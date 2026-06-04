@@ -1,0 +1,8 @@
+{
+  "_comment": "Per-metric tolerances for the metrics smoke test. All values are ABSOLUTE tolerances except wall_time_seconds, which is RELATIVE (30% by default).",
+  "phase1_volume_fraction":       0.05,
+  "cumulative_continuity_error":  0.001,
+  "interface_length_proxy":       50.0,
+  "wall_time_seconds":            0.30,
+  "time_step_count":              0.0
+}
