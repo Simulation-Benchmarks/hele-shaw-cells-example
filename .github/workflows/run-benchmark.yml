@@ -1,0 +1,89 @@
+name: hele-shaw-cells-example CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    # Off-peak: 04:17 UTC daily
+    - cron: '17 4 * * *'
+
+env:
+  CACHE_NUMBER: 1  # bump to reset the Docker build cache
+
+jobs:
+  run-benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v4
+
+      - name: Build the hele-shaw Docker image
+        run: |
+          cd openfoam
+          docker build -t hele-shaw:${{ github.sha }} .
+          echo "HELE_SHAW_IMAGE=hele-shaw:${{ github.sha }}" >> $GITHUB_ENV
+
+      - name: Setup Mambaforge
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          miniforge-version: latest
+          use-mamba: true
+
+      - name: Create workflow env
+        run: |
+          mamba env create -n hs-workflow -f environment.yml
+          conda run -n hs-workflow python -c "import snakemake; print('snakemake', snakemake.__version__)"
+
+      - name: Generate workflow config
+        run: |
+          conda run -n hs-workflow python generate_config.py
+
+      - name: Build the benchmark zip (regression check on the package script)
+        run: |
+          conda run -n hs-workflow python benchmark/build_benchmark_zip.py
+          unzip -l benchmark/hele-shaw-cells-example.zip | head
+
+      - name: Run benchmark for all configurations
+        run: |
+          cd openfoam
+          conda run -n hs-workflow python run_benchmark.py \
+            --no-snakemake \
+            --docker-image $HELE_SHAW_IMAGE \
+            2>&1 | tee ../results/run_benchmark.log
+
+      - name: Summarize + plot
+        run: |
+          conda run -n hs-workflow python openfoam/summarize_results.py \
+            results/*/solution_metrics.json \
+            --output results/summary.json
+          conda run -n hs-workflow python -c "import matplotlib" 2>/dev/null \
+            && conda run -n hs-workflow python openfoam/summarize_metrics.py \
+                 --summary-csv results/summary.csv \
+                 --output-dir results \
+            || echo "matplotlib not installed; skipping plot generation"
+
+      - name: Smoke test - metrics
+        run: |
+          for cfg in 1 2 3; do
+            metrics=results/$cfg/solution_metrics.json
+            if [ -f "$metrics" ]; then
+              echo "=== Smoke test: configuration $cfg ==="
+              conda run -n hs-workflow python tests/compare.py \
+                "$metrics" tests/baseline/metrics_baseline.json \
+                --tol-json tests/baseline/metrics_tolerances.json
+            fi
+          done
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hele-shaw-cells-example-results
+          path: |
+            results/
+            benchmark/hele-shaw-cells-example.zip
+            workflow_config.json

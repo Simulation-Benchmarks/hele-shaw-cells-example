@@ -1,0 +1,13 @@
+name: hs-workflow
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python >=3.10
+  - jinja2
+  - pyyaml
+  - snakemake >=7
+  - matplotlib
+  - pip
+  - pip:
+      - jinja2

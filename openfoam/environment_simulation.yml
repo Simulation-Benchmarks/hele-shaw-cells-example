@@ -1,0 +1,7 @@
+name: openfoam-bench
+channels:
+  - conda-forge
+dependencies:
+  - python >=3.10
+  - jinja2
+  - pyyaml
