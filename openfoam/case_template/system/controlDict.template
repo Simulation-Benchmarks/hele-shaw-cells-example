@@ -15,7 +15,7 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-application     heleShawFoam; 
+application     heleShawFoam;
 
 startFrom       startTime;
 
@@ -23,39 +23,39 @@ startTime       0;
 
 stopAt          endTime;
 
-endTime         15;   
+endTime         {{ solver.endTime }};
 
-deltaT          0.1;  
+deltaT          {{ solver.deltaT }};
 
 writeControl    adjustableRunTime;
 
-writeInterval   0.05; 
+writeInterval   {{ solver.writeInterval }};
 
 purgeWrite      0;
 
 writeFormat     ascii;
 
-writePrecision  6; 
+writePrecision  6;
 
 writeCompression off;
 
 timeFormat      general;
 
-timePrecision   6; 
+timePrecision   6;
 
 runTimeModifiable true;
 
 adjustTimeStep  yes;
 
-maxCo           0.5;
+maxCo           {{ solver.maxCo }};
 
-maxAlphaCo      0.5;
+maxAlphaCo      {{ solver.maxAlphaCo }};
 
 maxDeltaT       1;
 
 functions
 {
-  residuals 
+  residuals
   {
     type           residuals;
     fields (p_rgh U);

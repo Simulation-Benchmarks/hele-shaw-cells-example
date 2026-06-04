@@ -1,0 +1,40 @@
+{
+  "configuration": "1",
+
+  "domain": {
+    "R_in":  0.0015,
+    "R_out": 0.095,
+    "b":     0.001
+  },
+
+  "mesh": {
+    "NPA": 60,
+    "NPZ": 60,
+    "NPB": 1
+  },
+
+  "initial_condition": {
+    "bubble_radius": 0.0025,
+    "bubble_z_min": -0.0012,
+    "bubble_z_max":  0.0012
+  },
+
+  "fluids": {
+    "air":      { "rho": 1.2,    "k": 1.5e-5, "n": 1.0 },
+    "soap":     { "rho": 1026.6, "k": 2.0e-3, "n": 1.0 },
+    "sigma":    0.031,
+    "gapWidth": 0.001
+  },
+
+  "boundary_conditions": {
+    "inlet_volumetric_flow_rate": 4.0e-07
+  },
+
+  "solver": {
+    "endTime":       15.0,
+    "deltaT":         0.1,
+    "writeInterval":  0.05,
+    "maxCo":          0.5,
+    "maxAlphaCo":     0.5
+  }
+}
