@@ -1,0 +1,39 @@
+"""openfoam/Snakefile — sub-workflow for the OpenFOAM tool.
+
+Invoked by the top-level Snakefile per configuration. Builds a
+mesh_<config>.tar.gz (if not already present), runs the simulation
+through run_simulation.py, and emits the metrics + solution zip.
+"""
+import json
+
+configfile: "workflow_config.json"
+
+# The configuration id is passed in by the top-level Snakefile via
+# --config configuration=<id>. We read it here.
+CONFIG = config.get("configuration", "1")
+
+
+rule all:
+    input:
+        f"results/{CONFIG}/solution_metrics.json",
+        f"results/{CONFIG}/solution_field_data.zip",
+
+
+rule run_simulation:
+    input:
+        params=f"../../parameters_{CONFIG}.json",
+        mesh=f"../../mesh_{CONFIG}.tar.gz",
+    output:
+        zip=f"results/{CONFIG}/solution_field_data.zip",
+        metrics=f"results/{CONFIG}/solution_metrics.json",
+    log:
+        f"results/{CONFIG}/log.run_simulation.txt",
+    threads: 1
+    shell:
+        "python run_simulation.py "
+        "--input-parameter-file {input.params} "
+        "--input-mesh-file {input.mesh} "
+        "--output-solution-file-zip {output.zip} "
+        "--output-metrics-file {output.metrics} "
+        "--workdir results/{CONFIG} "
+        "2>&1 | tee {log}"
