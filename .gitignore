@@ -1,0 +1,21 @@
+# Build artifacts
+build/
+dist/
+*.egg-info/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# OpenFOAM run artifacts
+results/
+mesh_*.tar.gz
+workflow_config.json
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Docker
+*.log
