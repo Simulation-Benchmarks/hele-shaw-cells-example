@@ -1,0 +1,26 @@
+# docker-compose.yml
+#
+# Optional convenience wrapper. Equivalent to:
+#   docker build -t hele-shaw .
+#   docker run --rm -v "$PWD/../results/1:/case" hele-shaw
+#
+# Usage (from this directory, openfoam/):
+#   docker compose up --build
+#   # or to run a different command inside the container:
+#   docker compose run --rm hele-shaw bash
+#
+# Note: the volume mount makes the host's results/1/ folder read-write
+# inside the container, so all generated time-step files,
+# log.heleShawFoam, etc. will be visible on the host after the run
+# completes.
+
+services:
+  hele-shaw:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: hele-shaw:latest
+    container_name: hele-shaw
+    volumes:
+      - ../results/1:/case
+    working_dir: /case

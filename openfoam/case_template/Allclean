@@ -1,0 +1,37 @@
+#!/bin/sh
+# Allclean: remove all generated artifacts from the testcase.
+#
+# This deletes every time directory (e.g. 0.05, 0.1, 15) and log files
+# produced by the run. The initial conditions in 0/, the constant/
+# folder, and the system/ folder are preserved.
+#
+# Note: the naive `rm -rf [0-9]*` glob also matches the `0` directory
+# itself. We use a more careful pattern that matches any time
+# directory that is NOT exactly `0`.
+
+cd "${0%/*}" || exit 1
+
+# Collect candidate dirs. The `for` loop expands the globs at the
+# shell's discretion; if a glob doesn't match anything, the literal
+# pattern string is passed (with `nullglob` not set, which is the
+# default for sh).
+candidates=""
+for pattern in "0.[0-9]*" "[0-9]*" "processor*" "postProcessing"; do
+    for d in $pattern; do
+        case "$d" in
+            "0.[0-9]*"|"[0-9]*"|"processor*"|"postProcessing")
+                # Glob did not match anything; literal pattern.
+                continue
+                ;;
+        esac
+        if [ "$d" = "0" ]; then
+            continue
+        fi
+        if [ -d "$d" ]; then
+            rm -rf "$d"
+        fi
+    done
+done
+rm -f log.*
+
+echo "Allclean: removed all run artifacts; 0/, constant/, system/ are intact"

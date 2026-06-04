@@ -1,0 +1,35 @@
+# .dockerignore — keep the Docker build context small and reproducible.
+# Without this, `docker build` would send the case_template's Results/AVI
+# and any other large artifacts to the daemon, even though we don't COPY
+# them into the image.
+
+# Case template artifacts (mounted on the host at run time)
+case_template/0.[0-9]*
+case_template/[1-9]*
+case_template/processor*
+case_template/postProcessing
+case_template/log.*
+
+# Solver build cache (regenerated inside the image)
+solver/Make/linux*
+solver/Make/solaris*
+solver/Make/windows*
+solver/Make/darwin*
+
+# Runtime artifacts that may be in the openfoam/ dir on the host
+results/
+mesh_*.tar.gz
+__pycache__/
+*.pyc
+
+# OS / editor cruft
+.DS_Store
+*.swp
+*.swo
+.git
+.gitignore
+.idea
+.vscode
+
+# This file itself
+.dockerignore

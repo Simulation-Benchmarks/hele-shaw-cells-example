@@ -1,0 +1,37 @@
+#!/bin/sh
+# Allrun: run the Hele-Shaw cell simulation.
+#
+# Steps:
+#   1. (Re)generate the mesh if constant/polyMesh is missing.
+#   2. Initialize the air bubble with setFields.
+#   3. Run heleShawFoam.
+#
+# Run from inside the testcase/ directory (this script uses ${0%/*} to
+# locate itself). The OF environment is expected to be sourced by the
+# caller (the Docker entrypoint does this automatically).
+
+cd "${0%/*}" || exit 1
+
+set -e
+
+echo "Allrun: starting at $(date)"
+
+# 1. Mesh
+if [ ! -d constant/polyMesh ] || [ -z "$(ls constant/polyMesh 2>/dev/null)" ]; then
+    echo "Allrun: generating blockMeshDict from circulardomain.py"
+    python3 circulardomain.py > system/blockMeshDict
+    echo "Allrun: running blockMesh"
+    blockMesh
+else
+    echo "Allrun: reusing existing constant/polyMesh (delete it to re-mesh)"
+fi
+
+# 2. Initial fields
+echo "Allrun: running setFields (initial air cylinder)"
+setFields
+
+# 3. Solver
+echo "Allrun: starting heleShawFoam"
+heleShawFoam > log.heleShawFoam 2>&1
+
+echo "Allrun: done at $(date)"
