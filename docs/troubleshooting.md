@@ -101,3 +101,14 @@ solver writes many time-step directories. The `solution_field_data.zip`
 then has hundreds of subdirectories. This is fine; just be aware that
 extracting it on a system with a low `ulimit -n` (default 256 on
 macOS) may fail. Increase the limit with `ulimit -n 4096` if needed.
+
+## ROHub upload fails with 401 Unauthorized
+
+Check that `ROHUB_USERNAME` and `ROHUB_PASSWORD` environment variables
+are set to the *dev* endpoint's credentials, not production. The default
+endpoint in `openfoam/upload_to_rohub.py` is the development ROHub at
+`https://rohub2020-devel.apps.paas-dev.psnc.pl/`. If you're using
+production, change the endpoint URL in the script (and re-run).
+
+Also confirm the credentials are valid by logging in to the ROHub web
+portal directly.

@@ -24,6 +24,10 @@ rule all:
             "results/{config}/solution_field_data.zip",
             config=config["configurations"],
         ),
+        expand(
+            "results/{config}/fingers.png",
+            config=config["configurations"],
+        ),
 
 
 rule create_mesh:
@@ -59,3 +63,17 @@ rule summarize:
     output: "results/summary.json"
     shell:
         "python openfoam/summarize_results.py {input} --output {output}"
+
+
+rule plot_fingers:
+    input:
+        metrics="results/{config}/solution_metrics.json",
+    output:
+        fig="results/{config}/fingers.png",
+    params:
+        times="0.05 1 5 10 15",
+    shell:
+        "python openfoam/plot_fingers.py "
+        "--results-dir results/{wildcards.config} "
+        "--times {params.times} "
+        "--output {output.fig}"

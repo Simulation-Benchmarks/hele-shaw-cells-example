@@ -12,6 +12,7 @@ The Docker image, solver, mesh, fluid properties, and numerics are
 
 - **Problem definition**: [docs/hele-shaw-cells.md](docs/hele-shaw-cells.md)
 - **Troubleshooting**: [docs/troubleshooting.md](docs/troubleshooting.md)
+- ROHub upload + SPARQL queries: see [docs/rohub.md](docs/rohub.md)
 - **Original Docker-runnable build**: [`hele-shaw-cells-runnable`](../hele-shaw-cells-runnable)
 - **Original research artifact**: [`hele-shaw-cells/`](../hele-shaw-cells) (Yao Zhang, 2024)
 
@@ -129,6 +130,11 @@ with these five metrics:
 | `interface_length_proxy` | Cells with 0 < α < 1 (proxy for the air-cluster perimeter) | ~2141 |
 | `wall_time_seconds` | OF `ExecutionTime` | depends on host |
 | `time_step_count` | Number of write-time directories produced | 301 |
+
+## Publishing
+
+To publish this repo to GitHub and register it with the platform, see
+[PUBLISH.md](PUBLISH.md).
 
 ## License
 
