@@ -75,7 +75,12 @@ Inside the notebook:
 
 If you don't want to wait that long, set `RUN_SIMULATION=0` at the top
 of the notebook to skip the simulation and just see the math +
-workflow + visualization skeleton.
+workflow + visualization skeleton. **The fingers figure cell (cell 26)
+still runs in fast mode** — if `results/<config>/` is already on disk
+from a previous run, the polar and Cartesian figures are rendered
+from it without re-running the heavy compute. If `results/` is
+missing, the cell prints a clear "no results found" message and skips
+that configuration.
 
 ### Colima-specific gotchas
 
