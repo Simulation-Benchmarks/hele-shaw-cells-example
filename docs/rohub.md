@@ -139,6 +139,69 @@ ORDER BY ?metric_label
 > schema:value ?metric_value .` and add `?pv` to the `?metrics_file`
 > connection via `schema:hasPart`.
 
+### `m4i:`-namespaced walk (recommended)
+
+The `ro_crate.py` shipped with this repo emits a `m4i:Method` node
+(per the platform's `metadata4ing` ontology) with `m4i:hasParameter`,
+`m4i:investigates`, and `m4i:implementedByTool` predicates. The query
+below is the same shape the plate benchmark uses; it works against any
+uploaded Hele-Shaw `solution_field_data.zip`:
+
+```sparql
+PREFIX schema: <http://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX m4i: <https://w3id.org/nfdi4ing/metadata4ing#>
+
+SELECT DISTINCT
+    ?method_label
+    ?param_label   ?param_value
+    ?metric_label  ?metric_value
+    ?tool_label
+WHERE {
+  # ---- Input UUID (one or many) ----
+  VALUES ?uuid { "%UUID%" }
+
+  # ---- Construct the full Dataset IRI from UUID ----
+  BIND(IRI(CONCAT("https://w3id.org/ro-id-dev/", ?uuid)) AS ?dataset)
+
+  # ---- Find which graph contains that dataset ----
+  {
+    SELECT ?g WHERE { GRAPH ?g { ?dataset a schema:Dataset . } }
+  }
+
+  # ---- Walk the graph: m4i:Method → m4i:hasParameter → schema:PropertyValue
+  #                    m4i:Method → m4i:investigates  → schema:PropertyValue
+  #                    m4i:Method → m4i:implementedByTool → schema:SoftwareApplication
+  GRAPH ?g {
+    ?method a m4i:Method ;
+            rdfs:label ?method_label ;
+            m4i:hasParameter   ?param_pv ;
+            m4i:investigates   ?metric_pv ;
+            m4i:implementedByTool ?tool .
+
+    ?param_pv a schema:PropertyValue ;
+              rdfs:label ?param_label ;
+              schema:value ?param_value .
+
+    ?metric_pv a schema:PropertyValue ;
+               rdfs:label ?metric_label ;
+               schema:value ?metric_value .
+
+    ?tool a schema:SoftwareApplication ;
+          rdfs:label ?tool_label .
+
+    # Restrict to the Hele-Shaw tool (skip if you want all tools).
+    FILTER (LCASE(STR(?tool_label)) = "openfoam-heleshawfoam")
+  }
+}
+ORDER BY ?method_label ?param_label ?metric_label
+```
+
+This is the same query the plate benchmark's `rohub.md` documents, so
+a single SPARQL endpoint can host both benchmarks and the queries
+compose: replace `%UUID%` with a list of uploaded UUIDs from each
+benchmark to compare.
+
 ### Python form using `SPARQLWrapper`
 
 ```python
@@ -189,17 +252,15 @@ doubles the flow rate at the same mesh resolution as config 1, so
 
 ## Note on `m4i:`
 
-The plate benchmark (`linear-elastic-plate-with-hole`) uses the
-`metadata4ing` Snakemake reporter plugin, which writes its provenance
-into the RO-Crate with `m4i:`-namespaced predicates
-(`m4i:hasParameter`, `m4i:implementedByTool`, …). The Hele-Shaw
-benchmark does **not** depend on that plugin — its `ro-crate-metadata.json`
-is a small, generic RO-Crate 1.1 document with `schema:value` for the
-metrics. The SPARQL queries above are written for the Hele-Shaw shape;
-they will return empty results against a `m4i:`-namespaced crate. A
-follow-up may unify the two crates; until then, use the platform's
-[rohub.md](../NFDI4IngModelValidationPlatform/docs/rohub.md) for the
-plate benchmark and this file for the Hele-Shaw benchmark.
+The plate benchmark (`linear-elastic-plate-with-hole`) and this
+Hele-Shaw benchmark both emit `m4i:`-namespaced predicates
+(`m4i:Method`, `m4i:hasParameter`, `m4i:investigates`,
+`m4i:implementedByTool`) in the RO-Crate. The Hele-Shaw writer
+(`openfoam/ro_crate.py`) emits these directly — it does not depend
+on the `metadata4ing` Snakemake plugin. The SPARQL queries above use
+the same shape as the plate benchmark's `rohub.md` example, so a
+single ROHub SPARQL endpoint can host both benchmarks and a single
+query can compare them.
 
 ## Programmatic upload
 

@@ -108,6 +108,7 @@ def make_solution_zip(
     parameters: dict,
     parameters_file: Path,
     docker_image: str,
+    metrics: dict | None = None,
 ) -> None:
     """Build solution_field_data.zip with time-step dirs, log, dicts, RO-Crate."""
     output_zip = Path(output_zip)
@@ -120,6 +121,7 @@ def make_solution_zip(
         parameters_file=parameters_file,
         case_dir=workdir,
         docker_image=docker_image,
+        metrics=metrics,
     )
 
     with tempfile.TemporaryDirectory() as tmp:
@@ -222,6 +224,7 @@ def main() -> int:
         parameters=parameters,
         parameters_file=params_file,
         docker_image=args.docker_image,
+        metrics=metrics,
     )
 
     # 7. Check solver completion
