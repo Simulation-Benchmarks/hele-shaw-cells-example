@@ -318,6 +318,207 @@ def plot_fingers(
 
 
 # ---------------------------------------------------------------------------
+# Cartesian (X-Y) plotting
+# ---------------------------------------------------------------------------
+
+def _read_alpha_4quadrant_clean(path: Path) -> tuple[int, np.ndarray] | None:
+    """Read an OF volScalarField and return (cells_per_quadrant, arr_3d).
+
+    The returned ``arr_3d`` has shape ``(4, cells_per_quadrant)`` where
+    cells are in (q, theta, r) order. Returns ``None`` if the field is
+    uniform or unparseable.
+    """
+    try:
+        text = Path(path).read_text(errors="replace")
+    except FileNotFoundError:
+        return None
+    m_uni = _UNIFORM_RE.search(text)
+    if m_uni:
+        return None
+    m = _HEADER_RE.search(text)
+    if not m:
+        return None
+    n = int(m.group(1))
+    if n % 4 != 0:
+        return None
+    floats = [float(tok) for tok in m.group(2).split()]
+    if len(floats) != n:
+        return None
+    return (n // 4, np.asarray(floats, dtype=float).reshape((4, n // 4)))
+
+
+def plot_cartesian(
+    results_dir: Path,
+    times: list[float],
+    output: Path,
+    params: dict,
+    colormap: str,
+    dpi: int,
+) -> None:
+    """5-panel Cartesian (X-Y) plot of the radial fingering.
+
+    For each requested time, renders the alpha.air field as a 2D X-Y
+    scatter plot, where each cell is plotted at its physical (x, y)
+    position derived from polar (r, theta). The 4 mesh quadrants are
+    tiled angularly around the centre, producing the classic
+    "viscous fingering" / "alien-like" dendritic pattern.
+
+    The figure is a 2x3 grid (5 panels + 1 hidden) with one time per
+    panel. Colour: ``alpha.air`` from 0 (soap, blue) to 1 (air, red).
+    """
+    domain = params.get("domain", {})
+    mesh = params.get("mesh", {})
+    r_in = float(domain["R_in"])
+    r_out = float(domain["R_out"])
+    npa = int(mesh["NPA"])
+    npz = int(mesh["NPZ"])
+
+    dr = (r_out - r_in) / npa
+    r_centers = r_in + (np.arange(npa) + 0.5) * dr
+    dth_local = (np.pi / 2) / npz
+
+    # Pre-compute the (x, y) cell centres for each of the 4 quadrants.
+    # Quadrant q covers angular range [q*pi/2, (q+1)*pi/2].
+    quad_xy: list[tuple[np.ndarray, np.ndarray]] = []
+    for q in range(4):
+        th_centers = q * (np.pi / 2) + (np.arange(npz) + 0.5) * dth_local
+        R, TH = np.meshgrid(r_centers, th_centers, indexing="ij")
+        quad_xy.append((R.ravel(), TH.ravel()))
+
+    times_present: list[tuple[float, np.ndarray, np.ndarray, np.ndarray]] = []
+    for t in times:
+        alpha_path = results_dir / f"{t}" / "alpha.air"
+        if not alpha_path.exists():
+            alt_candidates = []
+            try:
+                alt_candidates.append(results_dir / f"{t:g}" / "alpha.air")
+                alt_candidates.append(results_dir / f"{t:.6g}" / "alpha.air")
+            except Exception:
+                pass
+            if any(p.exists() for p in alt_candidates):
+                alpha_path = next(p for p in alt_candidates if p.exists())
+            else:
+                print(
+                    f"plot_cartesian: WARN: no alpha.air at t={t} "
+                    f"(looked for {alpha_path}); substituting zeros",
+                    file=sys.stderr,
+                )
+                # Use a uniform-zero field so the panel still renders.
+                n_total = 4 * npa * npz
+                Xs = np.concatenate([xy[0] for xy in quad_xy])
+                Ys = np.concatenate([xy[1] for xy in quad_xy])
+                As = np.zeros(n_total, dtype=float)
+                times_present.append((float(t), Xs, Ys, As))
+                continue
+
+        result = _read_alpha_4quadrant_clean(alpha_path)
+        if result is None:
+            print(
+                f"plot_cartesian: WARN: {alpha_path} is uniform or "
+                f"unparseable; substituting zeros",
+                file=sys.stderr,
+            )
+            n_total = 4 * npa * npz
+            Xs = np.concatenate([xy[0] for xy in quad_xy])
+            Ys = np.concatenate([xy[1] for xy in quad_xy])
+            As = np.zeros(n_total, dtype=float)
+            times_present.append((float(t), Xs, Ys, As))
+            continue
+
+        cells_per_q, arr_3d = result
+        if cells_per_q != npa * npz:
+            print(
+                f"plot_cartesian: WARN: {alpha_path} has "
+                f"{cells_per_q} cells per quadrant, expected {npa * npz} "
+                f"(NPA*NPZ); substituting zeros",
+                file=sys.stderr,
+            )
+            n_total = 4 * npa * npz
+            Xs = np.concatenate([xy[0] for xy in quad_xy])
+            Ys = np.concatenate([xy[1] for xy in quad_xy])
+            As = np.zeros(n_total, dtype=float)
+            times_present.append((float(t), Xs, Ys, As))
+            continue
+
+        # arr_3d shape (4, npa*npz) is in (q, theta*r) order. Reshape
+        # each quadrant to (npz, npa) = (theta, r) and ravel — this
+        # matches the (R, TH) meshgrid we built in quad_xy.
+        Xs_list, Ys_list, As_list = [], [], []
+        for q in range(4):
+            R_q, TH_q = quad_xy[q]
+            A_q = arr_3d[q].reshape((npz, npa)).T.ravel()  # (theta, r) → (r, theta)
+            Xs_list.append(R_q * np.cos(TH_q))
+            Ys_list.append(R_q * np.sin(TH_q))
+            As_list.append(A_q)
+        times_present.append((
+            float(t),
+            np.concatenate(Xs_list),
+            np.concatenate(Ys_list),
+            np.concatenate(As_list),
+        ))
+
+    if not times_present:
+        print(
+            "plot_cartesian: ERROR: no requested times were present in "
+            f"{results_dir}; nothing to plot",
+            file=sys.stderr,
+        )
+        sys.exit(2)
+
+    n = len(times_present)
+    nrows, ncols = _grid_layout(n)
+    fig, axes = plt.subplots(
+        nrows, ncols,
+        figsize=(3.6 * ncols, 3.6 * nrows),
+        subplot_kw={"aspect": "equal"},
+    )
+    axes = np.atleast_1d(axes).ravel()
+
+    vmin, vmax = 0.0, 1.0
+    for ax, (t, Xs, Ys, As) in zip(axes, times_present):
+        # Use a square marker whose size in points is small enough that
+        # neighbouring cells touch but doesn't overpower the figure.
+        # With ~14400 cells, a marker size of ~1 pt gives a clean look
+        # at 100 DPI for an 11×7 inch figure.
+        ax.scatter(
+            Xs, Ys, c=As, cmap=colormap,
+            vmin=vmin, vmax=vmax, s=1.0, marker="s", linewidths=0,
+            rasterized=True,
+        )
+        ax.set_title(f"t = {t:g} s", fontsize=10)
+        ax.set_xlim(-r_out, r_out)
+        ax.set_ylim(-r_out, r_out)
+        ax.set_xticks([])
+        ax.set_yticks([])
+        ax.set_aspect("equal")
+
+    # Hide any unused axes
+    for ax in axes[n:]:
+        ax.set_visible(False)
+
+    # One shared colorbar for the whole figure
+    sm = plt.cm.ScalarMappable(cmap=colormap, norm=plt.Normalize(vmin=vmin, vmax=vmax))
+    sm.set_array([])
+    cbar = fig.colorbar(
+        sm, ax=axes[:n].tolist(),
+        orientation="vertical", fraction=0.025, pad=0.02,
+    )
+    cbar.set_label(r"$\alpha_{\mathrm{air}}$  (0 = soap, 1 = air)")
+
+    output.parent.mkdir(parents=True, exist_ok=True)
+    fig.suptitle(
+        f"Viscous fingering (Cartesian) — {results_dir.name}", fontsize=12, y=1.02
+    )
+    fig.subplots_adjust(wspace=0.15, hspace=0.25, right=0.9)
+    fig.savefig(output, dpi=dpi, bbox_inches="tight")
+    plt.close(fig)
+    print(
+        f"plot_cartesian: wrote {output} "
+        f"({n}/{len(times)} times, layout {nrows}x{ncols})"
+    )
+
+
+# ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 
@@ -349,6 +550,15 @@ def parse_args() -> argparse.Namespace:
         "--dpi", type=int, default=100,
         help="Figure DPI (default: 100)",
     )
+    ap.add_argument(
+        "--cartesian", action="store_true",
+        help="Generate a Cartesian (X-Y) plot of the radial fingering "
+             "instead of the default polar (r, theta) plot. Each cell "
+             "is plotted at its physical (x, y) position derived from "
+             "polar (r, theta), with the 4 mesh quadrants tiled around "
+             "the centre — produces the classic 'viscous fingering' / "
+             "'alien-like' dendritic pattern.",
+    )
     return ap.parse_args()
 
 
@@ -367,14 +577,24 @@ def main() -> int:
     )
     params = load_parameters(params_path)
 
-    plot_fingers(
-        results_dir=results_dir,
-        times=list(args.times),
-        output=Path(args.output),
-        params=params,
-        colormap=args.colormap,
-        dpi=args.dpi,
-    )
+    if args.cartesian:
+        plot_cartesian(
+            results_dir=results_dir,
+            times=list(args.times),
+            output=Path(args.output),
+            params=params,
+            colormap=args.colormap,
+            dpi=args.dpi,
+        )
+    else:
+        plot_fingers(
+            results_dir=results_dir,
+            times=list(args.times),
+            output=Path(args.output),
+            params=params,
+            colormap=args.colormap,
+            dpi=args.dpi,
+        )
     return 0
 
 
