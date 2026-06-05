@@ -3,6 +3,7 @@ name: hele-shaw-cells-example CI
 on:
   push:
     branches: [ main ]
+    tags: [ 'v*' ]
   pull_request:
     branches: [ main ]
   workflow_dispatch:
@@ -87,3 +88,58 @@ jobs:
             results/
             benchmark/hele-shaw-cells-example.zip
             workflow_config.json
+
+  rohub-upload:
+    # Tag-triggered: uploads the freshly-produced solution_field_data.zip
+    # files to the dev ROHub and saves the resulting UUIDs as an
+    # artifact. Soft-skips cleanly if ROHUB_USERNAME/ROHUB_PASSWORD
+    # are not set as repo secrets.
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    needs: run-benchmark
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v4
+
+      - name: Download run-benchmark results
+        uses: actions/download-artifact@v4
+        with:
+          name: hele-shaw-cells-example-results
+          path: results/
+
+      - name: Setup Mambaforge
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          miniforge-version: latest
+          use-mamba: true
+
+      - name: Create ROHub env
+        run: |
+          mamba env create -n hs-rohub -f openfoam/environment_rohub.yml
+          # Verify the install (the rohub install can be slow due to the
+          # editable git+https URL; allow it time).
+          conda run -n hs-rohub python -c "import rohub; print('rohub loaded')"
+
+      - name: Upload to ROHub
+        env:
+          ROHUB_USERNAME: ${{ secrets.ROHUB_USERNAME }}
+          ROHUB_PASSWORD: ${{ secrets.ROHUB_PASSWORD }}
+        run: |
+          if [ -z "$ROHUB_USERNAME" ] || [ -z "$ROHUB_PASSWORD" ]; then
+            echo "ROHUB_USERNAME/ROHUB_PASSWORD not set; skipping upload"
+            echo '{"skipped": true, "reason": "secrets not configured"}' \
+              > results/rohub_uuids.json
+            exit 0
+          fi
+          conda run -n hs-rohub python openfoam/upload_to_rohub.py \
+            --results-dir results/ \
+            --endpoint dev \
+            --output results/rohub_uuids.json
+
+      - name: Upload ROHub UUIDs as artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hele-shaw-cells-example-rohub-uuids
+          path: results/rohub_uuids.json
