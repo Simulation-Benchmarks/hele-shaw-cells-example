@@ -133,10 +133,15 @@ def resolve_parameters_file(
 
     Search order:
       1. explicit ``--parameters-file`` argument
-      2. ``<results-dir>/../parameters_<config>.json`` where ``<config>``
-         is the leaf name of ``results_dir`` (e.g. ``results/1`` →
-         ``parameters_1.json``)
-      3. ``<results-dir>/../parameters.json``
+      2. ``<results-dir>/../parameters_<config>.json`` (one level up)
+      3. ``<results-dir>/../parameters.json`` (one level up)
+      4. ``<results-dir>/../../parameters_<config>.json`` (two levels up)
+      5. ``<results-dir>/../../parameters.json`` (two levels up)
+
+    The "one level up" form supports layouts like ``sim/1/`` →
+    ``sim/parameters_1.json``; the "two levels up" form supports the
+    layout used in this repo (``results/<config>/`` with parameters at
+    the repo root).
     """
     if explicit:
         p = Path(explicit)
@@ -149,10 +154,13 @@ def resolve_parameters_file(
         return p
 
     parent = results_dir.parent
+    grandparent = parent.parent
     leaf = results_dir.name
     candidates = [
         parent / f"parameters_{leaf}.json",
         parent / "parameters.json",
+        grandparent / f"parameters_{leaf}.json",
+        grandparent / "parameters.json",
     ]
     for c in candidates:
         if c.exists():
