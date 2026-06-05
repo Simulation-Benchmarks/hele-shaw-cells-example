@@ -71,3 +71,14 @@ The tag push triggers `.github/workflows/run-benchmark.yml`'s
 `rohub-upload` job. If you've configured Zenodo (step 6), go to
 GitHub → Releases → Draft a new release → choose v1.0.0 → publish. Zenodo
 will mint the DOI within a few minutes.
+
+## Notes
+
+- The current `openfoam/ro_crate.py` emits generic RO-Crate 1.1. A
+  follow-up adds `m4i:`-namespaced predicates (the `metadata4ing`
+  ontology used by the plate benchmark) to make the SPARQL queries
+  cross-benchmark-compatible. See `docs/rohub.md` §"Note on m4i:".
+- The dev ROHub endpoint (`https://rohub2020-devel.apps.paas-dev.psnc.pl/`)
+  is the default for the upload job. To use production instead, edit
+  `openfoam/upload_to_rohub.py` (the `ENDPOINTS` dict) and the GitHub
+  workflow's `--endpoint` flag.
