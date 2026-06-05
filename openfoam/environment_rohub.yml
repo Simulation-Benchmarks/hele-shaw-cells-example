@@ -1,0 +1,13 @@
+name: hs-rohub
+channels:
+  - conda-forge
+dependencies:
+  - python >=3.10
+  - pip
+  - sparqlwrapper
+  - jinja2
+  - pyyaml
+  - matplotlib
+  - pip:
+      - "--editable=git+https://gitlab.pcss.pl/daisd-public/rohub/rohub-api.git@develop#egg=rohub"
+      - python-dotenv
