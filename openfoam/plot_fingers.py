@@ -102,23 +102,24 @@ def read_alpha_field(path: Path, npa: int, npz: int) -> np.ndarray:
         return np.zeros((npa, npz), dtype=float)
 
     arr = np.asarray(value, dtype=float)
-    if arr.size != npa * npz:
-        print(
-            f"plot_fingers: WARN: {path} has {arr.size} cells, expected "
-            f"{npa * npz} (NPA*NPZ); substituting zeros",
-            file=sys.stderr,
-        )
-        return np.zeros((npa, npz), dtype=float)
-
-    # The OF blockMeshDict writes 4 quadrants in a row, each with
-    # (NPA radial × NPZ angular) cells. The cell centers are:
-    #     r_i   = (i + 0.5) * (R_out - R_in) / NPA + R_in
-    #     th_j  = (j + 0.5) * 2π / NPZ
-    # The simple ``reshape((NPA, NPZ))`` matches the radial × angular
-    # layout in the runnable repo; for the multi-block quadrant case it
-    # produces a single stacked view of all 4 quadrants concatenated in
-    # θ, which is what we want for a polar pcolormesh.
-    return arr.reshape((npa, npz))
+    if arr.size == 4 * npa * npz:
+        # OF writes 4 quadrants × (NPA radial × NPZ angular) cells.
+        # The flat index is (q, theta, r) — verified empirically: with
+        # the post-setFields cylinder (240 ones at r=0 in the 1-cell-thick
+        # innermost ring), arr.reshape(4, npz, npa)[0, :5, 0] == 1.
+        # Stack 4 quadrants angularly → (r, 4*theta) for pcolormesh
+        # (the .T transpose in the pcolormesh call swaps to (4*theta, r)).
+        arr_3d = arr.reshape((4, npz, npa))   # (q, theta, r)
+        return arr_3d.transpose(0, 2, 1).reshape((npa, 4 * npz))  # (r, 4*theta)
+    if arr.size == npa * npz:
+        return arr.reshape((npa, npz))
+    print(
+        f"plot_fingers: WARN: {path} has {arr.size} cells, expected "
+        f"{npa * npz} (single quadrant) or {4 * npa * npz} (4 quadrants); "
+        f"substituting zeros",
+        file=sys.stderr,
+    )
+    return np.zeros((npa, npz), dtype=float)
 
 
 # ---------------------------------------------------------------------------
@@ -221,10 +222,11 @@ def plot_fingers(
     npz = int(mesh["NPZ"])
 
     dr = (r_out - r_in) / npa
-    dth = 2.0 * np.pi / npz
+    # 4 quadrants tiled angularly → 4*NPZ angular bins total.
+    dth = 2.0 * np.pi / (4 * npz)
     r_edges = np.linspace(r_in, r_out, npa + 1)
     r_centers = r_edges[:-1] + 0.5 * dr
-    th_edges = np.linspace(0.0, 2.0 * np.pi, npz + 1)
+    th_edges = np.linspace(0.0, 2.0 * np.pi, 4 * npz + 1)
     th_centers = th_edges[:-1] + 0.5 * dth
 
     times_present: list[tuple[float, np.ndarray]] = []
@@ -271,12 +273,14 @@ def plot_fingers(
     vmin, vmax = 0.0, 1.0
     images = []
     for ax, (t, field) in zip(axes, times_present):
-        # field is (NPA, NPZ); pcolormesh on a polar axis wants
-        # (theta, r) — i.e. we transpose to (NPZ, NPA) and pass cell-
-        # center 1-D coordinate arrays. With ``shading="nearest"`` the
-        # shapes (theta_centers, r_centers, field.T) are all consistent.
+        # field is (NPA, 4*NPZ) for the 4-quadrant case (or (NPA, NPZ)
+        # for the single-quadrant case). pcolormesh with shading="nearest"
+        # wants C of shape (Ny, Nx) where X=th_centers (Nx values) and
+        # Y=r_centers (Ny values) — i.e. C must be (npa, 4*npz). We pass
+        # the field as-is; the .T would be a no-op visually but would
+        # raise a shape-mismatch error from matplotlib.
         mesh_artist = ax.pcolormesh(
-            th_centers, r_centers, field.T, cmap=colormap,
+            th_centers, r_centers, field, cmap=colormap,
             vmin=vmin, vmax=vmax, shading="nearest",
         )
         images.append(mesh_artist)
