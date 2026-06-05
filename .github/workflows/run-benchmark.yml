@@ -1,15 +1,24 @@
 name: hele-shaw-cells-example CI
 
+# Workflow is currently DISABLED to silence failure emails while the
+# benchmark is being developed. To re-enable automatic runs:
+#   1. Uncomment the push, pull_request, schedule, and tags blocks
+#      below (replace the comment with the original `on:` entries).
+#   2. Commit and push. The next push to main (or the next cron tick)
+#      will run the workflow.
+#
+# Manual trigger (workflow_dispatch) is intentionally kept so the
+# workflow can still be run from the GitHub UI's Actions tab.
 on:
-  push:
-    branches: [ main ]
-    tags: [ 'v*' ]
-  pull_request:
-    branches: [ main ]
   workflow_dispatch:
-  schedule:
-    # Off-peak: 04:17 UTC daily
-    - cron: '17 4 * * *'
+  # push:
+  #   branches: [ main ]
+  #   tags: [ 'v*' ]
+  # pull_request:
+  #   branches: [ main ]
+  # schedule:
+  #   # Off-peak: 04:17 UTC daily
+  #   - cron: '17 4 * * *'
 
 env:
   CACHE_NUMBER: 1  # bump to reset the Docker build cache
