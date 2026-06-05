@@ -12,32 +12,69 @@ The Docker image, solver, mesh, fluid properties, and numerics are
 
 - **Problem definition**: [docs/hele-shaw-cells.md](docs/hele-shaw-cells.md)
 - **Troubleshooting**: [docs/troubleshooting.md](docs/troubleshooting.md)
-- ROHub upload + SPARQL queries: see [docs/rohub.md](docs/rohub.md)
+- **Install guide (macOS / Linux / WSL2 / remote VMs)**: [docs/getting_started.md](docs/getting_started.md)
+- **ROHub upload + SPARQL queries**: [docs/rohub.md](docs/rohub.md)
+- **Walkthrough notebook** (clone → build → math → run → inspect): [notebooks/Simulation_Walkthrough.ipynb](notebooks/Simulation_Walkthrough.ipynb)
+- **ROHub notebook**: [notebooks/RoCrate.ipynb](notebooks/RoCrate.ipynb)
 - **Original Docker-runnable build**: [`hele-shaw-cells-runnable`](../hele-shaw-cells-runnable)
 - **Original research artifact**: [`hele-shaw-cells/`](../hele-shaw-cells) (Yao Zhang, 2024)
 
 ## Quick start
 
-```bash
-# 1. Build the OpenFOAM Docker image (one-time, ~3 min on amd64)
-cd openfoam
-docker build -t hele-shaw:latest .
+The recommended path is the **walkthrough notebook**: it clones (or
+detects) the repo, builds the Docker image, walks through the
+mathematical model, runs the simulation, and visualises the fingers.
 
-# 2. Create the workflow Python env (one-time)
-mamba env create -n hs-workflow -f ../environment.yml
+```bash
+# 0. Install Docker (any flavour). On macOS, Colima is the lightest:
+brew install colima docker
+colima start          # one-time per session
+
+# 1. Clone the repo
+git clone https://github.com/Simulation-Benchmarks/hele-shaw-cells-example.git
+cd hele-shaw-cells-example
+
+# 2. Set up the workflow Python env (one-time)
+mamba env create -n hs-workflow -f environment.yml
 conda activate hs-workflow
 
-# 3. Generate the workflow config
-python generate_config.py
+# 3. Open the walkthrough notebook and run the cells
+jupyter lab notebooks/Simulation_Walkthrough.ipynb
+```
 
-# 4. Run all configurations (3 configs × ~3-5 min on amd64 = 9-15 min)
+Inside the notebook:
+
+- **Default mode** (`RUN_SIMULATION=1`): runs all 3 configurations.
+  ~10-15 min on native amd64, ~30-60 min on Apple Silicon under QEMU.
+- **Fast mode** (`RUN_SIMULATION=0`): skips Docker + simulation. Math,
+  parameter sweep, and visualization skeleton still work; ~1 min.
+
+For a step-by-step install on your platform (macOS, Linux, WSL2, Hetzner,
+Oracle Cloud, Paperspace, mybinder), see
+[docs/getting_started.md](docs/getting_started.md).
+
+### Command-line alternative (skip the notebook)
+
+If you just want to run the sweep from the terminal:
+
+```bash
+conda activate hs-workflow
+
+# Generate the workflow config and build all 3 meshes
+python generate_config.py
+for cfg in 1 2 3; do
+    python create_mesh.py $cfg
+done
+
+# Run all 3 configurations
 cd openfoam
 python run_benchmark.py
+cd ..
 
-# 5. Inspect results
-cat ../results/summary.json
-open ../results/phase1_volume_fraction_vs_NPA.pdf
-open ../results/phase1_volume_fraction_vs_flow_rate.pdf
+# Inspect the results
+cat results/summary.json
+ls results/{1,2,3}/solution_metrics.json
+ls results/{1,2,3}/fingers.png
 ```
 
 ## What's in this repo
@@ -45,15 +82,18 @@ open ../results/phase1_volume_fraction_vs_flow_rate.pdf
 ```
 hele-shaw-cells-example/
 ├── README.md                         # this file
-├── LICENSE                           # MIT
+├── LICENSE                           # MIT (with OF base-image GPL-3.0 caveat)
 │
 ├── docs/
-│   ├── hele-shaw-cells.md            # problem statement + parameters
-│   └── troubleshooting.md            # common errors and fixes
+│   ├── hele-shaw-cells.md            # problem statement + math model
+│   ├── getting_started.md            # cross-platform install guide
+│   ├── troubleshooting.md            # common errors and fixes
+│   ├── rohub.md                      # ROHub upload + SPARQL queries
+│   └── hele-shaw-cells.png           # reference finger pattern (extracted from runnable)
 │
-├── parameters_1.json                 # reference config (current defaults)
-├── parameters_2.json                 # mesh refinement (NPA=NPZ=80)
-├── parameters_3.json                 # flow-rate variation (8×10⁻⁷ m³/s)
+├── parameters_1.json                 # reference config (60×60 mesh, Q=4×10⁻⁷ m³/s)
+├── parameters_2.json                 # mild mesh refinement (80×80)
+├── parameters_3.json                 # flow-rate variation (Q=8×10⁻⁷ m³/s)
 │
 ├── create_mesh.py                    # top-level: parameters_*.json → mesh_*.tar.gz
 ├── generate_config.py                # scans parameters_*.json → workflow_config.json
@@ -67,18 +107,19 @@ hele-shaw-cells-example/
 │   ├── summarize_results.py          # aggregate metrics → summary.json
 │   ├── summarize_metrics.py          # summary.csv → PDF plots
 │   ├── metrics.py                    # log + alpha-field parser
-│   ├── ro_crate.py                   # hand-rolled ro-crate-metadata.json writer
+│   ├── ro_crate.py                   # hand-rolled ro-crate-metadata.json writer (m4i:-aware)
 │   ├── _render_templates.py          # case_template/ → working case dir
-│   ├── environment_simulation.yml, environment_benchmark.yml, environment_postprocessing.yml
+│   ├── environment_simulation.yml, environment_benchmark.yml,
+│   │   environment_postprocessing.yml, environment_rohub.yml
 │   ├── meshgen/circulardomain.py     # OF blockMeshDict generator
 │   ├── solver/                       # heleShawFoam C++ source
 │   ├── case_template/                # OF dicts as Jinja2 templates
 │   │   ├── 0/{alpha.air, U, p_rgh}.template
 │   │   ├── constant/{g, transportProperties, turbulenceProperties}.template
 │   │   ├── system/{controlDict, setFieldsDict}.template
-│   │   ├── system/{fvSchemes, fvSolution}      # verbatim
+│   │   ├── system/{fvSchemes, fvSolution}      # verbatim (no parameters)
 │   │   ├── Allrun, Allclean, case2D.foam
-│   │   └── Results/                  # the original reference AVI
+│   │   └── Results/sim_*.avi          # the original reference AVI
 │   └── tests_docker/run_container.sh
 │
 ├── benchmark/
@@ -97,26 +138,75 @@ hele-shaw-cells-example/
 │
 ├── environment.yml, environment_benchmarks.yml
 │
+├── notebooks/
+│   ├── Simulation_Walkthrough.ipynb  # end-to-end walkthrough (clone → build → math → run → inspect)
+│   └── RoCrate.ipynb                 # ROHub upload + SPARQL queries
+│
+├── scripts/
+│   ├── build_walkthrough_notebook.py # reproducible builder for the walkthrough notebook
+│   ├── extract_reference_frame.py    # extract docs/hele-shaw-cells.png from the runnable AVI
+│   ├── inspect_run.sh                # drop into the OF container with the case mounted
+│   └── regenerate_baseline.sh        # re-run config 1 and refresh the baselines (destructive)
+│
+├── PUBLISH.md                        # 7-step publish checklist
+├── PUBLISHED.md                      # records the publish event
+├── ZENODO.md                         # Zenodo DOI minting steps
+│
 └── .github/workflows/run-benchmark.yml
 ```
 
-## Relationship to `hele-shaw-cells-runnable`
+## What does the GitHub workflow do?
 
-This repo was created as the **blueprint-aligned** version of
-[`hele-shaw-cells-runnable`](../hele-shaw-cells-runnable). The two
-repos coexist:
+`.github/workflows/run-benchmark.yml` has **three jobs**. Two of them are
+disabled for automatic push triggers (commented out, per the `Phase 26:
+silence failure emails` decision); they run only on `workflow_dispatch`
+(manual trigger from the GitHub Actions tab). The third runs on every
+push and PR.
 
-| Repo | Purpose | Status |
-|---|---|---|
-| `hele-shaw-cells-runnable` | Verified Docker-runnable build with a 560-line README and a bit-exact baseline. The original developer artifact. | Unchanged. The source of truth for the working sim. |
-| `hele-shaw-cells-example` (this) | Same simulation, restructured to match the [platform instance-repo schema](../NFDI4IngModelValidationPlatform/docs/getting_started/benchmark_addition_guide.md). Has parameters_*.json, a top-level Snakefile, RO-Crate provenance, and a metrics smoke test. | This repo. |
-| `NFDI4IngModelValidationPlatform` | The main hub. Eventually lists this example in its benchmark registry. | Unchanged. |
-| `hele-shaw-cells/` (upstream) | The 2024 research artifact by Yao Zhang. | Unchanged historical record. |
+### Job 1: `run-benchmark` (manual trigger only, currently)
 
-The Docker image, solver, mesh, fluid properties, and numerics are
-**identical** between `hele-shaw-cells-runnable` and this repo. Both
-build the same `hele-shaw:latest` image and produce the same
-simulation output.
+- **Triggers:** `workflow_dispatch` only.
+- **Runner:** `ubuntu-latest` (native amd64, no QEMU).
+- **Steps:** checkout → build Docker image → set up mambaforge → create
+  workflow env → generate config → build benchmark zip (regression
+  check) → run all 3 configurations → summarize + plot → smoke-test
+  against the baseline → upload results as a downloadable artifact.
+- **Timeout:** 60 min. Each config takes ~3-5 min, so the full sweep
+  fits comfortably.
+- **Output artifact:** `hele-shaw-cells-example-results` (zip
+  containing `results/`, `benchmark/hele-shaw-cells-example.zip`,
+  `workflow_config.json`). Download from the Actions tab.
+
+**To re-enable automatic runs** (push / PR / schedule), uncomment the
+matching entries in the `on:` block at the top of the workflow file.
+
+### Job 2: `rohub-upload` (dormant, tag-triggered)
+
+- **Triggers:** tag pushes only (`v*`). **Currently dormant** because
+  the workflow's main trigger is `workflow_dispatch`, which doesn't
+  satisfy the gate.
+- **Runner:** `ubuntu-latest`.
+- **Steps:** download the run-benchmark artifact → set up the `hs-rohub`
+  conda env (with the editable `rohub` install) → run
+  `openfoam/upload_to_rohub.py` with the dev endpoint → upload the
+  resulting UUIDs as a separate artifact.
+- **Soft-skip:** if `ROHUB_USERNAME` / `ROHUB_PASSWORD` secrets are not
+  set, the job writes `{"skipped": true, "reason": "secrets not
+  configured"}` to the UUID file and exits 0. Never fails the build.
+- **To enable:** re-enable tag triggers in the `on:` block AND set the
+  ROHub secrets in the repo's Settings → Secrets → Actions.
+
+### Job 3: `notebook-smoke` (every push and PR)
+
+- **Triggers:** every push to `main` and every PR; skipped on the daily
+  schedule to save CI minutes.
+- **Runner:** `ubuntu-latest`.
+- **Steps:** install Jupyter deps → validate the notebook
+  (`nbformat.validate`) → execute the notebook in fast mode
+  (`RUN_SIMULATION=0`) → upload the executed notebook as an artifact.
+- **Timeout:** 15 min.
+- **Catches regressions in the notebook itself** — broken code cells,
+  missing imports, etc. ~1 min wall time per run.
 
 ## Output metrics
 
@@ -131,10 +221,29 @@ with these five metrics:
 | `wall_time_seconds` | OF `ExecutionTime` | depends on host |
 | `time_step_count` | Number of write-time directories produced | 301 |
 
+## Relationship to `hele-shaw-cells-runnable`
+
+This repo was created as the **blueprint-aligned** version of
+[`hele-shaw-cells-runnable`](../hele-shaw-cells-runnable). The two
+repos coexist:
+
+| Repo | Purpose | Status |
+|---|---|---|
+| `hele-shaw-cells-runnable` | Verified Docker-runnable build with a 560-line README and a bit-exact baseline. The original developer artifact. | Unchanged. The source of truth for the working sim. |
+| `hele-shaw-cells-example` (this) | Same simulation, restructured to match the [platform instance-repo schema](../NFDI4IngModelValidationPlatform/docs/getting_started/benchmark_addition_guide.md). Has parameters_*.json, a top-level Snakefile, RO-Crate provenance, and a metrics smoke test. | This repo. |
+| `NFDI4IngModelValidationPlatform` | The main hub. Lists this example in its benchmark registry. | Unchanged. |
+| `hele-shaw-cells/` (upstream) | The 2024 research artifact by Yao Zhang. | Unchanged historical record. |
+
+The Docker image, solver, mesh, fluid properties, and numerics are
+**identical** between `hele-shaw-cells-runnable` and this repo. Both
+build the same `hele-shaw:latest` image and produce the same
+simulation output.
+
 ## Publishing
 
 To publish this repo to GitHub and register it with the platform, see
-[PUBLISH.md](PUBLISH.md).
+[PUBLISH.md](PUBLISH.md). For the Zenodo DOI workflow, see
+[ZENODO.md](ZENODO.md).
 
 ## License
 
