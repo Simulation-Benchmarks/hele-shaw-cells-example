@@ -47,11 +47,11 @@ identifiers:
     value: "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example"
     description: "The GitHub repository URL (stable landing page)."
   - type: doi
-    value: "10.5281/zenodo.REPLACE_WITH_CONCEPT_DOI"
-    description: "Concept DOI for all versions of hele-shaw-cells-example (Zenodo). To be filled in after the first Zenodo deposit is published."
+    value: "10.5281/zenodo.20728189"
+    description: "Concept DOI for all versions of hele-shaw-cells-example (Zenodo). Resolves to the latest version."
   - type: doi
-    value: "10.5281/zenodo.REPLACE_WITH_VERSION_DOI"
-    description: "Version DOI for v1.0.1 (Zenodo). To be filled in after the first Zenodo deposit is published."
+    value: "10.5281/zenodo.20728190"
+    description: "Version DOI for v1.0.1 (Zenodo)."
 references:
   - type: software
     title: "OpenFOAM"

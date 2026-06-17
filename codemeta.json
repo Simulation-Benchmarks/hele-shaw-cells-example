@@ -3,8 +3,8 @@
   "@type": "SoftwareSourceCode",
   "identifier": [
     "hele-shaw-cells-example",
-    "https://doi.org/10.5281/zenodo.REPLACE_WITH_CONCEPT_DOI",
-    "https://doi.org/10.5281/zenodo.REPLACE_WITH_VERSION_DOI"
+    "https://doi.org/10.5281/zenodo.20728189",
+    "https://doi.org/10.5281/zenodo.20728190"
   ],
   "name": "hele-shaw-cells-example",
   "description": "Blueprint-aligned instance repository for the Hele-Shaw cells benchmark of the NFDI4IngModelValidationPlatform. Contains a 2D OpenFOAM-v2112 simulation of radial viscous fingering in a circular Hele-Shaw cell (air injected at the centre displacing a viscous soap solution), with the VOF interface captured by the isoAdvector scheme and surface tension via the continuum-surface-force model. Three parameter configurations (reference, mesh refinement, flow-rate variation) form a minimal convergence + sensitivity study.",
@@ -15,7 +15,7 @@
   "license": "https://spdx.org/licenses/MIT",
   "codeRepository": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example",
   "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example",
-  "downloadUrl": "https://zenodo.org/records/REPLACE_WITH_ZENODO_RECORD_ID",
+  "downloadUrl": "https://zenodo.org/records/20728190",
   "releaseNotes": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/main/CHANGELOG.md#101---2026-06-17",
   "issueTracker": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/issues",
   "programmingLanguage": [
