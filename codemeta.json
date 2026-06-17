@@ -1,0 +1,133 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "identifier": [
+    "hele-shaw-cells-example",
+    "https://doi.org/10.5281/zenodo.REPLACE_WITH_CONCEPT_DOI",
+    "https://doi.org/10.5281/zenodo.REPLACE_WITH_VERSION_DOI"
+  ],
+  "name": "hele-shaw-cells-example",
+  "description": "Blueprint-aligned instance repository for the Hele-Shaw cells benchmark of the NFDI4IngModelValidationPlatform. Contains a 2D OpenFOAM-v2112 simulation of radial viscous fingering in a circular Hele-Shaw cell (air injected at the centre displacing a viscous soap solution), with the VOF interface captured by the isoAdvector scheme and surface tension via the continuum-surface-force model. Three parameter configurations (reference, mesh refinement, flow-rate variation) form a minimal convergence + sensitivity study.",
+  "version": "1.0.1",
+  "dateCreated": "2026-06-05",
+  "datePublished": "2026-06-05",
+  "dateModified": "2026-06-17",
+  "license": "https://spdx.org/licenses/MIT",
+  "codeRepository": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example",
+  "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example",
+  "downloadUrl": "https://zenodo.org/records/REPLACE_WITH_ZENODO_RECORD_ID",
+  "releaseNotes": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/main/CHANGELOG.md#101---2026-06-17",
+  "issueTracker": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/issues",
+  "programmingLanguage": [
+    {
+      "@type": "ComputerLanguage",
+      "name": "C++",
+      "version": ">=14",
+      "notes": "heleShawFoam solver."
+    },
+    {
+      "@type": "ComputerLanguage",
+      "name": "Python",
+      "version": ">=3.10",
+      "notes": "Workflow scripts (create_mesh, generate_config, run_simulation, summarize_results, plot_fingers) and the Snakemake pipelines."
+    },
+    {
+      "@type": "ComputerLanguage",
+      "name": "OpenFOAM",
+      "version": "v2112",
+      "notes": "Case dicts and the heleShawFoam solver source."
+    }
+  ],
+  "runtimePlatform": "Docker (opencfd/openfoam-default:2112 base image)",
+  "operatingSystem": ["Linux", "macOS", "Windows (WSL2)"],
+  "developmentStatus": "active",
+  "applicationCategory": "Scientific/Engineering",
+  "keywords": [
+    "hele-shaw",
+    "viscous fingering",
+    "saffman-taylor",
+    "openfoam",
+    "volume-of-fluid",
+    "isoadvector",
+    "nfdi4ing",
+    "benchmark",
+    "FAIR4RS",
+    "research software",
+    "computational fluid dynamics",
+    "multiphase flow"
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Yao",
+      "familyName": "Zhang",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Original solver and case author (2024)"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://orcid.org/0000-0002-7121-6816",
+      "givenName": "Vasiliy",
+      "familyName": "Seibert",
+      "email": "vasiliy.seibert@tu-clausthal.de",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "TU Clausthal"
+      }
+    }
+  ],
+  "maintainer": [
+    {
+      "@type": "Person",
+      "@id": "https://orcid.org/0000-0002-7121-6816",
+      "givenName": "Vasiliy",
+      "familyName": "Seibert"
+    }
+  ],
+  "softwareRequirements": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "openfoam",
+      "name": "OpenFOAM",
+      "url": "https://www.openfoam.com/",
+      "softwareVersion": "v2112"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "isoadvector",
+      "name": "isoAdvection",
+      "url": "https://github.com/roenby/isoAdvector"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "snakemake",
+      "name": "Snakemake",
+      "url": "https://snakemake.readthedocs.io/",
+      "softwareVersion": ">=7.0"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "jinja2",
+      "name": "Jinja2",
+      "url": "https://pypi.org/project/Jinja2/"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "docker",
+      "name": "Docker",
+      "url": "https://www.docker.com/"
+    }
+  ],
+  "readme": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/main/README.md",
+  "funder": {
+    "@type": "Organization",
+    "name": "NFDI4Ing (National Research Data Infrastructure for Engineering)"
+  },
+  "isPartOf": {
+    "@type": "SoftwareSourceCode",
+    "name": "NFDI4IngModelValidationPlatform",
+    "url": "https://github.com/Simulation-Benchmarks/NFDI4IngModelValidationPlatform"
+  }
+}

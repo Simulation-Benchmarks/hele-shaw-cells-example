@@ -1,5 +1,7 @@
 # Hele-Shaw Cells Example
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.REPLACE_WITH_CONCEPT_DOI.svg)](https://doi.org/10.5281/zenodo.REPLACE_WITH_CONCEPT_DOI)
+
 A blueprint-aligned instance repository for the **Hele-Shaw cells** benchmark
 from the [NFDI4IngModelValidationPlatform](https://github.com/Simulation-Benchmarks/NFDI4IngModelValidationPlatform).
 
@@ -244,6 +246,36 @@ simulation output.
 To publish this repo to GitHub and register it with the platform, see
 [PUBLISH.md](PUBLISH.md). For the Zenodo DOI workflow, see
 [ZENODO.md](ZENODO.md).
+
+## Citing this software
+
+If you use this benchmark in published work, please cite the version of
+`hele-shaw-cells-example` that you actually ran. The full machine-readable
+citation metadata lives in [`CITATION.cff`](CITATION.cff) and
+[`codemeta.json`](codemeta.json) — GitHub renders a "Cite this repository"
+button on the sidebar that reads `CITATION.cff`.
+
+Each release is archived on Zenodo:
+
+| Level                | DOI                                                                                            |
+|----------------------|------------------------------------------------------------------------------------------------|
+| **Concept** (all versions) | [10.5281/zenodo.REPLACE_WITH_CONCEPT_DOI](https://doi.org/10.5281/zenodo.REPLACE_WITH_CONCEPT_DOI) — resolves to the latest |
+| v1.0.1               | [10.5281/zenodo.REPLACE_WITH_VERSION_DOI](https://doi.org/10.5281/zenodo.REPLACE_WITH_VERSION_DOI)                             |
+| v1.0.0               | (release predates the Zenodo webhook; the v1.0.1 deposit supersedes it for citation purposes) |
+
+> **Placeholder notice.** The DOIs above contain `REPLACE_WITH_*` strings
+> because the first Zenodo deposit has not yet been minted. To mint it:
+> (1) log in to https://zenodo.org/ with the GitHub account that owns
+> `Simulation-Benchmarks`; (2) Settings → GitHub → enable
+> `Simulation-Benchmarks/hele-shaw-cells-example`; (3) publish a GitHub
+> release from the `v1.0.1` tag (see [ZENODO.md](ZENODO.md)). After Zenodo
+> mints the deposit, replace the placeholders in `README.md` and
+> `CITATION.cff` with the real DOIs and commit. See [CHANGELOG.md](CHANGELOG.md)
+> for the version history.
+
+The **concept DOI** (F1.1) identifies the project across all versions; the
+**version DOI** (F1.2) identifies a specific snapshot. Citing a paper that
+used this benchmark? Use the version DOI of the exact version you ran.
 
 ## License
 

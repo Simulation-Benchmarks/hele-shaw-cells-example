@@ -1,0 +1,81 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata from this file."
+title: "hele-shaw-cells-example: a blueprint-aligned NFDI4Ing Hele-Shaw cells benchmark"
+abstract: >-
+  hele-shaw-cells-example is the blueprint-aligned instance repository for the
+  Hele-Shaw cells benchmark of the NFDI4IngModelValidationPlatform. It
+  contains a 2D OpenFOAM-v2112 simulation of radial viscous fingering in a
+  circular Hele-Shaw cell, where air injected at the centre displaces a
+  viscous soap solution. The interface is captured with the Volume-of-Fluid
+  method using the isoAdvector scheme; the surface-tension force is modelled
+  with the continuum-surface-force approach. Three parameter configurations
+  (reference, mesh refinement, flow-rate variation) form a minimal
+  convergence + sensitivity study. The Docker image, solver, mesh, fluid
+  properties, and numerics are identical to the hele-shaw-cells-runnable
+  reference build; only the repository layout follows the platform's
+  instance-repo schema (parameters_*.json, top-level Snakefile, RO-Crate
+  provenance, metrics smoke test).
+type: software
+authors:
+  - family-names: Zhang
+    given-names: Yao
+    name: "Yao Zhang"
+    affiliation: "Original solver and case author (2024)"
+  - family-names: Seibert
+    given-names: Vasiliy
+    orcid: "https://orcid.org/0000-0002-7121-6816"
+    email: vasiliy.seibert@tu-clausthal.de
+    affiliation: "TU Clausthal"
+version: "1.0.1"
+date-released: "2026-06-17"
+license: MIT
+repository-code: "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example"
+url: "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example"
+keywords:
+  - hele-shaw
+  - viscous fingering
+  - saffman-taylor
+  - openfoam
+  - volume-of-fluid
+  - isoadvector
+  - nfdi4ing
+  - benchmark
+  - FAIR4RS
+  - research software
+identifiers:
+  - type: url
+    value: "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example"
+    description: "The GitHub repository URL (stable landing page)."
+  - type: doi
+    value: "10.5281/zenodo.REPLACE_WITH_CONCEPT_DOI"
+    description: "Concept DOI for all versions of hele-shaw-cells-example (Zenodo). To be filled in after the first Zenodo deposit is published."
+  - type: doi
+    value: "10.5281/zenodo.REPLACE_WITH_VERSION_DOI"
+    description: "Version DOI for v1.0.1 (Zenodo). To be filled in after the first Zenodo deposit is published."
+references:
+  - type: software
+    title: "OpenFOAM"
+    authors:
+      - name: "The OpenFOAM Foundation / ESI Group"
+    url: "https://www.openfoam.com/"
+    notes: "The CFD toolkit used by heleShawFoam; v2112 base image (opencfd/openfoam-default:2112) is licensed under GPL-3.0."
+  - type: software
+    title: "isoAdvection"
+    authors:
+      - family-names: Roenby
+        given-names: Johan
+    url: "https://github.com/roenby/isoAdvector"
+    notes: "Geometric VOF interface reconstruction scheme used by heleShawFoam."
+  - type: software
+    title: "hele-shaw-cells-runnable"
+    authors:
+      - family-names: Zhang
+        given-names: Yao
+    url: "https://github.com/Simulation-Benchmarks/hele-shaw-cells-runnable"
+    notes: "Verified Docker-runnable build of the same simulation; bit-exact source of truth for this benchmark."
+  - type: software
+    title: "NFDI4IngModelValidationPlatform"
+    authors:
+      - name: "Simulation-Benchmarks maintainers"
+    url: "https://github.com/Simulation-Benchmarks/NFDI4IngModelValidationPlatform"
+    notes: "The platform hub that defines the instance-repo schema this repo follows."
