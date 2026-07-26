@@ -112,7 +112,55 @@ def run_one(
         ] + args.snakemake_args.split()
 
     print(f"[run_benchmark] configuration {config}: {' '.join(cmd)}")
-    return subprocess.call(cmd, cwd=str(REPO_ROOT))
+    rc = subprocess.call(cmd, cwd=str(REPO_ROOT))
+    if rc != 0:
+        return rc
+
+    # Render cartesian.png (if missing) and then fingers.png (if
+    # cartesian.png is on disk after the above step). Best-effort: a
+    # failure in either step prints a warning and the runner
+    # continues.
+    cartesian_png = workdir / "cartesian.png"
+    if not cartesian_png.exists():
+        print(
+            f"[run_benchmark] rendering cartesian.png for configuration {config}..."
+        )
+        cartesian_rc = subprocess.call(
+            [
+                sys.executable, str(HERE / "plot_fingers.py"),
+                "--results-dir", str(workdir),
+                "--times", "0.05", "1", "5", "10", "15",
+                "--output", str(cartesian_png),
+                "--cartesian",
+            ],
+            cwd=str(REPO_ROOT),
+        )
+        if cartesian_rc != 0:
+            print(
+                f"[run_benchmark] WARN: cartesian.png render failed "
+                f"(rc={cartesian_rc}); fingers.png will be skipped",
+                file=sys.stderr,
+            )
+
+    # Build fingers.png from cartesian.png (binarised panel + tip
+    # markers + critical-radius circle). Best-effort.
+    if cartesian_png.exists():
+        try:
+            from finger_pipeline import BinariseParams, render_fingers_png
+            fingers_png = workdir / "fingers.png"
+            render_fingers_png(
+                case_dir=workdir,
+                cartesian_png=cartesian_png,
+                output_png=fingers_png,
+                params=BinariseParams(),
+            )
+        except Exception as exc:
+            print(
+                f"[run_benchmark] WARN: could not render fingers.png: {exc}",
+                file=sys.stderr,
+            )
+
+    return rc
 
 
 def main() -> int:

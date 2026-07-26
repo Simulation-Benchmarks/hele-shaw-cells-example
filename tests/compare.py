@@ -196,6 +196,8 @@ DEFAULT_METRIC_TOLERANCES: dict[str, float] = {
     "interface_length_proxy":       50.0,   # ±50 cells
     "wall_time_seconds":            0.30,   # ±30% relative
     "time_step_count":              0.0,    # exact
+    "final_number_of_fingers":      5.0,    # ±5 fingers
+    "critical_radius_m":            0.005,  # ±5 mm
 }
 
 

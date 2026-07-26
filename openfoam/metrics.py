@@ -117,14 +117,18 @@ def parse_alpha_field(path: Path) -> dict[str, int] | None:
 
 
 def find_latest_time_dir(case_dir: Path) -> Path | None:
-    """Return the directory under case_dir/ with the largest float name.
+    """Return the directory under case_dir/Timesteps/ with the largest float name.
 
     The latest time directory is the one with the largest float-valued
-    name (e.g. '15' > '0.05' > '0').
+    name (e.g. '15' > '0.05' > '0'). The OF case (and therefore all
+    time-step dirs) lives under ``case_dir/Timesteps/``.
     """
     case_dir = Path(case_dir)
+    timesteps_dir = case_dir / "Timesteps"
+    if not timesteps_dir.is_dir():
+        return None
     candidates: list[tuple[float, Path]] = []
-    for entry in case_dir.iterdir():
+    for entry in timesteps_dir.iterdir():
         if not entry.is_dir():
             continue
         try:
@@ -139,10 +143,13 @@ def find_latest_time_dir(case_dir: Path) -> Path | None:
 
 
 def count_time_step_dirs(case_dir: Path) -> int:
-    """Count the time-step directories under case_dir (excludes 0 by default)."""
+    """Count the time-step directories under case_dir/Timesteps/ (excludes 0 by default)."""
     case_dir = Path(case_dir)
+    timesteps_dir = case_dir / "Timesteps"
+    if not timesteps_dir.is_dir():
+        return 0
     n = 0
-    for entry in case_dir.iterdir():
+    for entry in timesteps_dir.iterdir():
         if not entry.is_dir():
             continue
         try:

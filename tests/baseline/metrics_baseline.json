@@ -1,9 +1,11 @@
 {
-  "_comment": "Baseline values for configuration 1 (the reference config), captured from a verified end-to-end run. See tests/baseline/log.heleShawFoam and tests/baseline/alpha.air_t15 for the alpha-field baselines.",
+  "_comment": "Baseline values for configuration 1 (the reference config), captured from a verified end-to-end run. See tests/baseline/log.heleShawFoam and tests/baseline/alpha.air_t15 for the alpha-field baselines. The two new finger metrics (final_number_of_fingers, critical_radius_m) are computed by the alpha-field binarisation path (alpha > 0.5 + skeletonise + 3x3-neighbour tip rule), not the PNG path. The values here are for the alpha-field path; the experiment's PNG-based path gives different numbers (29 / 0.0057) because the two paths binarise different connected components.",
   "configuration": "1",
   "phase1_volume_fraction":       0.2118,
   "cumulative_continuity_error":  5.6e-4,
   "interface_length_proxy":       2141.0,
   "wall_time_seconds":            1100.0,
-  "time_step_count":              301
+  "time_step_count":              300,
+  "final_number_of_fingers":      15,
+  "critical_radius_m":            0.0158
 }

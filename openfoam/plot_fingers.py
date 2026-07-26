@@ -230,15 +230,16 @@ def plot_fingers(
     th_centers = th_edges[:-1] + 0.5 * dth
 
     times_present: list[tuple[float, np.ndarray]] = []
+    timesteps_dir = results_dir / "Timesteps"
     for t in times:
-        alpha_path = results_dir / f"{t}" / "alpha.air"
+        alpha_path = timesteps_dir / f"{t}" / "alpha.air"
         if not alpha_path.exists():
             # OF writes times as e.g. "1e-05" or "0.05"; try a couple of
             # common spellings before giving up.
             alt_candidates = []
             try:
-                alt_candidates.append(results_dir / f"{t:g}" / "alpha.air")
-                alt_candidates.append(results_dir / f"{t:.6g}" / "alpha.air")
+                alt_candidates.append(timesteps_dir / f"{t:g}" / "alpha.air")
+                alt_candidates.append(timesteps_dir / f"{t:.6g}" / "alpha.air")
             except Exception:
                 pass
             if any(p.exists() for p in alt_candidates):
@@ -386,13 +387,14 @@ def plot_cartesian(
         quad_xy.append((R.ravel(), TH.ravel()))
 
     times_present: list[tuple[float, np.ndarray, np.ndarray, np.ndarray]] = []
+    timesteps_dir = results_dir / "Timesteps"
     for t in times:
-        alpha_path = results_dir / f"{t}" / "alpha.air"
+        alpha_path = timesteps_dir / f"{t}" / "alpha.air"
         if not alpha_path.exists():
             alt_candidates = []
             try:
-                alt_candidates.append(results_dir / f"{t:g}" / "alpha.air")
-                alt_candidates.append(results_dir / f"{t:.6g}" / "alpha.air")
+                alt_candidates.append(timesteps_dir / f"{t:g}" / "alpha.air")
+                alt_candidates.append(timesteps_dir / f"{t:.6g}" / "alpha.air")
             except Exception:
                 pass
             if any(p.exists() for p in alt_candidates):

@@ -6,11 +6,14 @@
 #   2. Initialize the air bubble with setFields.
 #   3. Run heleShawFoam.
 #
-# Run from inside the testcase/ directory (this script uses ${0%/*} to
-# locate itself). The OF environment is expected to be sourced by the
-# caller (the Docker entrypoint does this automatically).
+# Run from the workdir root (this script lives at <workdir>/Allrun).
+# It cd's into Timesteps/ where the OF case (constant/, system/, 0/,
+# Allclean, etc.) and the time-step dirs live. The OF environment is
+# expected to be sourced by the caller (the Docker entrypoint does
+# this automatically).
 
 cd "${0%/*}" || exit 1
+cd Timesteps || exit 1
 
 set -e
 

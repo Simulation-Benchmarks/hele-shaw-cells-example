@@ -109,6 +109,10 @@ hele-shaw-cells-example/
 │   ├── summarize_results.py          # aggregate metrics → summary.json
 │   ├── summarize_metrics.py          # summary.csv → PDF plots
 │   ├── metrics.py                    # log + alpha-field parser
+│   ├── finger_binarise.py            # alpha-field / PNG binarisation
+│   ├── finger_count_tips.py          # skeletonise + 3x3-neighbour tip rule
+│   ├── finger_panel_detect.py        # auto-detect panel rectangles from PNG
+│   ├── finger_pipeline.py            # end-to-end: extract_finger_metrics + render_fingers_png
 │   ├── ro_crate.py                   # hand-rolled ro-crate-metadata.json writer (m4i:-aware)
 │   ├── _render_templates.py          # case_template/ → working case dir
 │   ├── environment_simulation.yml, environment_benchmark.yml,
@@ -129,9 +133,16 @@ hele-shaw-cells-example/
 │   └── build_benchmark_zip.py        # reproducible build script
 │
 ├── results/                          # produced at runtime; .gitignored
+│                                    # each config produces a dir with:
+│                                    #   Allrun, solution_metrics.json,
+│                                    #   solution_field_data.zip,
+│                                    #   cartesian.png, fingers.png, and
+│                                    #   Timesteps/<t>/  (the OF case
+│                                    #   + all 301 time-step dirs)
 │
 ├── tests/
-│   ├── compare.py                    # alpha-field diff AND metrics smoke test
+│   ├── compare.py                    # alpha-field diff AND metrics smoke test (7 metrics)
+│   ├── test_finger_pipeline.py       # unit test for the finger pipeline
 │   ├── baseline/                     # captured from a verified run
 │   │   ├── alpha.air_t0.05, alpha.air_t15, log.heleShawFoam
 │   │   ├── metrics_baseline.json     # the 5 reference values
@@ -213,7 +224,7 @@ matching entries in the `on:` block at the top of the workflow file.
 ## Output metrics
 
 Each configuration produces `results/<config>/solution_metrics.json`
-with these five metrics:
+with these seven metrics:
 
 | Metric | Description | Typical value (config 1) |
 |---|---|---|
@@ -222,6 +233,15 @@ with these five metrics:
 | `interface_length_proxy` | Cells with 0 < α < 1 (proxy for the air-cluster perimeter) | ~2141 |
 | `wall_time_seconds` | OF `ExecutionTime` | depends on host |
 | `time_step_count` | Number of write-time directories produced | 301 |
+| `final_number_of_fingers` | Number of fingertips in the binarised final-frame alpha field (alpha > 0.5 + skeletonise + 3x3-neighbour tip rule) | ~15 |
+| `critical_radius_m` | Smallest distance from the cell centre to the air region's boundary at the last time-step, in metres | ~0.016 |
+
+The two new finger metrics are computed by the alpha-field path of
+`openfoam/finger_pipeline.py:extract_finger_metrics`, which reads the
+alpha field at every time-step dir and binarises it directly — no
+PNG involved. The binarisation is rendering-parameter independent,
+so a change in `plot_cartesian`'s DPI, figsize, colormap, or marker
+size does not affect the metrics.
 
 ## Relationship to `hele-shaw-cells-runnable`
 

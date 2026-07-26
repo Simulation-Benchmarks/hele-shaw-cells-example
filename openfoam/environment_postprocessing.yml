@@ -5,3 +5,7 @@ dependencies:
   - python >=3.10
   - matplotlib
   - pandas
+  - numpy
+  - scipy
+  - scikit-image
+  - pillow

@@ -4,5 +4,7 @@
   "cumulative_continuity_error":  0.001,
   "interface_length_proxy":       50.0,
   "wall_time_seconds":            0.30,
-  "time_step_count":              0.0
+  "time_step_count":              0.0,
+  "final_number_of_fingers":      5.0,
+  "critical_radius_m":            0.005
 }
