@@ -1,0 +1,327 @@
+{
+  "diagram": {
+    "bytes": 67645,
+    "path": "Validation.drawio",
+    "revision": null,
+    "sha256": "182b574888e044685ed66d6505eed993ff3187d04fa58af9ade6e0c98b93f1ab"
+  },
+  "files": [
+    {
+      "bytes": 7237,
+      "path": ".github/workflows/run-benchmark.yml",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "14cd6ac9082ba575bb55b7f848b5f5ddd0a1a5a2a7fc8a82328bb2cd64797612",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/.github/workflows/run-benchmark.yml"
+    },
+    {
+      "bytes": 11988,
+      "path": "CHANGELOG.md",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "d73b1ac5af7ed89d7e14645191b9c27259722bae20b6ee1a43c8f9e58716c2e3",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/CHANGELOG.md"
+    },
+    {
+      "bytes": 3421,
+      "path": "CITATION.cff",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "0acc73d5f31d3c2d7a5649167944132dbfe5a70146eab68884ed69aabf216fbe",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/CITATION.cff"
+    },
+    {
+      "bytes": 1319,
+      "path": "LICENSE",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "c13e6e6bcf4ab365ca08eb345208e9595b85edef13c8fbe48bba966dc215c2d0",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/LICENSE"
+    },
+    {
+      "bytes": 574,
+      "path": "PUBLISHED.md",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "a07f8509327a7eb563998112565afc791abbf6b71fdcc37152807ffd6fa67eec",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/PUBLISHED.md"
+    },
+    {
+      "bytes": 15438,
+      "path": "README.md",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "5610cf3f112546728597e5b02bcce68c75563ad9711fe649e6123878275e7bbd",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/README.md"
+    },
+    {
+      "bytes": 2102,
+      "path": "Snakefile",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "728874a459f2d602dc94cc1ab57f6921edaa16fe74c74c6de3ac72fe64621e48",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/Snakefile"
+    },
+    {
+      "bytes": 4481,
+      "path": "codemeta.json",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "e8d4f6c987408c907557cb255109d4da8b6cc1528139ad9bbdc3e15de7cdbb9b",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/codemeta.json"
+    },
+    {
+      "bytes": 6579,
+      "path": "create_mesh.py",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "a8c36eaa9e1e2d6beb045e04dba174f1d827bd9fbb3e41fd3c94c374a1f7a373",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/create_mesh.py"
+    },
+    {
+      "bytes": 11265,
+      "path": "docs/getting_started.md",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "8cd9fb6a46dbb102fb9ebd1610de048f5b9a398f376126fbb020b21d1231cf89",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/docs/getting_started.md"
+    },
+    {
+      "bytes": 12875,
+      "path": "docs/hele-shaw-cells.md",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "89a8d3a9a5421985a7ef695665d8ecda2091437723413669693a31cce73c3fb2",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/docs/hele-shaw-cells.md"
+    },
+    {
+      "bytes": 64728,
+      "path": "docs/hele-shaw-cells.png",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "3a9e46ec93003c7018a7ba680ae27a9bfa6c215e047a2235eaca64b0697c9a93",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/docs/hele-shaw-cells.png"
+    },
+    {
+      "bytes": 11269,
+      "path": "docs/rohub.md",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "5443d81bf562e63a1750d789da9874e96a459d3500ca1832d6c9aa2766d4d28c",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/docs/rohub.md"
+    },
+    {
+      "bytes": 2245,
+      "path": "generate_config.py",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "b1834291910e99771229fe53e0e0f52c15b07d82aa0083c8c9c577db14f89a9f",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/generate_config.py"
+    },
+    {
+      "bytes": 9712,
+      "path": "notebooks/RoCrate.ipynb",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "c15759282e38a7045bd420c743380702a1a8850777f94da54c3ddd91806e5bdc",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/notebooks/RoCrate.ipynb"
+    },
+    {
+      "bytes": 667769,
+      "path": "notebooks/Simulation_Walkthrough.ipynb",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "453b3a86d7cf7fb128437617936cfb6e55301a792b57691d9cfd7e03fbc0ba16",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/notebooks/Simulation_Walkthrough.ipynb"
+    },
+    {
+      "bytes": 2869,
+      "path": "openfoam/Dockerfile",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "bbf7c90512232dc5c32637d2083a46dc6cc6e487c559a5b92122667ca366be7c",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/Dockerfile"
+    },
+    {
+      "bytes": 1231,
+      "path": "openfoam/Snakefile",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "807b5423b910b348d7a4dc6458ccd89e05f49c516ada6f8c3f6b479d01dfa026",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/Snakefile"
+    },
+    {
+      "bytes": 2679,
+      "path": "openfoam/_render_templates.py",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "639cf0aa5ff7852d1e904d5b4d9e13c1fc4f74de55982bc0ff468e3dd4475027",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/_render_templates.py"
+    },
+    {
+      "bytes": 1423,
+      "path": "openfoam/case_template/0/U.template",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "0ad415948aee393ff2365ed13aa4b7e6dcfbebf75727d31544276981634353b5",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/case_template/0/U.template"
+    },
+    {
+      "bytes": 1904,
+      "path": "openfoam/case_template/constant/transportProperties.template",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "3875023a534f063afde7d6b36252fe9ad2e526cdc3676ecb1437b3a6ba4bb904",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/case_template/constant/transportProperties.template"
+    },
+    {
+      "bytes": 870,
+      "path": "openfoam/case_template/constant/turbulenceProperties.template",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "b80c2704b9f8427225eb4c4549512fbb318354283f9622c88ccfbf05aed5b23f",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/case_template/constant/turbulenceProperties.template"
+    },
+    {
+      "bytes": 1490,
+      "path": "openfoam/case_template/system/controlDict.template",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "32eb59670e0e5a0b9870c8c1f5cb4192ae5ff887596ab48221cd0bdeeb80de0f",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/case_template/system/controlDict.template"
+    },
+    {
+      "bytes": 6082,
+      "path": "openfoam/finger_binarise.py",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "6009499c4b0b37487fada0d8171f15f4fe57350b3cbf23e2dab97fd58f188d4f",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/finger_binarise.py"
+    },
+    {
+      "bytes": 1569,
+      "path": "openfoam/finger_count_tips.py",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "d720d37e019631477802902f3cea1942b9a8153664226ab287d349815e2cd636",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/finger_count_tips.py"
+    },
+    {
+      "bytes": 18962,
+      "path": "openfoam/finger_pipeline.py",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "62f88eaaa9c611de8572d3b1472de717298853c046a923c1318730356a6d1715",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/finger_pipeline.py"
+    },
+    {
+      "bytes": 6935,
+      "path": "openfoam/metrics.py",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "6acdc70d6d0c98669a3f1237f82643cb1436c95f3dae86dd2855e48538a1c600",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/metrics.py"
+    },
+    {
+      "bytes": 21197,
+      "path": "openfoam/plot_fingers.py",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "e30c891496d3746d3710dd25fa3841b6729dff315a43e356506cd72620b7c2e9",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/plot_fingers.py"
+    },
+    {
+      "bytes": 11163,
+      "path": "openfoam/ro_crate.py",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "bc53e3ebb424be3859fea691fd1245084aaa088570d87fb2f600b321a1a02746",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/ro_crate.py"
+    },
+    {
+      "bytes": 7371,
+      "path": "openfoam/run_benchmark.py",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "18f97be4cdd0b15752c2db87c54a2728fcc521c4a34afbac8f1ab5d868175ae2",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/run_benchmark.py"
+    },
+    {
+      "bytes": 13440,
+      "path": "openfoam/run_simulation.py",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "bbfefcd1082781db357f5920b2be5998c8caef1738c1c7de02b3406bb4a87aa5",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/run_simulation.py"
+    },
+    {
+      "bytes": 979,
+      "path": "openfoam/solver/UEqn.H",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "bc898cfd62b1c236e31a09340dd0eab8be2b730ca2f467579f463a68c187691d",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/solver/UEqn.H"
+    },
+    {
+      "bytes": 2555,
+      "path": "openfoam/solver/heleShawFoam.C",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "6a789b7fd63d069c1c5b160e33f427dbf97bbe40e9abe447a8f30e581b592ef7",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/solver/heleShawFoam.C"
+    },
+    {
+      "bytes": 2715,
+      "path": "openfoam/summarize_results.py",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "4487adb05103c7d42d6d36107ec0d64ddd1c779a3d4afe0ab111a9f03427375c",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/summarize_results.py"
+    },
+    {
+      "bytes": 6797,
+      "path": "openfoam/upload_to_rohub.py",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "ed7a641521416c5592a970be5b141c7f86bd418d2766f805e93d2531e1737515",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/upload_to_rohub.py"
+    },
+    {
+      "bytes": 696,
+      "path": "parameters_1.json",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "f782185f028fdf7a71d609f8e545dae566d41a326eef8a63b4fc4a657d454c79",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/parameters_1.json"
+    },
+    {
+      "bytes": 696,
+      "path": "parameters_2.json",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "e3a3931663876bc3344cb8665509cafca6266c045f4391dcf44472ccbbb71692",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/parameters_2.json"
+    },
+    {
+      "bytes": 696,
+      "path": "parameters_3.json",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "a6dafc64cfd6f36e65dcf8571bbf91c17164cc8b423a048abb7414a0072f0549",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/parameters_3.json"
+    },
+    {
+      "bytes": 4456,
+      "path": "scripts/extract_reference_frame.py",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "0dd071c8212b4adb0c09e4109a435dca5b5f25495e88a229e9401f0165423cb8",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/scripts/extract_reference_frame.py"
+    },
+    {
+      "bytes": 47753,
+      "path": "tests/baseline/alpha.air_t15",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "ed893af9cf8c43ba380f5e610ac756d7e98394d60002a25b43e63b83f767de42",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/tests/baseline/alpha.air_t15"
+    },
+    {
+      "bytes": 1294508,
+      "path": "tests/baseline/log.heleShawFoam",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "ec2dab9e3d91bcd7038791d5bc0dc2b2cf138710e36d4ae65db90eb2bf1dbc61",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/tests/baseline/log.heleShawFoam"
+    },
+    {
+      "bytes": 905,
+      "path": "tests/baseline/metrics_baseline.json",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "b0193c2d400248d24169b470174abaffcd80e7b9d7e979e3fde1639d5dc5780d",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/tests/baseline/metrics_baseline.json"
+    },
+    {
+      "bytes": 447,
+      "path": "tests/baseline/metrics_tolerances.json",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "a9692fb18ae24801af40d902dc793639e440b30b979d1287bb9dc64638c49f4e",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/tests/baseline/metrics_tolerances.json"
+    },
+    {
+      "bytes": 11367,
+      "path": "tests/compare.py",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "99c16f64e0e1192e67993282b910f6caf1020e185b39e0e865585fcb2de2852b",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/tests/compare.py"
+    },
+    {
+      "bytes": 11131,
+      "path": "tests/test_finger_pipeline.py",
+      "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+      "sha256": "6a6a3d9580b7f97871530cca0937de6169538691496d7678ed8abd54eafae75a",
+      "url": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/tests/test_finger_pipeline.py"
+    }
+  ],
+  "repository": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example",
+  "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b"
+}

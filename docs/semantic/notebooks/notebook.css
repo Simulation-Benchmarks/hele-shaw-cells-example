@@ -1,0 +1,24 @@
+/* SPDX-FileCopyrightText: 2026 Vasiliy Seibert
+   SPDX-License-Identifier: MIT
+   Notebook-only geometry; colors and fonts inherit the atlas tokens. */
+#notebook-page .notebook-evidence{margin:24px 0;padding:18px 22px;border:1px solid var(--color-border);border-left:3px solid var(--color-primary);border-radius:6px;background:var(--color-code-tint);font-size:14px}
+#notebook-page .notebook-evidence p{margin:8px 0 0}
+#notebook-page .notebook-contents{border-bottom:1px solid var(--color-border);padding-bottom:24px;margin-bottom:30px}
+#notebook-page .notebook-contents ol{columns:2;column-gap:32px;padding-left:24px}
+#notebook-page .notebook-contents li{break-inside:avoid;padding:3px 0}
+#notebook-page .notebook-contents a{color:var(--color-primary);text-underline-offset:3px}
+#notebook-page .notebook-contents a:hover{color:var(--color-ink)}
+#notebook-page h3,#notebook-page .notebook-cell-anchor{scroll-margin-top:calc(var(--header-height) + 24px)}
+#notebook-page .notebook-cell-anchor{display:block}
+#notebook-page .saved-log{border:1px solid var(--color-border);border-radius:6px;margin:12px 0;padding:12px 16px}
+#notebook-page .saved-log summary{cursor:pointer;color:var(--color-primary);font-size:13px}
+#notebook-page .saved-log summary:hover{color:var(--color-ink)}
+#notebook-page .saved-log summary:active{color:var(--color-science)}
+#notebook-page .saved-log[open]>.output_area{max-height:65vh;overflow:auto}
+#notebook-page .text_cell img{max-width:100%;height:auto}
+#notebook-page math[display="block"]{overflow:auto;max-width:100%;padding:12px 0;font-size:1.08em}
+#notebook-page math[display="inline"]{font-size:1em}
+#notebook-page .rendered_html{overflow-wrap:anywhere}
+#notebook-page .rendered_html table{display:block;overflow:auto;max-width:100%}
+@media(max-width:680px){#notebook-page .notebook-contents ol{columns:1}#notebook-page .notebook-evidence{padding:14px 16px}}
+@media print{#notebook-page .saved-log[open]>.output_area{max-height:none;overflow:visible}#notebook-page .notebook-actions{display:none}}

@@ -1,0 +1,34 @@
+{
+  "diagramOnlyLabels": [
+    "schema:FileObject",
+    "ontoMS:Model",
+    "ontoMS:Task",
+    "m4i:VariableSet",
+    "m4i:onfiguration",
+    "cr:Field"
+  ],
+  "metadata4ing": {
+    "namespace": "http://w3id.org/nfdi4ing/metadata4ing#",
+    "source": "https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/",
+    "terms": [
+      "NumericalVariable",
+      "Method",
+      "Tool",
+      "ProcessingStep",
+      "realizesMethod",
+      "hasEmployedTool",
+      "implementedByTool",
+      "hasKindOfQuantity",
+      "hasUnit"
+    ],
+    "version": "1.4.0"
+  },
+  "policy": "Diagram-only labels are source vocabulary annotations, not asserted external classes. Local hs:ProcessConcept and hs relations distinguish conceptual workflows from the historic m4i:ProcessingStep saved run.",
+  "prov": {
+    "namespace": "http://www.w3.org/ns/prov#",
+    "source": "https://www.w3.org/TR/prov-o/",
+    "terms": [
+      "Activity"
+    ]
+  }
+}

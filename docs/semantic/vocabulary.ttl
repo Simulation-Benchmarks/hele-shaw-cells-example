@@ -1,0 +1,175 @@
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#Artifact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#Artifact> <http://www.w3.org/2000/01/rdf-schema#comment> "An expected artifact or saved file; status distinguishes available evidence from conceptual outputs." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#Artifact> <http://www.w3.org/2000/01/rdf-schema#label> "Artifact" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#Artifact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/CreativeWork> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#AtlasEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#AtlasEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity exposed in the evidence-linked browser projection." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#AtlasEntity> <http://www.w3.org/2000/01/rdf-schema#label> "AtlasEntity" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#AtlasEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Thing> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#Configuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#Configuration> <http://www.w3.org/2000/01/rdf-schema#comment> "A configuration described by source parameters or a diagram proposal." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#Configuration> <http://www.w3.org/2000/01/rdf-schema#label> "Configuration" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#Configuration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/CreativeWork> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#DiagramNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#DiagramNote> <http://www.w3.org/2000/01/rdf-schema#comment> "A heading or annotation in the source diagram." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#DiagramNote> <http://www.w3.org/2000/01/rdf-schema#label> "DiagramNote" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#DiagramNote> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/CreativeWork> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#FileBinding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#FileBinding> <http://www.w3.org/2000/01/rdf-schema#comment> "A concrete file selector corresponding to a quantity." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#FileBinding> <http://www.w3.org/2000/01/rdf-schema#label> "FileBinding" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#FileBinding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/CreativeWork> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#Formula> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#Formula> <http://www.w3.org/2000/01/rdf-schema#comment> "A mathematical expression described by the model documentation." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#Formula> <http://www.w3.org/2000/01/rdf-schema#label> "Formula" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#Formula> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/CreativeWork> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#Material> <http://www.w3.org/2000/01/rdf-schema#comment> "Material described in the experimental model." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#Material> <http://www.w3.org/2000/01/rdf-schema#label> "Material" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#Material> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Thing> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#Model> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#Model> <http://www.w3.org/2000/01/rdf-schema#comment> "The mathematical model described by the repository." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#Model> <http://www.w3.org/2000/01/rdf-schema#label> "Model" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#Model> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/CreativeWork> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#NumericalVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#NumericalVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "A numerical quantity distinguished from a concrete file field." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#NumericalVariable> <http://www.w3.org/2000/01/rdf-schema#label> "NumericalVariable" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#NumericalVariable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#ProcessConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#ProcessConcept> <http://www.w3.org/2000/01/rdf-schema#comment> "A named process in a conceptual workflow; does not assert a new execution." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#ProcessConcept> <http://www.w3.org/2000/01/rdf-schema#label> "ProcessConcept" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#ProcessConcept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/CreativeWork> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#RelationProposal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#RelationProposal> <http://www.w3.org/2000/01/rdf-schema#comment> "A reified relation awaiting review; its subject-predicate-object triple is not asserted." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#RelationProposal> <http://www.w3.org/2000/01/rdf-schema#label> "RelationProposal" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#RelationProposal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#SavedRun> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#SavedRun> <http://www.w3.org/2000/01/rdf-schema#comment> "A historic execution documented by saved notebook outputs; not a newly executed run." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#SavedRun> <http://www.w3.org/2000/01/rdf-schema#label> "SavedRun" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#SavedRun> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/nfdi4ing/metadata4ing#ProcessingStep> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#Task> <http://www.w3.org/2000/01/rdf-schema#comment> "A scientific question or task, distinct from its execution." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#Task> <http://www.w3.org/2000/01/rdf-schema#label> "Task" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#Task> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/CreativeWork> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#VariableSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#VariableSet> <http://www.w3.org/2000/01/rdf-schema#comment> "A local grouping of configured variables; no unverified external class is asserted." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#VariableSet> <http://www.w3.org/2000/01/rdf-schema#label> "VariableSet" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#VariableSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/CreativeWork> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#VocabularyTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#VocabularyTerm> <http://www.w3.org/2000/01/rdf-schema#comment> "A label in the original diagram legend, retained as source evidence." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#VocabularyTerm> <http://www.w3.org/2000/01/rdf-schema#label> "VocabularyTerm" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#VocabularyTerm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/DefinedTerm> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted> <http://www.w3.org/2000/01/rdf-schema#comment> "Whether a reified edge is also asserted as an RDF triple." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted> <http://www.w3.org/2000/01/rdf-schema#label> "asserted" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#comparesWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#comparesWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a regression process to its simulation baseline." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#comparesWith> <http://www.w3.org/2000/01/rdf-schema#label> "comparesWith" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#configuredValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#configuredValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Literal configured value at the pinned revision." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#configuredValue> <http://www.w3.org/2000/01/rdf-schema#label> "configuredValue" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#configures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#configures> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a configuration to the concept being configured." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#configures> <http://www.w3.org/2000/01/rdf-schema#label> "configures" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#correspondsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#correspondsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Crosswalk between diagram roles and repository entities." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#correspondsTo> <http://www.w3.org/2000/01/rdf-schema#label> "correspondsTo" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#describedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#describedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a scientific model to documentation." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#describedBy> <http://www.w3.org/2000/01/rdf-schema#label> "describedBy" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#documents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#documents> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a saved artifact to the concept or execution it documents." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#documents> <http://www.w3.org/2000/01/rdf-schema#label> "documents" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Evidence availability or review status, displayed in the browser." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus> <http://www.w3.org/2000/01/rdf-schema#label> "evidenceStatus" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#generatedByMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#generatedByMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a dataset description to a method; does not assert a completed execution." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#generatedByMethod> <http://www.w3.org/2000/01/rdf-schema#label> "generatedByMethod" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#generatedBySoftware> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#generatedBySoftware> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a dataset description to software." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#generatedBySoftware> <http://www.w3.org/2000/01/rdf-schema#label> "generatedBySoftware" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#generatedByTool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#generatedByTool> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a dataset description to a physical tool." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#generatedByTool> <http://www.w3.org/2000/01/rdf-schema#label> "generatedByTool" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasBinding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasBinding> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a variable to its source-file binding." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasBinding> <http://www.w3.org/2000/01/rdf-schema#label> "hasBinding" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasConfiguredProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasConfiguredProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a dataset description to a configured property." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasConfiguredProperty> <http://www.w3.org/2000/01/rdf-schema#label> "hasConfiguredProperty" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasInput> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a process concept to its expected input." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasInput> <http://www.w3.org/2000/01/rdf-schema#label> "hasInput" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasObservedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasObservedProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a dataset description to an observed property." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasObservedProperty> <http://www.w3.org/2000/01/rdf-schema#label> "hasObservedProperty" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a process concept to its expected output, without asserting execution." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasOutput> <http://www.w3.org/2000/01/rdf-schema#label> "hasOutput" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a conceptual model, method, tool, or configuration to a variable." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasParameter> <http://www.w3.org/2000/01/rdf-schema#label> "hasParameter" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasPart> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a local conceptual grouping to a member." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasPart> <http://www.w3.org/2000/01/rdf-schema#label> "hasPart" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#inFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#inFile> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a binding to its versioned source file." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#inFile> <http://www.w3.org/2000/01/rdf-schema#label> "inFile" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#inputTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#inputTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a conceptual input artifact to its consuming process; inverse of hasInput." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#inputTo> <http://www.w3.org/2000/01/rdf-schema#label> "inputTo" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#inputTo> <http://www.w3.org/2002/07/owl#inverseOf> <https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasInput> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#investigatesTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#investigatesTask> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a process concept to the scientific task it investigates." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#investigatesTask> <http://www.w3.org/2000/01/rdf-schema#label> "investigatesTask" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#originalLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#originalLabel> <http://www.w3.org/2000/01/rdf-schema#comment> "Unmodified plain-text spelling from the source diagram." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#originalLabel> <http://www.w3.org/2000/01/rdf-schema#label> "originalLabel" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#path> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#path> <http://www.w3.org/2000/01/rdf-schema#comment> "Repository-relative source path." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#path> <http://www.w3.org/2000/01/rdf-schema#label> "path" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#precedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#precedes> <http://www.w3.org/2000/01/rdf-schema#comment> "Illustrated workflow order; not an execution timestamp assertion." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#precedes> <http://www.w3.org/2000/01/rdf-schema#label> "precedes" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#proposedRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#proposedRelation> <http://www.w3.org/2000/01/rdf-schema#comment> "Unspecified source-diagram relationship retained for review." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#proposedRelation> <http://www.w3.org/2000/01/rdf-schema#label> "proposedRelation" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#realizesMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#realizesMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a diagram process concept to a method; use m4i:realizesMethod for actual processing steps." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#realizesMethod> <http://www.w3.org/2000/01/rdf-schema#label> "realizesMethod" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#represents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#represents> <http://www.w3.org/2000/01/rdf-schema#comment> "Maps an implementation field or diagram occurrence to a scientific concept, without asserting identity." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#represents> <http://www.w3.org/2000/01/rdf-schema#label> "represents" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#reviewNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#reviewNote> <http://www.w3.org/2000/01/rdf-schema#comment> "A qualification or ambiguity requiring review." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#reviewNote> <http://www.w3.org/2000/01/rdf-schema#label> "reviewNote" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#revision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#revision> <http://www.w3.org/2000/01/rdf-schema#comment> "Immutable source Git revision." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#revision> <http://www.w3.org/2000/01/rdf-schema#label> "revision" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#savedValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#savedValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Historic value transcribed from committed notebook output or baseline." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#savedValue> <http://www.w3.org/2000/01/rdf-schema#label> "savedValue" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#selector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#selector> <http://www.w3.org/2000/01/rdf-schema#comment> "JSON key or source selector for a binding." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#selector> <http://www.w3.org/2000/01/rdf-schema#label> "selector" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#sha256> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#sha256> <http://www.w3.org/2000/01/rdf-schema#comment> "SHA-256 digest of original source bytes." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#sha256> <http://www.w3.org/2000/01/rdf-schema#label> "sha256" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#sourceArtifact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#sourceArtifact> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a quantity or field to the artifact in which it is represented." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#sourceArtifact> <http://www.w3.org/2000/01/rdf-schema#label> "sourceArtifact" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#sourceDiagramId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#sourceDiagramId> <http://www.w3.org/2000/01/rdf-schema#comment> "Original draw.io cell or edge identifier." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#sourceDiagramId> <http://www.w3.org/2000/01/rdf-schema#label> "sourceDiagramId" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#unitLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#unitLabel> <http://www.w3.org/2000/01/rdf-schema#comment> "Human-readable unit copied or inferred from source documentation; not an invented QUDT URI." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#unitLabel> <http://www.w3.org/2000/01/rdf-schema#label> "unitLabel" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#usesModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#usesModel> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a simulation concept to its mathematical model." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#usesModel> <http://www.w3.org/2000/01/rdf-schema#label> "usesModel" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#usesTool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#usesTool> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a process concept to an employed tool." .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#usesTool> <http://www.w3.org/2000/01/rdf-schema#label> "usesTool" .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl> <http://purl.org/dc/terms/source> <https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl> <http://www.w3.org/2000/01/rdf-schema#comment> "Hele-Shaw application vocabulary. Diagram shorthand is preserved as evidence and mapped explicitly; the namespace is a project publication proposal." .

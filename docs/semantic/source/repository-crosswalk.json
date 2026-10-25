@@ -1,0 +1,161 @@
+{
+  "mappings": [
+    {
+      "bindingIds": [
+        "binding/configuration-1/boundary_conditions.inlet_volumetric_flow_rate",
+        "binding/configuration-2/boundary_conditions.inlet_volumetric_flow_rate",
+        "binding/configuration-3/boundary_conditions.inlet_volumetric_flow_rate"
+      ],
+      "diagramId": "gINPJ2q_6kqyxV_ifaUd-8",
+      "entityId": "diagram-cell/gINPJ2q_6kqyxV_ifaUd-8",
+      "note": "Correspondence to a simulation input; does not assert a configured experimental execution.",
+      "selector": "boundary_conditions.inlet_volumetric_flow_rate",
+      "status": "Repository mapping",
+      "unitLabel": "m³/s"
+    },
+    {
+      "bindingIds": [
+        "binding/configuration-1/domain.R_in",
+        "binding/configuration-2/domain.R_in",
+        "binding/configuration-3/domain.R_in"
+      ],
+      "diagramId": "gINPJ2q_6kqyxV_ifaUd-26",
+      "entityId": "diagram-cell/gINPJ2q_6kqyxV_ifaUd-26",
+      "note": "Correspondence to a simulation input; does not assert a configured experimental execution.",
+      "selector": "domain.R_in",
+      "status": "Repository mapping",
+      "unitLabel": "m"
+    },
+    {
+      "bindingIds": [
+        "binding/configuration-1/domain.b",
+        "binding/configuration-2/domain.b",
+        "binding/configuration-3/domain.b"
+      ],
+      "diagramId": "gINPJ2q_6kqyxV_ifaUd-30",
+      "entityId": "diagram-cell/gINPJ2q_6kqyxV_ifaUd-30",
+      "note": "Correspondence to a simulation input; does not assert a configured experimental execution.",
+      "selector": "domain.b",
+      "status": "Repository mapping",
+      "unitLabel": "m"
+    },
+    {
+      "bindingIds": [
+        "binding/configuration-1/fluids.air.rho",
+        "binding/configuration-2/fluids.air.rho",
+        "binding/configuration-3/fluids.air.rho"
+      ],
+      "diagramId": "gINPJ2q_6kqyxV_ifaUd-33",
+      "entityId": "diagram-cell/gINPJ2q_6kqyxV_ifaUd-33",
+      "note": "Correspondence to a simulation input; does not assert a configured experimental execution.",
+      "selector": "fluids.air.rho",
+      "status": "Repository mapping",
+      "unitLabel": "kg/m³"
+    },
+    {
+      "bindingIds": [
+        "binding/configuration-1/fluids.air.k",
+        "binding/configuration-2/fluids.air.k",
+        "binding/configuration-3/fluids.air.k"
+      ],
+      "diagramId": "gINPJ2q_6kqyxV_ifaUd-34",
+      "entityId": "diagram-cell/gINPJ2q_6kqyxV_ifaUd-34",
+      "note": "Correspondence to a simulation input; does not assert a configured experimental execution.",
+      "selector": "fluids.air.k",
+      "status": "Repository mapping",
+      "unitLabel": "m²/s (Newtonian n = 1)"
+    },
+    {
+      "bindingIds": [
+        "binding/configuration-1/fluids.soap.rho",
+        "binding/configuration-2/fluids.soap.rho",
+        "binding/configuration-3/fluids.soap.rho"
+      ],
+      "diagramId": "ZY6PJmolS8cB0s2s886y-47",
+      "entityId": "diagram-cell/ZY6PJmolS8cB0s2s886y-47",
+      "note": "Correspondence to a simulation input; does not assert a configured experimental execution.",
+      "selector": "fluids.soap.rho",
+      "status": "Repository mapping",
+      "unitLabel": "kg/m³"
+    },
+    {
+      "bindingIds": [
+        "binding/configuration-1/fluids.soap.k",
+        "binding/configuration-2/fluids.soap.k",
+        "binding/configuration-3/fluids.soap.k"
+      ],
+      "diagramId": "gINPJ2q_6kqyxV_ifaUd-12",
+      "entityId": "diagram-cell/gINPJ2q_6kqyxV_ifaUd-12",
+      "note": "Correspondence to a simulation input; does not assert a configured experimental execution.",
+      "selector": "fluids.soap.k",
+      "status": "Repository mapping",
+      "unitLabel": "m²/s (Newtonian n = 1)"
+    },
+    {
+      "bindingIds": [
+        "binding/configuration-1/fluids.sigma",
+        "binding/configuration-2/fluids.sigma",
+        "binding/configuration-3/fluids.sigma"
+      ],
+      "diagramId": "gINPJ2q_6kqyxV_ifaUd-15",
+      "entityId": "diagram-cell/gINPJ2q_6kqyxV_ifaUd-15",
+      "note": "Correspondence to a simulation input; does not assert a configured experimental execution.",
+      "selector": "fluids.sigma",
+      "status": "Repository mapping",
+      "unitLabel": "N/m"
+    },
+    {
+      "bindingIds": [
+        "binding/configuration-1/fluids.air.rho",
+        "binding/configuration-2/fluids.air.rho",
+        "binding/configuration-3/fluids.air.rho"
+      ],
+      "diagramId": "TBgv5Hgd8a8wxE1-uLRW-1",
+      "entityId": "diagram-cell/TBgv5Hgd8a8wxE1-uLRW-1",
+      "note": "Correspondence to a simulation input; does not assert a configured experimental execution.",
+      "selector": "fluids.air.rho",
+      "status": "Repository mapping",
+      "unitLabel": "kg/m³"
+    },
+    {
+      "bindingIds": [
+        "binding/configuration-1/fluids.soap.rho",
+        "binding/configuration-2/fluids.soap.rho",
+        "binding/configuration-3/fluids.soap.rho"
+      ],
+      "diagramId": "TBgv5Hgd8a8wxE1-uLRW-5",
+      "entityId": "diagram-cell/TBgv5Hgd8a8wxE1-uLRW-5",
+      "note": "Correspondence to a simulation input; does not assert a configured experimental execution.",
+      "selector": "fluids.soap.rho",
+      "status": "Repository mapping",
+      "unitLabel": "kg/m³"
+    },
+    {
+      "bindingIds": [
+        "binding/configuration-1/fluids.sigma",
+        "binding/configuration-2/fluids.sigma",
+        "binding/configuration-3/fluids.sigma"
+      ],
+      "diagramId": "TBgv5Hgd8a8wxE1-uLRW-8",
+      "entityId": "diagram-cell/TBgv5Hgd8a8wxE1-uLRW-8",
+      "note": "Correspondence to a simulation input; does not assert a configured experimental execution.",
+      "selector": "fluids.sigma",
+      "status": "Repository mapping",
+      "unitLabel": "N/m"
+    },
+    {
+      "bindingIds": [
+        "binding/configuration-1/boundary_conditions.inlet_volumetric_flow_rate",
+        "binding/configuration-2/boundary_conditions.inlet_volumetric_flow_rate",
+        "binding/configuration-3/boundary_conditions.inlet_volumetric_flow_rate"
+      ],
+      "diagramId": "JDZ3WXQOoo0OTXsIz6hO-13",
+      "entityId": "diagram-cell/JDZ3WXQOoo0OTXsIz6hO-13",
+      "note": "Correspondence to a simulation input; does not assert a configured experimental execution.",
+      "selector": "boundary_conditions.inlet_volumetric_flow_rate",
+      "status": "Repository mapping",
+      "unitLabel": "m³/s"
+    }
+  ],
+  "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b"
+}

@@ -1,6 +1,7 @@
 # Build artifacts
 build/
 dist/
+_site/
 *.egg-info/
 __pycache__/
 .ipynb_checkpoints/

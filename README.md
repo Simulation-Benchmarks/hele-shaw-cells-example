@@ -12,6 +12,7 @@ to fit the [instance-repo schema](../NFDI4IngModelValidationPlatform/docs/gettin
 The Docker image, solver, mesh, fluid properties, and numerics are
 **identical**; only the repository layout follows the platform convention.
 
+- **Semantic atlas**: [Semantic Model → Workflows → NFDI4Ing Use Cases](https://simulation-benchmarks.github.io/hele-shaw-cells-example/) · [build and evidence notes](docs/semantic/README.md)
 - **Problem definition**: [docs/hele-shaw-cells.md](docs/hele-shaw-cells.md)
 - **Troubleshooting**: [docs/troubleshooting.md](docs/troubleshooting.md)
 - **Install guide (macOS / Linux / WSL2 / remote VMs)**: [docs/getting_started.md](docs/getting_started.md)

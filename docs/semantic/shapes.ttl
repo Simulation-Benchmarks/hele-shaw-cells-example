@@ -1,0 +1,33 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix hs: <https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix m4i: <http://w3id.org/nfdi4ing/metadata4ing#> .
+
+# Application-level completeness checks, not scientific or OWL certification.
+hs:AtlasEntityShape a sh:NodeShape ;
+  sh:targetClass hs:AtlasEntity ;
+  sh:property [ sh:path rdfs:label ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path dct:description ; sh:minCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path dct:source ; sh:minCount 1 ; sh:nodeKind sh:IRI ] ;
+  sh:property [ sh:path hs:evidenceStatus ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] .
+
+hs:ProposalShape a sh:NodeShape ;
+  sh:targetClass hs:RelationProposal ;
+  sh:property [ sh:path rdf:subject ; sh:minCount 1 ; sh:maxCount 1 ; sh:class hs:AtlasEntity ] ;
+  sh:property [ sh:path rdf:predicate ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+  sh:property [ sh:path rdf:object ; sh:minCount 1 ; sh:maxCount 1 ; sh:class hs:AtlasEntity ] ;
+  sh:property [ sh:path hs:asserted ; sh:hasValue false ] .
+
+hs:SavedRunShape a sh:NodeShape ;
+  sh:targetClass hs:SavedRun ;
+  sh:property [ sh:path m4i:realizesMethod ; sh:minCount 1 ; sh:class m4i:Method ] ;
+  sh:property [ sh:path m4i:hasEmployedTool ; sh:minCount 1 ; sh:class m4i:Tool ] ;
+  sh:property [ sh:path hs:evidenceStatus ; sh:hasValue "Saved evidence" ] .
+
+hs:FileBindingShape a sh:NodeShape ;
+  sh:targetSubjectsOf hs:selector ;
+  sh:property [ sh:path hs:selector ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path hs:inFile ; sh:minCount 1 ; sh:maxCount 1 ; sh:class hs:AtlasEntity ] .

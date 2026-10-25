@@ -1,0 +1,419 @@
+{
+  "bindings": [
+    {
+      "bindingId": "binding/configuration-1/boundary_conditions.inlet_volumetric_flow_rate",
+      "configuration": "1",
+      "selector": "boundary_conditions.inlet_volumetric_flow_rate",
+      "value": 4e-07
+    },
+    {
+      "bindingId": "binding/configuration-1/domain.R_in",
+      "configuration": "1",
+      "selector": "domain.R_in",
+      "value": 0.0015
+    },
+    {
+      "bindingId": "binding/configuration-1/domain.R_out",
+      "configuration": "1",
+      "selector": "domain.R_out",
+      "value": 0.095
+    },
+    {
+      "bindingId": "binding/configuration-1/domain.b",
+      "configuration": "1",
+      "selector": "domain.b",
+      "value": 0.001
+    },
+    {
+      "bindingId": "binding/configuration-1/fluids.air.k",
+      "configuration": "1",
+      "selector": "fluids.air.k",
+      "value": 1.5e-05
+    },
+    {
+      "bindingId": "binding/configuration-1/fluids.air.n",
+      "configuration": "1",
+      "selector": "fluids.air.n",
+      "value": 1.0
+    },
+    {
+      "bindingId": "binding/configuration-1/fluids.air.rho",
+      "configuration": "1",
+      "selector": "fluids.air.rho",
+      "value": 1.2
+    },
+    {
+      "bindingId": "binding/configuration-1/fluids.gapWidth",
+      "configuration": "1",
+      "selector": "fluids.gapWidth",
+      "value": 0.001
+    },
+    {
+      "bindingId": "binding/configuration-1/fluids.sigma",
+      "configuration": "1",
+      "selector": "fluids.sigma",
+      "value": 0.031
+    },
+    {
+      "bindingId": "binding/configuration-1/fluids.soap.k",
+      "configuration": "1",
+      "selector": "fluids.soap.k",
+      "value": 0.002
+    },
+    {
+      "bindingId": "binding/configuration-1/fluids.soap.n",
+      "configuration": "1",
+      "selector": "fluids.soap.n",
+      "value": 1.0
+    },
+    {
+      "bindingId": "binding/configuration-1/fluids.soap.rho",
+      "configuration": "1",
+      "selector": "fluids.soap.rho",
+      "value": 1026.6
+    },
+    {
+      "bindingId": "binding/configuration-1/initial_condition.bubble_radius",
+      "configuration": "1",
+      "selector": "initial_condition.bubble_radius",
+      "value": 0.0025
+    },
+    {
+      "bindingId": "binding/configuration-1/initial_condition.bubble_z_max",
+      "configuration": "1",
+      "selector": "initial_condition.bubble_z_max",
+      "value": 0.0012
+    },
+    {
+      "bindingId": "binding/configuration-1/initial_condition.bubble_z_min",
+      "configuration": "1",
+      "selector": "initial_condition.bubble_z_min",
+      "value": -0.0012
+    },
+    {
+      "bindingId": "binding/configuration-1/mesh.NPA",
+      "configuration": "1",
+      "selector": "mesh.NPA",
+      "value": 60
+    },
+    {
+      "bindingId": "binding/configuration-1/mesh.NPB",
+      "configuration": "1",
+      "selector": "mesh.NPB",
+      "value": 1
+    },
+    {
+      "bindingId": "binding/configuration-1/mesh.NPZ",
+      "configuration": "1",
+      "selector": "mesh.NPZ",
+      "value": 60
+    },
+    {
+      "bindingId": "binding/configuration-1/solver.deltaT",
+      "configuration": "1",
+      "selector": "solver.deltaT",
+      "value": 0.1
+    },
+    {
+      "bindingId": "binding/configuration-1/solver.endTime",
+      "configuration": "1",
+      "selector": "solver.endTime",
+      "value": 15.0
+    },
+    {
+      "bindingId": "binding/configuration-1/solver.maxAlphaCo",
+      "configuration": "1",
+      "selector": "solver.maxAlphaCo",
+      "value": 0.5
+    },
+    {
+      "bindingId": "binding/configuration-1/solver.maxCo",
+      "configuration": "1",
+      "selector": "solver.maxCo",
+      "value": 0.5
+    },
+    {
+      "bindingId": "binding/configuration-1/solver.writeInterval",
+      "configuration": "1",
+      "selector": "solver.writeInterval",
+      "value": 0.05
+    },
+    {
+      "bindingId": "binding/configuration-2/boundary_conditions.inlet_volumetric_flow_rate",
+      "configuration": "2",
+      "selector": "boundary_conditions.inlet_volumetric_flow_rate",
+      "value": 4e-07
+    },
+    {
+      "bindingId": "binding/configuration-2/domain.R_in",
+      "configuration": "2",
+      "selector": "domain.R_in",
+      "value": 0.0015
+    },
+    {
+      "bindingId": "binding/configuration-2/domain.R_out",
+      "configuration": "2",
+      "selector": "domain.R_out",
+      "value": 0.095
+    },
+    {
+      "bindingId": "binding/configuration-2/domain.b",
+      "configuration": "2",
+      "selector": "domain.b",
+      "value": 0.001
+    },
+    {
+      "bindingId": "binding/configuration-2/fluids.air.k",
+      "configuration": "2",
+      "selector": "fluids.air.k",
+      "value": 1.5e-05
+    },
+    {
+      "bindingId": "binding/configuration-2/fluids.air.n",
+      "configuration": "2",
+      "selector": "fluids.air.n",
+      "value": 1.0
+    },
+    {
+      "bindingId": "binding/configuration-2/fluids.air.rho",
+      "configuration": "2",
+      "selector": "fluids.air.rho",
+      "value": 1.2
+    },
+    {
+      "bindingId": "binding/configuration-2/fluids.gapWidth",
+      "configuration": "2",
+      "selector": "fluids.gapWidth",
+      "value": 0.001
+    },
+    {
+      "bindingId": "binding/configuration-2/fluids.sigma",
+      "configuration": "2",
+      "selector": "fluids.sigma",
+      "value": 0.031
+    },
+    {
+      "bindingId": "binding/configuration-2/fluids.soap.k",
+      "configuration": "2",
+      "selector": "fluids.soap.k",
+      "value": 0.002
+    },
+    {
+      "bindingId": "binding/configuration-2/fluids.soap.n",
+      "configuration": "2",
+      "selector": "fluids.soap.n",
+      "value": 1.0
+    },
+    {
+      "bindingId": "binding/configuration-2/fluids.soap.rho",
+      "configuration": "2",
+      "selector": "fluids.soap.rho",
+      "value": 1026.6
+    },
+    {
+      "bindingId": "binding/configuration-2/initial_condition.bubble_radius",
+      "configuration": "2",
+      "selector": "initial_condition.bubble_radius",
+      "value": 0.0025
+    },
+    {
+      "bindingId": "binding/configuration-2/initial_condition.bubble_z_max",
+      "configuration": "2",
+      "selector": "initial_condition.bubble_z_max",
+      "value": 0.0012
+    },
+    {
+      "bindingId": "binding/configuration-2/initial_condition.bubble_z_min",
+      "configuration": "2",
+      "selector": "initial_condition.bubble_z_min",
+      "value": -0.0012
+    },
+    {
+      "bindingId": "binding/configuration-2/mesh.NPA",
+      "configuration": "2",
+      "selector": "mesh.NPA",
+      "value": 80
+    },
+    {
+      "bindingId": "binding/configuration-2/mesh.NPB",
+      "configuration": "2",
+      "selector": "mesh.NPB",
+      "value": 1
+    },
+    {
+      "bindingId": "binding/configuration-2/mesh.NPZ",
+      "configuration": "2",
+      "selector": "mesh.NPZ",
+      "value": 80
+    },
+    {
+      "bindingId": "binding/configuration-2/solver.deltaT",
+      "configuration": "2",
+      "selector": "solver.deltaT",
+      "value": 0.1
+    },
+    {
+      "bindingId": "binding/configuration-2/solver.endTime",
+      "configuration": "2",
+      "selector": "solver.endTime",
+      "value": 15.0
+    },
+    {
+      "bindingId": "binding/configuration-2/solver.maxAlphaCo",
+      "configuration": "2",
+      "selector": "solver.maxAlphaCo",
+      "value": 0.5
+    },
+    {
+      "bindingId": "binding/configuration-2/solver.maxCo",
+      "configuration": "2",
+      "selector": "solver.maxCo",
+      "value": 0.5
+    },
+    {
+      "bindingId": "binding/configuration-2/solver.writeInterval",
+      "configuration": "2",
+      "selector": "solver.writeInterval",
+      "value": 0.05
+    },
+    {
+      "bindingId": "binding/configuration-3/boundary_conditions.inlet_volumetric_flow_rate",
+      "configuration": "3",
+      "selector": "boundary_conditions.inlet_volumetric_flow_rate",
+      "value": 8e-07
+    },
+    {
+      "bindingId": "binding/configuration-3/domain.R_in",
+      "configuration": "3",
+      "selector": "domain.R_in",
+      "value": 0.0015
+    },
+    {
+      "bindingId": "binding/configuration-3/domain.R_out",
+      "configuration": "3",
+      "selector": "domain.R_out",
+      "value": 0.095
+    },
+    {
+      "bindingId": "binding/configuration-3/domain.b",
+      "configuration": "3",
+      "selector": "domain.b",
+      "value": 0.001
+    },
+    {
+      "bindingId": "binding/configuration-3/fluids.air.k",
+      "configuration": "3",
+      "selector": "fluids.air.k",
+      "value": 1.5e-05
+    },
+    {
+      "bindingId": "binding/configuration-3/fluids.air.n",
+      "configuration": "3",
+      "selector": "fluids.air.n",
+      "value": 1.0
+    },
+    {
+      "bindingId": "binding/configuration-3/fluids.air.rho",
+      "configuration": "3",
+      "selector": "fluids.air.rho",
+      "value": 1.2
+    },
+    {
+      "bindingId": "binding/configuration-3/fluids.gapWidth",
+      "configuration": "3",
+      "selector": "fluids.gapWidth",
+      "value": 0.001
+    },
+    {
+      "bindingId": "binding/configuration-3/fluids.sigma",
+      "configuration": "3",
+      "selector": "fluids.sigma",
+      "value": 0.031
+    },
+    {
+      "bindingId": "binding/configuration-3/fluids.soap.k",
+      "configuration": "3",
+      "selector": "fluids.soap.k",
+      "value": 0.002
+    },
+    {
+      "bindingId": "binding/configuration-3/fluids.soap.n",
+      "configuration": "3",
+      "selector": "fluids.soap.n",
+      "value": 1.0
+    },
+    {
+      "bindingId": "binding/configuration-3/fluids.soap.rho",
+      "configuration": "3",
+      "selector": "fluids.soap.rho",
+      "value": 1026.6
+    },
+    {
+      "bindingId": "binding/configuration-3/initial_condition.bubble_radius",
+      "configuration": "3",
+      "selector": "initial_condition.bubble_radius",
+      "value": 0.0025
+    },
+    {
+      "bindingId": "binding/configuration-3/initial_condition.bubble_z_max",
+      "configuration": "3",
+      "selector": "initial_condition.bubble_z_max",
+      "value": 0.0012
+    },
+    {
+      "bindingId": "binding/configuration-3/initial_condition.bubble_z_min",
+      "configuration": "3",
+      "selector": "initial_condition.bubble_z_min",
+      "value": -0.0012
+    },
+    {
+      "bindingId": "binding/configuration-3/mesh.NPA",
+      "configuration": "3",
+      "selector": "mesh.NPA",
+      "value": 60
+    },
+    {
+      "bindingId": "binding/configuration-3/mesh.NPB",
+      "configuration": "3",
+      "selector": "mesh.NPB",
+      "value": 1
+    },
+    {
+      "bindingId": "binding/configuration-3/mesh.NPZ",
+      "configuration": "3",
+      "selector": "mesh.NPZ",
+      "value": 60
+    },
+    {
+      "bindingId": "binding/configuration-3/solver.deltaT",
+      "configuration": "3",
+      "selector": "solver.deltaT",
+      "value": 0.1
+    },
+    {
+      "bindingId": "binding/configuration-3/solver.endTime",
+      "configuration": "3",
+      "selector": "solver.endTime",
+      "value": 15.0
+    },
+    {
+      "bindingId": "binding/configuration-3/solver.maxAlphaCo",
+      "configuration": "3",
+      "selector": "solver.maxAlphaCo",
+      "value": 0.5
+    },
+    {
+      "bindingId": "binding/configuration-3/solver.maxCo",
+      "configuration": "3",
+      "selector": "solver.maxCo",
+      "value": 0.5
+    },
+    {
+      "bindingId": "binding/configuration-3/solver.writeInterval",
+      "configuration": "3",
+      "selector": "solver.writeInterval",
+      "value": 0.05
+    }
+  ],
+  "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b"
+}

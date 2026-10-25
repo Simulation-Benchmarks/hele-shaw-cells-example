@@ -1,0 +1,73 @@
+name: Semantic atlas preview and publication
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/semantic/**'
+      - 'Validation.drawio'
+      - 'DESIGN.md'
+      - 'notebooks/Simulation_Walkthrough.ipynb'
+      - '.github/workflows/pages.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'docs/semantic/**'
+      - 'Validation.drawio'
+      - 'DESIGN.md'
+      - 'notebooks/Simulation_Walkthrough.ipynb'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: semantic-pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: docs/semantic/requirements.txt
+      - name: Install static-site dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y graphviz
+          python -m pip install -r docs/semantic/requirements.txt
+      - name: Build and validate saved evidence
+        run: python docs/semantic/tools/build_site.py --output-dir _site
+      - name: Check notebook fidelity
+        run: python -m unittest discover -s docs/semantic/tests -p 'test_*.py'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: semantic-pages-preview
+          path: _site
+          include-hidden-files: true
+      - uses: actions/upload-pages-artifact@v3
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        with:
+          path: _site
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - name: Publish semantic atlas
+        id: deployment
+        uses: actions/deploy-pages@v4

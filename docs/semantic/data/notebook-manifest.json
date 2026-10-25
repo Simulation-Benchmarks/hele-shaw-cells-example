@@ -1,0 +1,907 @@
+{
+  "source": "notebooks/Simulation_Walkthrough.ipynb",
+  "sourceRevision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+  "sourceSha256": "453b3a86d7cf7fb128437617936cfb6e55301a792b57691d9cfd7e03fbc0ba16",
+  "view": "notebooks/Simulation_Walkthrough.html",
+  "executionPolicy": "Render saved outputs only; no cells executed by this build.",
+  "cellCount": 34,
+  "codeCellCount": 15,
+  "executedCodeCellCount": 15,
+  "outputCount": 47,
+  "savedImageCount": 9,
+  "cells": [
+    {
+      "index": 0,
+      "type": "markdown",
+      "sourceSha256": "816bb95f02ab81e081de0b1f3d8f401133cb3f28502a944abb256007e63af45a",
+      "executionCount": null,
+      "outputs": []
+    },
+    {
+      "index": 1,
+      "type": "code",
+      "sourceSha256": "b3bfb7b1d728e1406dd4caa2a486821949c280425968940b1c506e8c4e5a0880",
+      "executionCount": 1,
+      "outputs": [
+        {
+          "index": 0,
+          "type": "stream",
+          "sha256": "f594b154a2b8d4f6bcb562cd2905645b73bea14f31ed37638b5ab17b9d686d26"
+        },
+        {
+          "index": 1,
+          "type": "execute_result",
+          "sha256": "d4f3bf5897693b254d95104f3ab4d429b03d90611d4aead4c0fdf7ddf7e37765",
+          "mimeTypes": [
+            "text/plain"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "type": "markdown",
+      "sourceSha256": "9a0128231b15e104bb32f9bdff782c201730df567bdb069637a090a5bea3cd06",
+      "executionCount": null,
+      "outputs": []
+    },
+    {
+      "index": 3,
+      "type": "code",
+      "sourceSha256": "c4235cdd318cad4186606e1a6a7198daa01867870232839c6e834fb43684f1f8",
+      "executionCount": 2,
+      "outputs": [
+        {
+          "index": 0,
+          "type": "stream",
+          "sha256": "5d87714b0e5e8d33e2372656b7765f919bccaa9e6b6c55bf5440ed180b74ed7e"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "type": "markdown",
+      "sourceSha256": "816986d0c5dc2cc14feafaf9e6ed9dde0c365c34b31f3f4c56f3e908d40dc87c",
+      "executionCount": null,
+      "outputs": []
+    },
+    {
+      "index": 5,
+      "type": "markdown",
+      "sourceSha256": "652a9883d1ddfddcf59a59194d3180604f43b3e2038648da3ac69f2a2a9611c9",
+      "executionCount": null,
+      "outputs": []
+    },
+    {
+      "index": 6,
+      "type": "markdown",
+      "sourceSha256": "95ccbd3c87ddb6cbff462efcb0c88d83d546f83f725c958b906cef2046655434",
+      "executionCount": null,
+      "outputs": []
+    },
+    {
+      "index": 7,
+      "type": "markdown",
+      "sourceSha256": "563b404fb987a83de46d061152a5f83e6931d5420d7850615427dc0bbd2bdfab",
+      "executionCount": null,
+      "outputs": []
+    },
+    {
+      "index": 8,
+      "type": "markdown",
+      "sourceSha256": "6e286e8814a4262d57fb08f15a91d458b7553fc1aee5176cc70590b6e4bd90b7",
+      "executionCount": null,
+      "outputs": []
+    },
+    {
+      "index": 9,
+      "type": "code",
+      "sourceSha256": "516b36986eb0d80ac2b6a87f87c03499f40431bf9b16c112a470b6e3b12568d7",
+      "executionCount": 3,
+      "outputs": [
+        {
+          "index": 0,
+          "type": "stream",
+          "sha256": "6d2feb51c7a11403c4eb56affe8b3ef0e62d9328335e92854586cbfd4019bb8d"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "type": "markdown",
+      "sourceSha256": "a2e0a7f26807648fd67b77f5d79b7fed0c5a3350a5c49e665289195cb02d027a",
+      "executionCount": null,
+      "outputs": []
+    },
+    {
+      "index": 11,
+      "type": "markdown",
+      "sourceSha256": "f4d7da44b2a223ce12bba9d2b472aa6cfabf5e813c50604e62202266a52ca433",
+      "executionCount": null,
+      "outputs": []
+    },
+    {
+      "index": 12,
+      "type": "code",
+      "sourceSha256": "632905dcbc3be983c4c56b7955914933030b714f9672f623762d8278d56058d2",
+      "executionCount": 4,
+      "outputs": [
+        {
+          "index": 0,
+          "type": "stream",
+          "sha256": "9d64be4f10975a640d2bfddd5f69922419221fd61c82ec238069a7132ef2bf2a"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "type": "markdown",
+      "sourceSha256": "eefdd97953ec3dc45e5efbe102aeebf0805dbff96bb6179e407075259867133a",
+      "executionCount": null,
+      "outputs": []
+    },
+    {
+      "index": 14,
+      "type": "code",
+      "sourceSha256": "c48312a25d231abef72b1f20d6dc4da852c57a786be63b5423441dbd99a35fd8",
+      "executionCount": 5,
+      "outputs": [
+        {
+          "index": 0,
+          "type": "execute_result",
+          "sha256": "ee8b54bd3eb6630ab11f6c50594bfdaf8bd210c3f8a46909498a7d5b93d95473",
+          "mimeTypes": [
+            "text/html",
+            "text/plain"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "type": "markdown",
+      "sourceSha256": "01d8f43c2d8e60434e0d3de42dcbd9391d97228adb6eb74ad5e5fc23235bdd79",
+      "executionCount": null,
+      "outputs": []
+    },
+    {
+      "index": 16,
+      "type": "markdown",
+      "sourceSha256": "2d6abe190293f2b73e52418fb8a8def87713897d3783441a3677818369c5c007",
+      "executionCount": null,
+      "outputs": []
+    },
+    {
+      "index": 17,
+      "type": "code",
+      "sourceSha256": "b69204433bc9c0c88c9c02b8c814fe73d64157dd135b6cef1f8ae614485dbd02",
+      "executionCount": 6,
+      "outputs": [
+        {
+          "index": 0,
+          "type": "stream",
+          "sha256": "74d1e2f538d6e2f476fe11d125c16163ac531c5fa24b7d7bbcb03ff22855730a"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "type": "code",
+      "sourceSha256": "99a41925133c2c935da34e5e02b0b467e5193aeb72dea3fa57f58fd49b6e3696",
+      "executionCount": 7,
+      "outputs": [
+        {
+          "index": 0,
+          "type": "stream",
+          "sha256": "c736af69930dd481975392f14730cd53d25df50853c63c5cef1ebaf214cbbfb1"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "type": "code",
+      "sourceSha256": "bf3463fca3b65e03a4974b07ed10729ac877191d422564958808f87d9da32d03",
+      "executionCount": 8,
+      "outputs": [
+        {
+          "index": 0,
+          "type": "stream",
+          "sha256": "0b48a6e5d26e315939b2be829cd6ffe0c5714028691811ad0144974a47b6cea5"
+        },
+        {
+          "index": 1,
+          "type": "stream",
+          "sha256": "adc704c27a5728684ed954809d3f91ff5e366c392b2d3f840f435c7b7712c4bb"
+        },
+        {
+          "index": 2,
+          "type": "stream",
+          "sha256": "b4ed18dd50e2bdfb5e286dd875a9e94868879d7704da2a82907353870d82ea4d"
+        },
+        {
+          "index": 3,
+          "type": "stream",
+          "sha256": "20b73089467bce78d04e29f341a3a4e11957009cf34a2bbddedff1f84dc096af"
+        },
+        {
+          "index": 4,
+          "type": "stream",
+          "sha256": "3371d8d8c7ea6e9a474a5775f7722c6b53d1870a8b20ac872b9a1e887a515561"
+        },
+        {
+          "index": 5,
+          "type": "stream",
+          "sha256": "bd3e52a80ec683ba740aa264665fed33c05590f98b8128be6652a6bad87c0301"
+        },
+        {
+          "index": 6,
+          "type": "stream",
+          "sha256": "9c9b054b1349c51b111e5e356f251ab14dfd3d55ba754364b4446896b709833b"
+        },
+        {
+          "index": 7,
+          "type": "stream",
+          "sha256": "adc704c27a5728684ed954809d3f91ff5e366c392b2d3f840f435c7b7712c4bb"
+        },
+        {
+          "index": 8,
+          "type": "stream",
+          "sha256": "da4a1f539b24c090f9f60678c2d438e90ec9dad0dc0b62c1c22dcb6bb09f027d"
+        },
+        {
+          "index": 9,
+          "type": "stream",
+          "sha256": "14096033dc5b2e7afb3fec01b5f573cd49eb9a65008054c52734ced3b13c3c99"
+        },
+        {
+          "index": 10,
+          "type": "stream",
+          "sha256": "5c820f83358aef66c1d3bb6b3b4cd5ab46a33c064b8fa426ef6393bede107187"
+        },
+        {
+          "index": 11,
+          "type": "stream",
+          "sha256": "bd3e52a80ec683ba740aa264665fed33c05590f98b8128be6652a6bad87c0301"
+        },
+        {
+          "index": 12,
+          "type": "stream",
+          "sha256": "9cfe76f83b654b2569a7a1ddd3908af070d1dbd4af599dc8b896e0d6f704f82f"
+        },
+        {
+          "index": 13,
+          "type": "stream",
+          "sha256": "adc704c27a5728684ed954809d3f91ff5e366c392b2d3f840f435c7b7712c4bb"
+        },
+        {
+          "index": 14,
+          "type": "stream",
+          "sha256": "ada81f30f7b666c27c9463995d377dfe3a1c71b8fee88aeab694548ab26077ad"
+        },
+        {
+          "index": 15,
+          "type": "stream",
+          "sha256": "0c0ca0f94ccb3b266e32aae2db57c4480c1126e08daf4c7f9bb87b1361901c56"
+        },
+        {
+          "index": 16,
+          "type": "stream",
+          "sha256": "6028eb587959974dd369d761b295ca73cc146a82129ea1afd3daf9a7abf652e7"
+        },
+        {
+          "index": 17,
+          "type": "stream",
+          "sha256": "bd3e52a80ec683ba740aa264665fed33c05590f98b8128be6652a6bad87c0301"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "type": "markdown",
+      "sourceSha256": "f76c1b7da37abaa7471d6f2176f5930f4c19176b2e8f64f725782b8a9044eede",
+      "executionCount": null,
+      "outputs": []
+    },
+    {
+      "index": 21,
+      "type": "code",
+      "sourceSha256": "1023f05acc4296ec6a6b559f39b98dd073cb0242d869a0fe694362f397cd8cb4",
+      "executionCount": 9,
+      "outputs": [
+        {
+          "index": 0,
+          "type": "stream",
+          "sha256": "ae3c3675c05b39b89668b0b9bab6fd5636193b092ac89e4f7250a42ddad19a7c"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "type": "markdown",
+      "sourceSha256": "af226486b06b7ccd58ab72cb0109b31f02aaf515344cde62b736a07d1b71e88a",
+      "executionCount": null,
+      "outputs": []
+    },
+    {
+      "index": 23,
+      "type": "code",
+      "sourceSha256": "a16a82db758eacc0bea878f9c91f1bbac4dc4a926d88f8a30d69ac5e029d9f67",
+      "executionCount": 10,
+      "outputs": [
+        {
+          "index": 0,
+          "type": "execute_result",
+          "sha256": "a26a4f42dfc8468e3c6c9b9b6b8d5708edfed9a6a53d0649daea80d69d8cb1ea",
+          "mimeTypes": [
+            "text/html",
+            "text/plain"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "type": "code",
+      "sourceSha256": "e9e1873eecbff453a01d60558f436bd7246e1365020a6cda4aba469781d3d63e",
+      "executionCount": 11,
+      "outputs": [
+        {
+          "index": 0,
+          "type": "stream",
+          "sha256": "51e89391d08f816ef8e6e5216f784e56c3091f3c7814d5d001ce5ae63a250b00"
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "type": "markdown",
+      "sourceSha256": "0f2554a760bea9e14d3f33ae515787887da066a5abbc56f1a7d340acd363376a",
+      "executionCount": null,
+      "outputs": []
+    },
+    {
+      "index": 26,
+      "type": "code",
+      "sourceSha256": "33eb10f204cebd22091247373eece3cfb57bf3e660cf5f581d16f59f0b802f41",
+      "executionCount": 16,
+      "outputs": [
+        {
+          "index": 0,
+          "type": "stream",
+          "sha256": "a0bb6d2d52003aa695a050842c9ab367ef95ba7dd074ed610cff5fbc02bb2841"
+        },
+        {
+          "index": 1,
+          "type": "display_data",
+          "sha256": "d9e03a17a07756011c70a183868ced3a8a794746a00e81c8a56b123ce6edf408",
+          "mimeTypes": [
+            "image/png",
+            "text/plain"
+          ],
+          "imageSha256": "cdd6816788069bdce1015e50c0688ede8888ecb0c5a991d8774eb0645bde5db1"
+        },
+        {
+          "index": 2,
+          "type": "stream",
+          "sha256": "ab2766e863acacec10b8c49066fb628bbfd6e56b952516eb6f4f445080f0a1aa"
+        },
+        {
+          "index": 3,
+          "type": "display_data",
+          "sha256": "dc013acdf37fb28e2144848c6cc8e9ee7b5533932a44be03159b29a15b6619ab",
+          "mimeTypes": [
+            "image/png",
+            "text/plain"
+          ],
+          "imageSha256": "78cc15a7ac87f06dc5ce8bdc7f2a84c4cec8b478695bc21539fffc18168b312a"
+        },
+        {
+          "index": 4,
+          "type": "stream",
+          "sha256": "0a1955e72b6db0d6841b973cd6176de4401d71017beb8171b524d67c775b214d"
+        },
+        {
+          "index": 5,
+          "type": "display_data",
+          "sha256": "59bc71e6f987ef1a15f3e1b2d589c2f9b20adb9fca40d9d50d9a33dcdc9f0a4c",
+          "mimeTypes": [
+            "image/png",
+            "text/plain"
+          ],
+          "imageSha256": "998177a19fbeacfc7c5253d72dc79c8e7115b7eca2435dab4eb1c6a80583c766"
+        },
+        {
+          "index": 6,
+          "type": "stream",
+          "sha256": "f6252b6cc3d19aac686da2f77e39c2bb3fba8b2d3292da74c3b016dab0bb006a"
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "type": "code",
+      "sourceSha256": "a9112cc8647d1c40c7eebd8c517378ceecc4b93339f25229b0ee14ecd17b1f81",
+      "executionCount": 13,
+      "outputs": [
+        {
+          "index": 0,
+          "type": "stream",
+          "sha256": "431623f7ed5f0fd6ef0c4f9df241cf7eaae8b07024e089dd7347bdd0ae562bb8"
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "type": "markdown",
+      "sourceSha256": "5b264335fa0d4bcb54631e73934794fc36adcdbf908305c9db0ea1159561450b",
+      "executionCount": null,
+      "outputs": []
+    },
+    {
+      "index": 29,
+      "type": "markdown",
+      "sourceSha256": "8b0a9f0abdc1b59435e53eb904bd992d73fd9b0057e36c03aa58427d8c842a3d",
+      "executionCount": null,
+      "outputs": []
+    },
+    {
+      "index": 30,
+      "type": "code",
+      "sourceSha256": "425ec630e99e0a8024e07b2c466caf51d999f2d7cad32ea87b91d9cf159feca7",
+      "executionCount": 14,
+      "outputs": [
+        {
+          "index": 0,
+          "type": "stream",
+          "sha256": "a424523763e15a67be24f1787defac62be3fe099fe3a80c81dba2fa682c31695"
+        },
+        {
+          "index": 1,
+          "type": "display_data",
+          "sha256": "beee47f371c53ff5c5d8a69c23b58166eedc87a719c5acb20f65d61ffbe028a3",
+          "mimeTypes": [
+            "image/png",
+            "text/plain"
+          ],
+          "imageSha256": "0dc3b5e566826e87651aaa545e334abeb29c59323796491ad774f355e424abaa"
+        },
+        {
+          "index": 2,
+          "type": "display_data",
+          "sha256": "6752ea36100c1c705c00c3890dc4d88e77cba82eab2df0ad67d10030cc55f971",
+          "mimeTypes": [
+            "image/png",
+            "text/plain"
+          ],
+          "imageSha256": "ddb90cda3799c9e31e99a8487a9228607ead023a92d0303e8104391093cb01b3"
+        },
+        {
+          "index": 3,
+          "type": "stream",
+          "sha256": "967cbc44a68c77eaf4e5d587ad3dca1f77eaeac117e0c7ced5f21196fb4ada3e"
+        },
+        {
+          "index": 4,
+          "type": "display_data",
+          "sha256": "b5a134eaa254d023adbf5f1e1c9ef46bea0b23eb8850994e3b604529ba54a1cb",
+          "mimeTypes": [
+            "image/png",
+            "text/plain"
+          ],
+          "imageSha256": "8555ac4b935e08812e1b81a2cd281b84edb412a92faf740c04324e72884b20f6"
+        },
+        {
+          "index": 5,
+          "type": "display_data",
+          "sha256": "a94011971bd3b977690ac9a05a3a826728776cfc44033fe0e27b825455e8b7f8",
+          "mimeTypes": [
+            "image/png",
+            "text/plain"
+          ],
+          "imageSha256": "bd9c8ea9ff6686cfdf36b80829f75801ad9fb2f5ff9919b48cf0fedca5b756cf"
+        },
+        {
+          "index": 6,
+          "type": "stream",
+          "sha256": "85ffe69d55b4408916dee05054eead3675401e46ffe39a9848a586dcd87468ce"
+        },
+        {
+          "index": 7,
+          "type": "display_data",
+          "sha256": "35a9f15ef1d32ed89f8de439b90db6493a2601fe741fbbc55dbbbbbc20c581f3",
+          "mimeTypes": [
+            "image/png",
+            "text/plain"
+          ],
+          "imageSha256": "a0a3cf11f17308bff19e0bb315d38a17a34d0796511ba67c5d6d3b5a90737010"
+        },
+        {
+          "index": 8,
+          "type": "display_data",
+          "sha256": "7fdff5c7fa5a5a6806519de2ca179783fa0ba54bcce63f24d05f34d5cc94d050",
+          "mimeTypes": [
+            "image/png",
+            "text/plain"
+          ],
+          "imageSha256": "7c54b66175e09eb44d177434697d5976ae7d5254d62b7029d7e5ca513b07a15e"
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "type": "markdown",
+      "sourceSha256": "e9d68f613a1f8abd7e507a7bc9d626de7c98d326c778a9451c41bc5976154ba7",
+      "executionCount": null,
+      "outputs": []
+    },
+    {
+      "index": 32,
+      "type": "code",
+      "sourceSha256": "804967fb5b83f9f6ca2901e662be2fdad22385ec91fd8723e2469d3ed112d282",
+      "executionCount": 15,
+      "outputs": [
+        {
+          "index": 0,
+          "type": "stream",
+          "sha256": "63ac953cb9e8a7d0d00e9ae1714f359a3cb99161f2acdf2cdf4488491741a0bb"
+        }
+      ]
+    },
+    {
+      "index": 33,
+      "type": "markdown",
+      "sourceSha256": "946e7d40c4c661ff879921fbb9f010fee79724e778329bfcf7b4da52d9e1880a",
+      "executionCount": null,
+      "outputs": []
+    }
+  ],
+  "images": [
+    {
+      "cellIndex": 26,
+      "outputIndex": 1,
+      "sha256": "cdd6816788069bdce1015e50c0688ede8888ecb0c5a991d8774eb0645bde5db1",
+      "bytes": 109190,
+      "width": 901,
+      "height": 675
+    },
+    {
+      "cellIndex": 26,
+      "outputIndex": 3,
+      "sha256": "78cc15a7ac87f06dc5ce8bdc7f2a84c4cec8b478695bc21539fffc18168b312a",
+      "bytes": 100714,
+      "width": 901,
+      "height": 675
+    },
+    {
+      "cellIndex": 26,
+      "outputIndex": 5,
+      "sha256": "998177a19fbeacfc7c5253d72dc79c8e7115b7eca2435dab4eb1c6a80583c766",
+      "bytes": 121102,
+      "width": 901,
+      "height": 675
+    },
+    {
+      "cellIndex": 30,
+      "outputIndex": 1,
+      "sha256": "0dc3b5e566826e87651aaa545e334abeb29c59323796491ad774f355e424abaa",
+      "bytes": 27798,
+      "width": 875,
+      "height": 500
+    },
+    {
+      "cellIndex": 30,
+      "outputIndex": 2,
+      "sha256": "ddb90cda3799c9e31e99a8487a9228607ead023a92d0303e8104391093cb01b3",
+      "bytes": 2851,
+      "width": 247,
+      "height": 247
+    },
+    {
+      "cellIndex": 30,
+      "outputIndex": 4,
+      "sha256": "8555ac4b935e08812e1b81a2cd281b84edb412a92faf740c04324e72884b20f6",
+      "bytes": 33166,
+      "width": 875,
+      "height": 500
+    },
+    {
+      "cellIndex": 30,
+      "outputIndex": 5,
+      "sha256": "bd9c8ea9ff6686cfdf36b80829f75801ad9fb2f5ff9919b48cf0fedca5b756cf",
+      "bytes": 2988,
+      "width": 247,
+      "height": 247
+    },
+    {
+      "cellIndex": 30,
+      "outputIndex": 7,
+      "sha256": "a0a3cf11f17308bff19e0bb315d38a17a34d0796511ba67c5d6d3b5a90737010",
+      "bytes": 29492,
+      "width": 875,
+      "height": 500
+    },
+    {
+      "cellIndex": 30,
+      "outputIndex": 8,
+      "sha256": "7c54b66175e09eb44d177434697d5976ae7d5254d62b7029d7e5ca513b07a15e",
+      "bytes": 3208,
+      "width": 247,
+      "height": 247
+    }
+  ],
+  "sections": [
+    {
+      "cellIndex": 0,
+      "anchor": "setup",
+      "title": "Set up the walkthrough",
+      "previewUrl": "notebooks/Simulation_Walkthrough.html#setup"
+    },
+    {
+      "cellIndex": 2,
+      "anchor": "build-image",
+      "title": "Build the OpenFOAM image",
+      "previewUrl": "notebooks/Simulation_Walkthrough.html#build-image"
+    },
+    {
+      "cellIndex": 4,
+      "anchor": "mathematical-model",
+      "title": "Read the mathematical model",
+      "previewUrl": "notebooks/Simulation_Walkthrough.html#mathematical-model"
+    },
+    {
+      "cellIndex": 5,
+      "anchor": "governing-equations",
+      "title": "Governing equations",
+      "previewUrl": "notebooks/Simulation_Walkthrough.html#governing-equations"
+    },
+    {
+      "cellIndex": 6,
+      "anchor": "gap-averaged-model",
+      "title": "Gap-averaged model",
+      "previewUrl": "notebooks/Simulation_Walkthrough.html#gap-averaged-model"
+    },
+    {
+      "cellIndex": 7,
+      "anchor": "initial-boundary-conditions",
+      "title": "Initial and boundary conditions",
+      "previewUrl": "notebooks/Simulation_Walkthrough.html#initial-boundary-conditions"
+    },
+    {
+      "cellIndex": 8,
+      "anchor": "dimensionless-numbers",
+      "title": "Dimensionless numbers",
+      "previewUrl": "notebooks/Simulation_Walkthrough.html#dimensionless-numbers"
+    },
+    {
+      "cellIndex": 10,
+      "anchor": "reference-result",
+      "title": "Reference simulation image",
+      "previewUrl": "notebooks/Simulation_Walkthrough.html#reference-result"
+    },
+    {
+      "cellIndex": 11,
+      "anchor": "solver-numerics",
+      "title": "Solver numerics",
+      "previewUrl": "notebooks/Simulation_Walkthrough.html#solver-numerics"
+    },
+    {
+      "cellIndex": 13,
+      "anchor": "parameter-sweep",
+      "title": "Inspect the three configurations",
+      "previewUrl": "notebooks/Simulation_Walkthrough.html#parameter-sweep"
+    },
+    {
+      "cellIndex": 16,
+      "anchor": "run-simulation",
+      "title": "Follow the saved simulation run",
+      "previewUrl": "notebooks/Simulation_Walkthrough.html#run-simulation"
+    },
+    {
+      "cellIndex": 22,
+      "anchor": "inspect-results",
+      "title": "Inspect the saved results",
+      "previewUrl": "notebooks/Simulation_Walkthrough.html#inspect-results"
+    },
+    {
+      "cellIndex": 24,
+      "anchor": "regression-checks",
+      "title": "Read the saved regression checks",
+      "previewUrl": "notebooks/Simulation_Walkthrough.html#regression-checks"
+    },
+    {
+      "cellIndex": 25,
+      "anchor": "cartesian-figures",
+      "title": "Inspect the Cartesian figures",
+      "previewUrl": "notebooks/Simulation_Walkthrough.html#cartesian-figures"
+    },
+    {
+      "cellIndex": 27,
+      "anchor": "alpha-field-inspection",
+      "title": "Inspect the alpha field",
+      "previewUrl": "notebooks/Simulation_Walkthrough.html#alpha-field-inspection"
+    },
+    {
+      "cellIndex": 29,
+      "anchor": "finger-metrics",
+      "title": "Inspect finger counts and radius",
+      "previewUrl": "notebooks/Simulation_Walkthrough.html#finger-metrics"
+    },
+    {
+      "cellIndex": 31,
+      "anchor": "compare-reference",
+      "title": "Compare with the reference",
+      "previewUrl": "notebooks/Simulation_Walkthrough.html#compare-reference"
+    },
+    {
+      "cellIndex": 32,
+      "anchor": "ro-crate-inspection",
+      "title": "Inspect the local RO-Crate",
+      "previewUrl": "notebooks/Simulation_Walkthrough.html#ro-crate-inspection"
+    },
+    {
+      "cellIndex": 33,
+      "anchor": "next-steps",
+      "title": "Further repository documentation",
+      "previewUrl": "notebooks/Simulation_Walkthrough.html#next-steps"
+    }
+  ],
+  "equations": [
+    {
+      "tex": "b \\ll R",
+      "display": "inline"
+    },
+    {
+      "tex": "\\nabla \\cdot \\mathbf{u} = 0",
+      "display": "block"
+    },
+    {
+      "tex": "\\rho \\left(\\frac{\\partial \\mathbf{u}}{\\partial t} + \\mathbf{u} \\cdot \\nabla \\mathbf{u}\\right) = -\\nabla p + \\nabla \\cdot (2\\mu \\mathbf{D}) + \\mathbf{f}_{\\sigma}",
+      "display": "block"
+    },
+    {
+      "tex": "\\mathbf{D} = \\frac{1}{2}(\\nabla \\mathbf{u} + \\nabla \\mathbf{u}^\\top)",
+      "display": "inline"
+    },
+    {
+      "tex": "\\alpha \\in [0, 1]",
+      "display": "inline"
+    },
+    {
+      "tex": "\\frac{\\partial \\alpha}{\\partial t} + \\nabla \\cdot (\\alpha \\mathbf{u}) = 0",
+      "display": "block"
+    },
+    {
+      "tex": "\\mathbf{f}_{\\sigma} = \\sigma \\kappa \\nabla \\alpha, \\qquad \\kappa = \\nabla \\cdot \\left(\\frac{\\nabla \\alpha}{|\\nabla \\alpha|}\\right)",
+      "display": "block"
+    },
+    {
+      "tex": "\\langle \\mathbf{u} \\rangle = -\\frac{b^2}{12\\mu} \\nabla p",
+      "display": "block"
+    },
+    {
+      "tex": "\\nabla \\cdot \\langle \\mathbf{u} \\rangle = Q / (\\pi R_\\text{in}^2)",
+      "display": "inline"
+    },
+    {
+      "tex": "R_\\text{in} = 1.5",
+      "display": "inline"
+    },
+    {
+      "tex": "R_\\text{out} = 95",
+      "display": "inline"
+    },
+    {
+      "tex": "b = 1",
+      "display": "inline"
+    },
+    {
+      "tex": "b",
+      "display": "inline"
+    },
+    {
+      "tex": "R = R_\\text{in}",
+      "display": "inline"
+    },
+    {
+      "tex": "Q",
+      "display": "inline"
+    },
+    {
+      "tex": "R = R_\\text{out}",
+      "display": "inline"
+    },
+    {
+      "tex": "z = \\pm b/2",
+      "display": "inline"
+    },
+    {
+      "tex": "\\sigma = 0.031",
+      "display": "inline"
+    },
+    {
+      "tex": "n=1",
+      "display": "inline"
+    },
+    {
+      "tex": "\\mathrm{Ca} = \\mu_\\text{soap} U / \\sigma",
+      "display": "inline"
+    },
+    {
+      "tex": "\\mathrm{Ca}",
+      "display": "inline"
+    },
+    {
+      "tex": "M = \\mu_\\text{air} / \\mu_\\text{soap}",
+      "display": "inline"
+    },
+    {
+      "tex": "M \\ll 1",
+      "display": "inline"
+    },
+    {
+      "tex": "\\mathrm{Re} = \\rho U b / \\mu",
+      "display": "inline"
+    },
+    {
+      "tex": "\\mathrm{Re} \\ll 1",
+      "display": "inline"
+    },
+    {
+      "tex": "\\mathrm{Pe} = Q / (D_\\alpha R_\\text{in})",
+      "display": "inline"
+    },
+    {
+      "tex": "t \\approx 10",
+      "display": "inline"
+    },
+    {
+      "tex": "NPA = NPZ = 60",
+      "display": "inline"
+    },
+    {
+      "tex": "Q = 4 \\times 10^{-7}",
+      "display": "inline"
+    },
+    {
+      "tex": "Q",
+      "display": "inline"
+    },
+    {
+      "tex": "NPA = NPZ = 80",
+      "display": "inline"
+    },
+    {
+      "tex": "Q = 8 \\times 10^{-7}",
+      "display": "inline"
+    },
+    {
+      "tex": "Q",
+      "display": "inline"
+    },
+    {
+      "tex": "0 < \\alpha < 1",
+      "display": "inline"
+    },
+    {
+      "tex": "\\alpha",
+      "display": "inline"
+    },
+    {
+      "tex": "\\alpha > 0.5",
+      "display": "inline"
+    }
+  ],
+  "viewSha256": "01c068cf363535fdba5d5dd719b5f2a4205655ff3ac6b08a58beb39736ab204c",
+  "assets": {
+    "notebooks/assets/hele-shaw-cells.png": "3a9e46ec93003c7018a7ba680ae27a9bfa6c215e047a2235eaca64b0697c9a93",
+    "notebooks/notebook.css": "c81e27beb9e0ca87973a7a6297f7e0db2ac95fe9f794a6bcb4cf048be41529e5"
+  },
+  "verification": {
+    "codeCellsVerified": 15,
+    "outputsVerified": 47,
+    "savedImagesVerified": 9,
+    "tablesVerified": 2,
+    "equationsRendered": 36,
+    "executedByBuild": false
+  }
+}

@@ -1,0 +1,40 @@
+[
+  {
+    "id": "mvp",
+    "logos": [],
+    "name": "Model Validation Platform",
+    "serviceName": "NFDI4Ing Model Validation Platform",
+    "status": "Repository integration documented",
+    "summary": "The example follows the platform instance-repository layout and benchmark contract; registration is documented by the repository.",
+    "url": "https://github.com/Simulation-Benchmarks/NFDI4IngModelValidationPlatform",
+    "workflowSlugs": [
+      "prepare-simulate",
+      "check-reproducibility"
+    ]
+  },
+  {
+    "id": "jupyter",
+    "logos": [],
+    "name": "NFDI4Ing Jupyter Hub",
+    "previewUrl": "notebooks/Simulation_Walkthrough.html",
+    "serviceName": "NFDI4Ing Jupyter Hub",
+    "status": "Project launch not configured",
+    "summary": "Use the saved notebook view now, or follow the installation guide for a local environment. No project-specific hosted launch URL is configured.",
+    "url": "https://jupyter.nfdi4ing.de/",
+    "workflowSlugs": [
+      "inspect-results"
+    ]
+  },
+  {
+    "id": "rohub",
+    "logos": [],
+    "name": "ROHub",
+    "serviceName": "ROHub",
+    "status": "Optional; upload unverified",
+    "summary": "Upload and query scripts are supplied. No successful upload identifier is recorded in the inspected sources.",
+    "url": "https://www.rohub.org/",
+    "workflowSlugs": [
+      "package-share"
+    ]
+  }
+]
