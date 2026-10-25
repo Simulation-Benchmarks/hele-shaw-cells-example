@@ -99,6 +99,15 @@ fonts, images or API are needed for this drawing. Renderer provenance and licens
 are retained in `vendor/drawio/`. Validation checks representation and
 evidence integrity, not the scientific validity of the simulation.
 
+## Portable drawing and mapping example
+
+[`../drawio-html/`](../drawio-html/README.md) keeps the original drawing, its HTML
+viewer, a 212-row mapping table, full link records and a step-by-step mapping
+guide together. The folder renders independently of the atlas and includes a
+Python-standard-library rebuild/check command. The full build refreshes and
+publishes it at [`drawio-html/`](https://simulation-benchmarks.github.io/hele-shaw-cells-example/drawio-html/),
+with a [ZIP download](https://simulation-benchmarks.github.io/hele-shaw-cells-example/drawio-html.zip).
+
 ## Publication
 
 The independent `.github/workflows/pages.yml` builds preview artifacts for pull

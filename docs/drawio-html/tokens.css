@@ -1,0 +1,23 @@
+/* Generated from DESIGN.md by tools/build_tokens.py. */
+:root {
+  --color-ink: #182f3a;
+  --color-muted: #546872;
+  --color-primary: #245a8d;
+  --color-science: #246952;
+  --color-literature: #72568e;
+  --color-config: #846114;
+  --color-warning: #8b4c28;
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-border: #d6e0e3;
+  --color-science-tint: #edf5f0;
+  --color-code-tint: #edf2f9;
+  --color-warning-tint: #fcf2e7;
+  --color-scrollbar: #93a5ae;
+  --color-scrollbar-track: #f3f6f7;
+  --color-scrollbar-hover: #738c99;
+  --color-scrollbar-active: #546872;
+  --font-display: Arial, Helvetica, sans-serif;
+  --font-body: Arial, Helvetica, sans-serif;
+  --font-mono: 'SFMono-Regular', Consolas, monospace;
+}

@@ -13,6 +13,7 @@ The Docker image, solver, mesh, fluid properties, and numerics are
 **identical**; only the repository layout follows the platform convention.
 
 - **Semantic atlas**: [Semantic Model → Workflows → NFDI4Ing Use Cases](https://simulation-benchmarks.github.io/hele-shaw-cells-example/) · [build and evidence notes](docs/semantic/README.md)
+- **Drawing-to-HTML example**: [original drawing, portable viewer and mapping guide](docs/drawio-html/README.md) · [open viewer](https://simulation-benchmarks.github.io/hele-shaw-cells-example/drawio-html/) · [download folder](https://simulation-benchmarks.github.io/hele-shaw-cells-example/drawio-html.zip)
 - **Problem definition**: [docs/hele-shaw-cells.md](docs/hele-shaw-cells.md)
 - **Troubleshooting**: [docs/troubleshooting.md](docs/troubleshooting.md)
 - **Install guide (macOS / Linux / WSL2 / remote VMs)**: [docs/getting_started.md](docs/getting_started.md)

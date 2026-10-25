@@ -26,7 +26,7 @@ def main() -> None:
     marker = output / ".hele-shaw-site-build"
     if output.exists() and any(output.iterdir()) and not marker.exists():
         parser.error("Refusing to replace a nonempty directory without the site build marker.")
-    for name in ("notebook_view.py", "build_inspection.py", "build_model.py", "build_tokens.py", "build_graphs.py", "build_drawio.py", "validate_model.py", "validate_drawio.py"):
+    for name in ("notebook_view.py", "build_inspection.py", "build_model.py", "build_tokens.py", "build_graphs.py", "build_drawio.py", "validate_model.py", "validate_drawio.py", "export_drawio_package.py"):
         subprocess.run([sys.executable, str(SITE / "tools" / name)], cwd=REPO, check=True)
     if output.exists():
         shutil.rmtree(output)
@@ -45,6 +45,9 @@ def main() -> None:
         if source.is_dir():
             shutil.copytree(source, output / name)
     shutil.copy2(REPO / "Validation.drawio", output / "Validation.drawio")
+    shutil.copytree(REPO / "docs/drawio-html", output / "drawio-html",
+                    ignore=shutil.ignore_patterns('__pycache__', '*.pyc', '.DS_Store'))
+    shutil.make_archive(str(output / "drawio-html"), 'zip', output, 'drawio-html')
     print(f"Validated static site: {output}")
 
 

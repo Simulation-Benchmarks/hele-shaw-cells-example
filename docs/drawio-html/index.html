@@ -1,0 +1,57 @@
+<!doctype html>
+<!-- SPDX-FileCopyrightText: 2026 Vasiliy Seibert; SPDX-License-Identifier: MIT -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Validation.drawio — drawing and mapping</title>
+  <meta name="description" content="The original Hele-Shaw validation drawing with links by cell ID and a documented, reproducible HTML viewer.">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="data.js"></script>
+  <script defer src="vendor/drawio/29.6.6/offline-config.js"></script>
+  <script defer src="vendor/drawio/29.6.6/viewer-static.min.js"></script>
+  <script defer src="drawio-viewer.js"></script>
+  <script defer src="viewer.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#drawing">Skip to drawing</a>
+  <header>
+    <div><p class="eyebrow">Hele-Shaw semantic model</p><h1>Validation.drawio</h1></div>
+    <nav aria-label="Drawing files">
+      <a href="Validation.drawio" download>Original drawing ↓</a>
+      <a href="Validation.linked.drawio" download>Drawing with links ↓</a>
+      <a href="README.md">Mapping guide</a>
+      <a href="mapping.csv" download>Mapping table ↓</a>
+      <a href="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview">Full atlas ↗</a>
+    </nav>
+  </header>
+  <main>
+    <p>The original shapes, labels and arrows are preserved. Select a shape or arrow to open its source or atlas entry.</p>
+    <div class="toolbar">
+      <div class="zoom" role="group" aria-label="Diagram zoom">
+        <button id="zoom-out" type="button" aria-label="Zoom out" disabled>−</button>
+        <button id="fit" type="button" disabled>Fit diagram</button>
+        <button id="actual" type="button" disabled>100%</button>
+        <button id="zoom-in" type="button" aria-label="Zoom in" disabled>+</button>
+      </div>
+      <p id="status" role="status">Loading the original drawing…</p>
+    </div>
+    <div id="drawing" tabindex="0" role="region" aria-label="Validation drawing; use arrow keys or scrollbars to pan" aria-describedby="drawing-help"><div id="diagram"></div></div>
+    <p id="drawing-help" class="muted">Zoom with the buttons. Use the scrollbars or arrow keys to pan. Tab through links to see their mapping below. Experimental acquisition and experimental validation remain conceptual.</p>
+    <section class="details" aria-labelledby="details-title">
+      <h2 id="details-title">Drawing → web link</h2>
+      <p id="cell-hint">Hover over or focus a diagram link to inspect its original ID, meaning and destination.</p>
+      <dl id="cell-details" hidden></dl>
+    </section>
+    <details class="explanation">
+      <summary>How the drawing becomes a web page</summary>
+      <p>The page loads the original XML from <code>data.js</code>. The bundled draw.io renderer creates an SVG using the saved geometry. A separate mapping attaches URLs by the original cell ID. A before-and-after check verifies that adding those links did not change the drawing.</p>
+      <p>Edit a URL in <a href="drawio-links.json">drawio-links.json</a>, then run <code>python3 build.py</code> in this folder. The <a href="README.md">mapping guide</a> explains the fields, examples and checks. Drawing links need internet access; the drawing itself renders locally.</p>
+      <p id="audit"></p>
+    </details>
+  </main>
+  <footer>Design adapted from FAIR4SD · Official draw.io renderer 29.6.6 · <a href="ATTRIBUTION.md">Attribution and licenses</a></footer>
+  <noscript><p>Enable JavaScript to render the drawing, or download <a href="Validation.drawio">Validation.drawio</a> and open it in draw.io.</p></noscript>
+</body>
+</html>

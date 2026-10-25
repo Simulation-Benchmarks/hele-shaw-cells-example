@@ -132,6 +132,7 @@ Detailed mapping status is available on focus and in relationship pages.
 | Search | app.js | Local search, clear button, keyboard traversal, Escape, no-results feedback |
 | Canvas and inline diagrams | app.js bindGraph | Shared node behavior, unique SVG IDs, pan/zoom/fit, keyboard panning |
 | Original drawing | tools/build_drawio.py + drawio-viewer.js | Byte-identical source, complete native rendering, links by cell ID, no visual mutation |
+| Portable drawing example | docs/drawio-html + tools/export_drawio_package.py | Same renderer and generated tokens; independent HTML shell with native scrolling, zoom buttons and cell mapping details |
 | Relationship details | app.js | Original endpoints and labels, mapping status, review notes, Back/refresh |
 | Graph generation | tools/build_graphs.py | Deterministic entity IDs, RDF-backed arrows, visible evidence status |
 | Workflow catalog | app.js + model.workflows | Contents, section anchors, five stages, contextual return links |
@@ -147,6 +148,12 @@ neighborhoods disclose omitted neighbors while RDF retains every relationship.
 Use visible focus, accessible names, hover/focus descriptions, non-drag panning,
 reduced-motion support and readable contrast. Document views own natural page
 scrolling; the canvas's viewport constraint never applies to them.
+
+The portable drawing folder is a read-only documentation example. It copies the
+canonical draw.io adapter, renderer and generated tokens; it does not introduce
+another diagram painter or semantic interpretation. Its own scrollable drawing
+region supports native scrollbars and keyboard panning. Source and relationship
+links resolve to the published atlas, so the folder can be copied independently.
 
 ## Do's and Don'ts
 

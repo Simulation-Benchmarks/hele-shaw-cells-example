@@ -1,0 +1,11 @@
+{
+  "name": "draw.io official static viewer",
+  "version": "29.6.6",
+  "distribution": "draw.io Desktop for macOS, bundled Quick Look preview renderer",
+  "sourcePath": "/Applications/draw.io.app/Contents/PlugIns/PreviewExtension.appex/Contents/Resources/viewer-static.min.js",
+  "upstream": "https://github.com/jgraph/drawio-desktop/releases/tag/v29.6.6",
+  "license": "Apache-2.0 with preserved bundled dependency notices",
+  "sha256": "997b577dfa6285d0efc0e658295f92c72b84680af0b0d43ab0e0effe7b9902bc",
+  "bytes": 3725506,
+  "modifications": "None. The viewer bundle is copied byte-for-byte."
+}

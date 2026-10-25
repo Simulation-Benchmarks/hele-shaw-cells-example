@@ -1,0 +1,46 @@
+/* SPDX-FileCopyrightText: 2026 Vasiliy Seibert; SPDX-License-Identifier: MIT */
+* { box-sizing: border-box; scrollbar-width: auto; scrollbar-color: var(--color-scrollbar) var(--color-scrollbar-track); }
+*::-webkit-scrollbar { width: 12px; height: 12px; }
+*::-webkit-scrollbar-track { background: var(--color-scrollbar-track); }
+*::-webkit-scrollbar-thumb { background: var(--color-scrollbar); border: 3px solid var(--color-scrollbar-track); border-radius: 8px; }
+*::-webkit-scrollbar-thumb:hover { background: var(--color-scrollbar-hover); }
+*::-webkit-scrollbar-thumb:active { background: var(--color-scrollbar-active); }
+body { margin: 0; background: var(--color-background); color: var(--color-ink); font: 15px/1.5 var(--font-body); }
+header { padding: 20px 24px; border-bottom: 1px solid var(--color-border); display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+h1 { font-size: 23px; line-height: 1.2; margin: 4px 0 0; }
+h2 { font-size: 17px; margin: 0 0 8px; }
+.eyebrow, .muted { color: var(--color-muted); }
+.eyebrow { margin: 0; font-size: 12px; }
+nav, .toolbar, .zoom { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+nav { column-gap: 20px; }
+a { color: var(--color-primary); text-underline-offset: 3px; }
+a, button, summary { cursor: pointer; }
+a:hover { text-decoration-thickness: 2px; }
+a:active { color: var(--color-ink); }
+:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; }
+.skip-link { position: absolute; top: -60px; left: 16px; padding: 8px; background: var(--color-background); z-index: 2; }
+.skip-link:focus { top: 8px; }
+main { padding: 0 24px 24px; }
+.toolbar { justify-content: space-between; margin: 12px 0; }
+#status { margin: 0; font-size: 13px; color: var(--color-muted); }
+button { min-height: 40px; min-width: 40px; padding: 7px 12px; border: 1px solid var(--color-border); border-radius: 6px; background: var(--color-surface); color: var(--color-ink); font: inherit; }
+button:hover:enabled { background: var(--color-code-tint); border-color: var(--color-primary); }
+button:active:enabled { background: var(--color-border); }
+button:disabled { cursor: default; opacity: .5; }
+#drawing { overflow: auto; height: max(360px, 68vh); border: 1px solid var(--color-border); border-radius: 8px; background: white; scrollbar-gutter: stable; }
+#diagram { width: max-content; min-width: 100%; min-height: 100%; padding: 12px; display: flex; justify-content: center; align-items: center; }
+#diagram svg { display: block; flex-shrink: 0; }
+/* Do not override the drawing's fills, fonts, stroke widths or geometry. */
+#drawing a:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
+.details, .explanation { margin-top: 20px; padding: 16px; border: 1px solid var(--color-border); border-radius: 8px; }
+#cell-hint { margin: 0; color: var(--color-muted); }
+dl { display: grid; grid-template-columns: 150px 1fr; gap: 6px 20px; margin: 0; }
+dt { font-weight: 600; }
+dd { margin: 0; overflow-wrap: anywhere; }
+[hidden] { display: none !important; }
+summary { color: var(--color-primary); font-weight: 600; }
+summary:hover { text-decoration: underline; }
+code { font-family: var(--font-mono); font-size: .9em; overflow-wrap: anywhere; }
+footer { padding: 16px 24px; border-top: 1px solid var(--color-border); color: var(--color-muted); font-size: 12px; }
+@media (max-width: 600px) { header, main, footer { padding-left: 16px; padding-right: 16px; } nav { font-size: 13px; gap: 12px; } .zoom { gap: 6px; } dl { grid-template-columns: 1fr; gap: 2px; } dd { margin-bottom: 10px; } }
+@media (forced-colors: active) { * { scrollbar-color: auto; } }

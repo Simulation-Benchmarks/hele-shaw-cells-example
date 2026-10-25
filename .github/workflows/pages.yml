@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'docs/semantic/**'
+      - 'docs/drawio-html/**'
       - 'Validation.drawio'
       - 'DESIGN.md'
       - 'notebooks/Simulation_Walkthrough.ipynb'
@@ -13,6 +14,7 @@ on:
     branches: [main]
     paths:
       - 'docs/semantic/**'
+      - 'docs/drawio-html/**'
       - 'Validation.drawio'
       - 'DESIGN.md'
       - 'notebooks/Simulation_Walkthrough.ipynb'
