@@ -62,3 +62,38 @@ The strict UI audit reports no findings for the edited interface sources.
 Generated data and unchanged third-party code are excluded from that UI scan.
 Whitespace checks pass for authored changes; two upstream whitespace-only lines
 in the official viewer are retained to preserve its verified byte-for-byte hash.
+
+
+## Executable NFDI4Ing workflow — 2026-10-25
+
+The inspection workflow now has five numbered notebook stages, linked to an
+actual authenticated NFDI4Ing JupyterLab destination. Service use cases follow
+FAIR4SD’s “Use the service to [user action]” formulation. The Jupyter case has a
+direct notebook action, setup guide, workflow link and saved reading alternative.
+All four workflow slugs remain available.
+
+A fresh repository clone was created in the authenticated service's persistent
+work folder. The source notebook checksum matched the committed notebook before
+execution. JupyterLab Run All Cells completed with prompts 1–5, no error outputs
+and an Idle kernel. Python 3.13.11, NumPy 2.3.5, Pandas 2.3.3 and Matplotlib 3.10.8
+were observed. No Docker, OpenFOAM, original-notebook execution or upload ran.
+The inspection preserved nine missing measurements, reproduced all 21 recorded
+comparison decisions, redisplayed six original images, and created one plot from
+recorded scalar values. Runtime evidence and source identity are in
+`jupyter-validation.json`; no account identifier or credential is published.
+
+The public user-redirect URL and all five heading links were checked in the same
+workspace and browser tab. The Hub may initially scroll a long section past its
+heading in a narrow panel; the regression heading was verified with the notebook
+expanded by collapsing the file browser. This behavior and the two-step Back
+navigation through the Hub redirect are recorded in the setup/evidence files.
+The site’s own section links, Back navigation and refresh were also checked.
+
+The full static build passes 41 semantic checks plus original-drawing validation;
+all 38 unit tests pass. The strict audit of authored interface sources reports no
+findings. Desktop (1280×800) and mobile (390×844) checks show no page overflow;
+workflow diagrams scroll locally and all seven inspection figures load. The
+original drawing still renders all 212 elements with unchanged visual signature
+`fnv1a32:642050a5`. FAIR4SD, the original diagram and the historic walkthrough
+remain unchanged. Normal publication builds render saved outputs without
+executing any notebook.

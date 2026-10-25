@@ -1,0 +1,7 @@
+# Only for the lightweight inspect_results.ipynb, not the simulation workflow.
+# Locally exercised with numpy 2.4.4, pandas 3.0.3, matplotlib 3.10.9.
+# NFDI4Ing Python 3 images may already provide these packages.
+numpy>=1.26
+pandas>=2.0
+matplotlib>=3.8
+ipython>=8.0

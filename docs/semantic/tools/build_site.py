@@ -26,7 +26,7 @@ def main() -> None:
     marker = output / ".hele-shaw-site-build"
     if output.exists() and any(output.iterdir()) and not marker.exists():
         parser.error("Refusing to replace a nonempty directory without the site build marker.")
-    for name in ("notebook_view.py", "build_model.py", "build_tokens.py", "build_graphs.py", "build_drawio.py", "validate_model.py", "validate_drawio.py"):
+    for name in ("notebook_view.py", "build_inspection.py", "build_model.py", "build_tokens.py", "build_graphs.py", "build_drawio.py", "validate_model.py", "validate_drawio.py"):
         subprocess.run([sys.executable, str(SITE / "tools" / name)], cwd=REPO, check=True)
     if output.exists():
         shutil.rmtree(output)
@@ -34,7 +34,7 @@ def main() -> None:
     marker.touch()
     files = ("index.html", "app.js", "drawio-viewer.js", "tokens.css", "style.css", "model.ttl", "model.jsonld",
              "vocabulary.ttl", "shapes.ttl", "validation.json", "nfdi4ing-services.json",
-             "ATTRIBUTION.md", ".nojekyll")
+             "ATTRIBUTION.md", "JUPYTER.md", "jupyter.json", "jupyter-validation.json", ".nojekyll")
     for name in files:
         source = SITE / name
         if not source.is_file():

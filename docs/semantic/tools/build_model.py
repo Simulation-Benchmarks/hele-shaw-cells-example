@@ -17,6 +17,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 from rdflib import Graph, Literal, Namespace, RDF, RDFS, OWL, URIRef, XSD
+from jupyter_service import notebook_url, setup_url
 
 ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / 'docs/semantic'
@@ -60,6 +61,11 @@ def source(path: str, label: str | None = None, target: str | None = None) -> di
     if target:
         entry['target'] = target
     return entry
+
+
+def current_source(path: str, label: str | None = None) -> dict:
+    """New inspection documents are separate from the immutable science inputs."""
+    return {'url': f'{REPO}/blob/main/{path}', 'label': label or path}
 
 
 def uri(key: str) -> URIRef:
@@ -452,6 +458,102 @@ for a, p, b, label in PIPELINE:
 # Clarify image-based conceptual processing versus the implemented field path.
 edge('step/simulation-postprocessing', HS.hasInput, 'artifact/simulation-images', 'conceptual image input', 'Proposed', note='The diagram connects simulation images to processing. Production finger/interface metrics use alpha.air directly; other metrics come from solver logs.', asserted=False)
 
+# The executable inspection is a new document over pinned historical inputs.
+# Its cells inspect committed data; they do not execute a simulation or upload.
+inspection_manifest_path = OUT / 'data/python-inspection-manifest.json'
+inspection_manifest = json.loads(inspection_manifest_path.read_text())
+inspection_sections = inspection_manifest['sections']
+assert [section['number'] for section in inspection_sections] == [1, 2, 3, 4, 5]
+assert inspection_manifest['revision'] == REV
+assert inspection_manifest['codeCellsExecuted'] == 5
+assert all(inspection_manifest[flag] is False for flag in
+           ('simulationExecuted', 'originalNotebookExecuted', 'uploadExecuted'))
+inspection_preview = 'notebooks/inspect_results.html'
+inspection_source_path = 'docs/semantic/notebooks/inspect_results.ipynb'
+inspection_python_path = 'docs/semantic/notebooks/inspect_results.py'
+inspection_launch = notebook_url()
+inspection_source_records = []
+for path in (inspection_source_path, inspection_python_path,
+             'docs/semantic/notebooks/inspect_results.html',
+             'docs/semantic/data/python-inspection-manifest.json'):
+    data = (ROOT / path).read_bytes()
+    inspection_source_records.append({'path': path, 'sha256': digest(data),
+                                      'bytes': len(data), 'ref': 'main',
+                                      'url': current_source(path)['url']})
+inspection_links = [current_source(inspection_source_path, 'Executable inspection notebook'),
+                    current_source(inspection_python_path, 'Paired Python source'),
+                    {'url': 'data/python-inspection-manifest.json', 'label': 'Inspection provenance'}]
+add('notebook/inspection', 'Inspect saved Hele-Shaw results', 'Notebook',
+    'A five-cell Python inspection of pinned, committed parameters, saved rounded metrics, baseline checks and original figures. Its saved outputs contain newly computed comparisons of recorded data. No simulation, original walkthrough execution or upload is performed.',
+    [SCHEMA.DigitalDocument], inspection_links, 'Saved inspection',
+    previewUrl=inspection_preview, evidenceScope='current-inspection',
+    path=inspection_source_path, sha256=digest((ROOT / inspection_source_path).read_bytes()))
+g.add((uri('notebook/inspection'), HS.path, Literal(inspection_source_path)))
+g.add((uri('notebook/inspection'), HS.sha256, Literal(entities['notebook/inspection']['sha256'])))
+if inspection_launch:
+    entities['notebook/inspection']['launchUrl'] = inspection_launch
+    entities['notebook/inspection']['sourceAction'] = 'open executable notebook in NFDI4Ing JupyterLab'
+edge('notebook/inspection', HS.sourceArtifact, 'notebook/walkthrough', 'inspects recorded notebook outputs', 'Source')
+
+inspection_summaries = [
+    'Locate the checkout and verify the hashes of the committed scientific inputs.',
+    'Read the reference, refined-mesh and doubled-flow configurations into a comparison table.',
+    'Read the three recorded metric rows; preserve all nine missing metric entries.',
+    'Recompute tolerance checks from recorded rounded values against the committed reference; missing values remain skipped.',
+    'Plot recorded scalar outcomes and redisplay the six original figures with their source hashes; no numeric trajectories are reconstructed.',
+]
+for section, summary in zip(inspection_sections, inspection_summaries):
+    number = section['number']
+    key = f'notebook-section/inspection/stage-{number}'
+    path = f'{inspection_python_path}#L{section["pythonStartLine"]}-L{section["pythonEndLine"]}'
+    add(key, re.sub(r'^\d+\.\s*', '', section['heading']), 'Notebook', summary,
+        [SCHEMA.SoftwareSourceCode], [current_source(path, f'Python section {number}'), *inspection_links],
+        'Executable inspection', previewUrl=f'{inspection_preview}#{section["previewAnchor"]}',
+        notebookSection=section['anchor'], sectionNumber=number,
+        displayLabel=['Verify sources', 'Inspect parameters', 'Read recorded metrics', 'Check regression', 'Compare outcomes'][number - 1],
+        displayType=f'Jupyter notebook · cell {number}',
+        sourceAction='open saved inspection section')
+    section_launch = notebook_url(section['anchor'])
+    if section_launch:
+        entities[key]['launchUrl'] = section_launch
+        entities[key]['sourceAction'] = 'open this section in NFDI4Ing JupyterLab'
+    edge('notebook/inspection', HS.hasPart, key, 'contains executable section', 'Source')
+    if number > 1:
+        edge(f'notebook-section/inspection/stage-{number - 1}', HS.precedes, key, 'then', 'Source')
+
+add('artifact/recorded-metrics', 'Recorded metrics table', 'Dataset',
+    'The three rounded metric rows transcribed by code from the committed walkthrough. Phase fraction, continuity error and wall time remain missing for all three configurations; the baseline is never used to fill these gaps.',
+    [SCHEMA.Dataset], [source('notebooks/Simulation_Walkthrough.ipynb'),
+                       {'url':'data/inspection/recorded-metrics.csv', 'label':'Extracted recorded metrics'},
+                       current_source(inspection_python_path)], 'Saved evidence',
+    previewUrl=f'{inspection_preview}#inspection-stage-3')
+add('artifact/inspection-regression', 'Recomputed recorded-data checks', 'Dataset',
+    'A new comparison of rounded recorded metrics with the committed baseline and tolerances. It reproduces the recorded pass, fail and skip pattern without running a solver; sensitivity configurations are compared with the configuration 1 reference.',
+    [SCHEMA.Dataset], [{'url':'data/inspection/recomputed-comparisons.csv', 'label':'Recomputed checks'},
+                       current_source(inspection_python_path), source('tests/baseline/metrics_baseline.json')],
+    'Computed from saved data', previewUrl=f'{inspection_preview}#inspection-stage-4')
+add('artifact/inspection-comparison', 'Recorded outcome comparison', 'Artifact',
+    'A newly computed plot compares the recorded scalar outcomes for the three configurations. Six original saved images show finger-count curves and final masks; their plotted trajectories are not recovered as numeric data.',
+    [SCHEMA.ImageObject], [{'url':'data/inspection/recorded-outcomes.png', 'label':'Recorded scalar comparison'},
+                           current_source(inspection_python_path), source('notebooks/Simulation_Walkthrough.ipynb')],
+    'Computed from saved data', previewUrl=f'{inspection_preview}#inspection-stage-5')
+inspection_relations = [
+    (1, HS.hasInput, 'repository', 'verifies pinned inputs'),
+    (2, HS.hasInput, 'configuration/1', 'reads reference parameters'),
+    (2, HS.hasInput, 'configuration/2', 'reads refined-mesh parameters'),
+    (2, HS.hasInput, 'configuration/3', 'reads doubled-flow parameters'),
+    (3, HS.hasInput, 'notebook/walkthrough', 'reads recorded output'),
+    (3, HS.hasOutput, 'artifact/recorded-metrics', 'extracts recorded table'),
+    (4, HS.hasInput, 'artifact/recorded-metrics', 'compares recorded values'),
+    (4, HS.hasInput, 'artifact/baseline', 'reads reference and tolerances'),
+    (4, HS.hasOutput, 'artifact/inspection-regression', 'recomputes checks'),
+    (5, HS.hasInput, 'artifact/recorded-metrics', 'plots recorded scalar values'),
+    (5, HS.hasInput, 'artifact/simulation-images', 'redisplays original figures'),
+    (5, HS.hasOutput, 'artifact/inspection-comparison', 'compares recorded outcomes'),
+]
+for number, predicate, target, label in inspection_relations:
+    edge(f'notebook-section/inspection/stage-{number}', predicate, target, label, 'Source')
+
 def stage(key, title, summary, ids):
     return {'id':key, 'title':title, 'summary':summary, 'entities':ids}
 
@@ -468,18 +570,21 @@ def curated_edges(ids):
     return [e for key, e in chosen.items() if key not in inverse_pairs]
 
 
-def workflow(slug, title, summary, caveat, stages, anchor, actions=None):
+def workflow(slug, title, summary, caveat, stages, anchor, actions=None, preview=None):
     ids = [i for s in stages for i in s['entities']]
     assert len(ids) == len(set(ids)), slug
-    selected = set(ids)
     view_edges = curated_edges(ids)
-    if slug == 'inspect-results':
-        # This concrete workflow follows field/log processing. The image-input
-        # proposal stays visible in the semantic overview and full RDF.
-        view_edges = [e for e in view_edges if not (
-            {e['source'], e['target']} == {'step/simulation-postprocessing', 'artifact/simulation-images'}
-            or (e['source'] == 'metric/fingers' and e['target'] == 'artifact/simulation-metrics'))]
-    return {'slug':slug, 'graphKey':'diagram/' + slug, 'title':title, 'summary':summary, 'caveat':caveat, 'stages':stages, 'entities':ids, 'edges':view_edges, 'actions':actions or [{'label':'Read saved walkthrough', 'url':'notebooks/Simulation_Walkthrough.html#' + anchor}, {'label':'View source notebook', 'url':source_url('notebooks/Simulation_Walkthrough.ipynb')}], 'previewUrl':'notebooks/Simulation_Walkthrough.html#' + anchor}
+    return {'slug':slug, 'graphKey':'diagram/' + slug, 'title':title, 'summary':summary, 'caveat':caveat, 'stages':stages, 'entities':ids, 'edges':view_edges, 'actions':actions or [{'label':'Read saved walkthrough', 'url':'notebooks/Simulation_Walkthrough.html#' + anchor}, {'label':'View source notebook', 'url':source_url('notebooks/Simulation_Walkthrough.ipynb')}], 'previewUrl':preview or 'notebooks/Simulation_Walkthrough.html#' + anchor}
+
+inspection_actions = []
+if inspection_launch:
+    inspection_actions.append({'label':'Open notebook in NFDI4Ing JupyterLab', 'url':inspection_launch, 'sameTab':True})
+inspection_actions += [
+    {'label':'First-time setup', 'url':setup_url()},
+    {'label':'Read saved inspection', 'url':inspection_preview},
+    {'label':'Download executable notebook', 'url':'notebooks/inspect_results.ipynb'},
+    {'label':'View Python source', 'url':current_source(inspection_python_path)['url']},
+]
 
 workflows = [
     workflow('prepare-simulate', 'Prepare and simulate', 'Follow three parameter configurations into meshes, OpenFOAM cases, and solver fields.', 'The site presents source and saved-run evidence; it does not execute the solver.', [
@@ -489,13 +594,13 @@ workflows = [
         stage('simulate','Run the simulation','The runner invokes the custom solver.',['step/simulation']),
         stage('fields','Inspect field output','Saved notebook evidence records the produced fields.',['artifact/simulation-fields','artifact/saved-run']),
     ], 'run-simulation'),
-    workflow('inspect-results', 'Inspect results', 'Trace finger counts and critical radii to alpha fields, then inspect saved figures and time series.', 'Finger counts, critical radii and the interface proxy use alpha fields; phase fraction, continuity error and execution time come from solver logs. PNG-based tip overlays are a separate visualisation path.', [
-        stage('fields','Start with fields','Use saved alpha.air output.',['artifact/simulation-fields']),
-        stage('extract','Extract metrics','Threshold, skeletonise and count field-based tips.',['step/simulation-postprocessing','software/python-postprocessing']),
-        stage('measure','Read measurements','Inspect counts, radii and the time series.',['artifact/simulation-metrics','metric/fingers','metric/radius','artifact/time-series']),
-        stage('render','Render figures','Visualise the field independently of metric extraction.',['step/visualisation','artifact/simulation-images']),
-        stage('notebook','Open saved evidence','Read embedded outputs without executing the notebook.',['notebook/walkthrough','artifact/reference-image']),
-    ], 'inspect-results'),
+    workflow('inspect-results', 'Inspect saved results with NFDI4Ing Jupyter',
+        'Use five Python cells to compare recorded Hele-Shaw outcomes across reference, refined-mesh and doubled-flow configurations.',
+        'Sign in to the NFDI4Ing Jupyter Service and follow the first-time clone setup. This inspection reads committed data, recomputes recorded-data checks and compares saved figures; it does not run OpenFOAM or upload a research object. Missing metrics remain missing.',
+        [stage(f'inspection-{section["number"]}', re.sub(r'^\d+\.\s*', '', section['heading']), summary,
+               [f'notebook-section/inspection/stage-{section["number"]}'])
+         for section, summary in zip(inspection_sections, inspection_summaries)],
+        'inspection-stage-1', inspection_actions, preview=inspection_preview),
     workflow('check-reproducibility', 'Check reproducibility', 'Compare simulation results with the committed reference and inspect the saved pass, fail, and skip outcomes.', 'Regression against a simulation baseline is not experiment-versus-simulation validation. Changed configurations are sensitivity cases.', [
         stage('reference','Select the reference','Configuration 1 is the regression reference.',['configuration/1','artifact/baseline']),
         stage('results','Choose result evidence','Use saved metrics or outputs from a separate fresh run.',['artifact/simulation-metrics','artifact/saved-run']),
@@ -503,7 +608,7 @@ workflows = [
         stage('report','Review outcomes','Saved output includes passes, skips and sensitivity differences.',['artifact/regression-report']),
         stage('boundary','Keep validation distinct','Experimental comparison remains a proposed extension.',['step/validation','artifact/validation-metrics']),
     ], 'regression-checks'),
-    workflow('package-share', 'Package and share', 'Follow inputs and outputs into a local RO-Crate, then explore the optional ROHub publication route.', 'Local packaging is evidenced in the notebook. No successful ROHub upload or project-specific JupyterHub launch is verified.', [
+    workflow('package-share', 'Package and share', 'Follow inputs and outputs into a local RO-Crate, then explore the optional ROHub publication route.', 'Local packaging is evidenced in the saved walkthrough. No successful ROHub upload is verified.', [
         stage('collect','Collect evidence','Bundle parameters and simulation outputs.',['configuration/1','artifact/simulation-fields','artifact/simulation-metrics']),
         stage('package','Describe provenance','The current writer creates its documented RO-Crate profile.',['step/package']),
         stage('crate','Inspect the package','A saved notebook cell inspects local metadata.',['artifact/ro-crate','notebook/walkthrough']),
@@ -511,6 +616,18 @@ workflows = [
         stage('query','Explore query guidance','Use the guide after a successful upload.',['artifact/rohub-query']),
     ], 'ro-crate-inspection', [{'label':'Inspect saved RO-Crate output','url':'notebooks/Simulation_Walkthrough.html#ro-crate-inspection'}, {'label':'Read ROHub guide','url':source_url('docs/rohub.md')}]),
 ]
+use_case_actions = {
+    'prepare-simulate':'prepare and run the three Hele-Shaw parameter configurations',
+    'inspect-results':'compare saved Hele-Shaw results across mesh and flow-rate configurations',
+    'check-reproducibility':'check simulation results against the committed reference',
+    'package-share':'share a packaged simulation run and query its provenance',
+}
+for item in workflows:
+    item['useCaseAction'] = use_case_actions[item['slug']]
+    if item['slug'] == 'inspect-results' and inspection_launch:
+        item['launchUrl'] = inspection_launch
+        item['setupUrl'] = setup_url()
+        item['note'] = 'Each numbered stage opens its section in NFDI4Ing JupyterLab. Sign in and clone the example once using the setup guide. The saved reading view is available without an account.'
 
 overview_groups = [
     {'id':'model','title':'Model and configuration','entities':['model','configuration/1','configuration/2','configuration/3']},
@@ -525,8 +642,12 @@ overview = {'entities':overview_ids, 'edges':curated_edges(overview_ids), 'group
 
 services = [
     {'id':'mvp', 'name':'Model Validation Platform', 'serviceName':'NFDI4Ing Model Validation Platform', 'url':'https://github.com/Simulation-Benchmarks/NFDI4IngModelValidationPlatform', 'workflowSlugs':['prepare-simulate','check-reproducibility'], 'logos':[], 'status':'Repository integration documented', 'summary':'The example follows the platform instance-repository layout and benchmark contract; registration is documented by the repository.'},
-    {'id':'jupyter', 'name':'NFDI4Ing Jupyter Hub', 'serviceName':'NFDI4Ing Jupyter Hub', 'url':'https://jupyter.nfdi4ing.de/', 'workflowSlugs':['inspect-results'], 'logos':[], 'status':'Project launch not configured', 'summary':'Use the saved notebook view now, or follow the installation guide for a local environment. No project-specific hosted launch URL is configured.', 'previewUrl':'notebooks/Simulation_Walkthrough.html'},
-    {'id':'rohub', 'name':'ROHub', 'serviceName':'ROHub', 'url':'https://www.rohub.org/', 'workflowSlugs':['package-share'], 'logos':[], 'status':'Optional; upload unverified', 'summary':'Upload and query scripts are supplied. No successful upload identifier is recorded in the inspected sources.'},
+    {'id':'jupyter', 'name':'NFDI4Ing Jupyter Service', 'serviceName':'NFDI4Ing Jupyter Service', 'url':'https://jupyter.nfdi4ing.de/', 'workflowSlugs':['inspect-results'], 'logos':[],
+     'status':'Authenticated notebook launch verified' if inspection_launch else 'Authenticated notebook launch not yet verified',
+     'summary':'Sign in to NFDI4Ing JupyterLab, clone the example once using the setup guide, then run five Python cells to inspect committed parameters, recorded metrics, baseline comparisons and saved figures.',
+     'previewUrl':inspection_preview, 'setupUrl':setup_url(),
+     **({'launchUrl':inspection_launch} if inspection_launch else {})},
+    {'id':'rohub', 'name':'ROHub', 'serviceName':'ROHub service', 'url':'https://www.rohub.org/', 'workflowSlugs':['package-share'], 'logos':[], 'status':'Optional; upload unverified', 'summary':'Upload and query scripts are supplied. No successful upload identifier is recorded in the inspected sources.'},
 ]
 
 crosswalk = {'meta':{'source':'Validation.drawio','sha256':diagram_hash,'vertexCount':len(vertices),'edgeCount':len(diagram_edges),'policy':'Every original vertex and edge is retained. Duplicate labels keep distinct entity identities. Unlabelled, uncertain, and direction-conflicted edges are proposals, not asserted domain triples.'}, 'vertices':vertices, 'edges':diagram_edges}
@@ -542,7 +663,7 @@ for item in entities.values():
     if item['id'] != 'source/validation-diagram' and item['sources'] and all(s['url'] == 'source/Validation.drawio' for s in item['sources']):
         item['navigation'] = 'explore'
 model = {
-    'meta': {'title':'Hele-Shaw semantic atlas', 'revision':REV, 'repository':REPO, 'namespace':BASE, 'ontology':'Metadata4Ing + PROV-O + schema.org + explicit Hele-Shaw extensions', 'version':'1.0.0-review', 'scope':'Source-backed simulation workflows aligned with the complete Validation.drawio crosswalk; experimental acquisition and scientific validation remain conceptual.', 'triples':len(g), 'fileCount':len(source_manifest)+1, 'variableCount':sum(e['kind']=='Variable' for e in entities.values()), 'diagramSha256':diagram_hash, 'sourceManifestSha256':digest(manifest_bytes), 'diagramVertexCount':len(vertices), 'diagramEdgeCount':len(diagram_edges), 'metricNames':metrics, 'seriesNames':['n_fingers_over_time'], 'evidenceNote':'Saved notebook output is historic evidence, not a new execution. Experimental observations and completed ROHub uploads are not supplied.'},
+    'meta': {'title':'Hele-Shaw semantic atlas', 'revision':REV, 'repository':REPO, 'namespace':BASE, 'ontology':'Metadata4Ing + PROV-O + schema.org + explicit Hele-Shaw extensions', 'version':'1.0.0-review', 'scope':'Source-backed simulation workflows aligned with the complete Validation.drawio crosswalk; experimental acquisition and scientific validation remain conceptual.', 'triples':len(g), 'fileCount':len(source_manifest)+1, 'variableCount':sum(e['kind']=='Variable' for e in entities.values()), 'diagramSha256':diagram_hash, 'sourceManifestSha256':digest(manifest_bytes), 'diagramVertexCount':len(vertices), 'diagramEdgeCount':len(diagram_edges), 'metricNames':metrics, 'seriesNames':['n_fingers_over_time'], 'evidenceNote':'The original notebook records historical simulation output. The new inspection computes comparisons of that saved data without executing a simulation. Experimental observations and completed ROHub uploads are not supplied.', 'inspectionEvidence':{'scope':'Current inspection documents over pinned scientific inputs', 'scientificSourceRevision':REV, 'files':inspection_source_records}},
     'entities':[entities[k] for k in sorted(entities)], 'edges':sorted(edges, key=lambda e:e['id']), 'overview':overview, 'workflows':workflows, 'services':services,
 }
 

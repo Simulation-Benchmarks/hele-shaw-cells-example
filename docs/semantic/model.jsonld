@@ -149,6 +149,72 @@
     ]
   },
   {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#artifact/inspection-comparison",
+    "@type": [
+      "https://schema.org/ImageObject",
+      "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#AtlasEntity"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "A newly computed plot compares the recorded scalar outcomes for the three configurations. Six original saved images show finger-count curves and final masks; their plotted trajectories are not recovered as numeric data."
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/notebooks/Simulation_Walkthrough.ipynb"
+      },
+      {
+        "@id": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/main/docs/semantic/notebooks/inspect_results.py"
+      },
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/data/inspection/recorded-outcomes.png"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Recorded outcome comparison"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Computed from saved data"
+      }
+    ]
+  },
+  {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#artifact/inspection-regression",
+    "@type": [
+      "https://schema.org/Dataset",
+      "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#AtlasEntity"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "A new comparison of rounded recorded metrics with the committed baseline and tolerances. It reproduces the recorded pass, fail and skip pattern without running a solver; sensitivity configurations are compared with the configuration 1 reference."
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/tests/baseline/metrics_baseline.json"
+      },
+      {
+        "@id": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/main/docs/semantic/notebooks/inspect_results.py"
+      },
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/data/inspection/recomputed-comparisons.csv"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Recomputed recorded-data checks"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Computed from saved data"
+      }
+    ]
+  },
+  {
     "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#artifact/mesh",
     "@type": [
       "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#Artifact",
@@ -172,6 +238,39 @@
     "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
       {
         "@value": "Implemented"
+      }
+    ]
+  },
+  {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#artifact/recorded-metrics",
+    "@type": [
+      "https://schema.org/Dataset",
+      "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#AtlasEntity"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "The three rounded metric rows transcribed by code from the committed walkthrough. Phase fraction, continuity error and wall time remain missing for all three configurations; the baseline is never used to fill these gaps."
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/notebooks/Simulation_Walkthrough.ipynb"
+      },
+      {
+        "@id": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/main/docs/semantic/notebooks/inspect_results.py"
+      },
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/data/inspection/recorded-metrics.csv"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Recorded metrics table"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Saved evidence"
       }
     ]
   },
@@ -9652,6 +9751,323 @@
     ]
   },
   {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-1",
+    "@type": [
+      "https://schema.org/SoftwareSourceCode",
+      "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#AtlasEntity"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "Locate the checkout and verify the hashes of the committed scientific inputs."
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/main/docs/semantic/notebooks/inspect_results.ipynb"
+      },
+      {
+        "@id": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/main/docs/semantic/notebooks/inspect_results.py"
+      },
+      {
+        "@id": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/main/docs/semantic/notebooks/inspect_results.py#L33-L72"
+      },
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/data/python-inspection-manifest.json"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Locate and verify sources"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Executable inspection"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasInput": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#repository"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#precedes": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-2"
+      }
+    ]
+  },
+  {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-2",
+    "@type": [
+      "https://schema.org/SoftwareSourceCode",
+      "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#AtlasEntity"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "Read the reference, refined-mesh and doubled-flow configurations into a comparison table."
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/main/docs/semantic/notebooks/inspect_results.ipynb"
+      },
+      {
+        "@id": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/main/docs/semantic/notebooks/inspect_results.py"
+      },
+      {
+        "@id": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/main/docs/semantic/notebooks/inspect_results.py#L81-L102"
+      },
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/data/python-inspection-manifest.json"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Inspect the parameter sweep"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Executable inspection"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasInput": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#configuration/1"
+      },
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#configuration/2"
+      },
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#configuration/3"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#precedes": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-3"
+      }
+    ]
+  },
+  {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-3",
+    "@type": [
+      "https://schema.org/SoftwareSourceCode",
+      "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#AtlasEntity"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "Read the three recorded metric rows; preserve all nine missing metric entries."
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/main/docs/semantic/notebooks/inspect_results.ipynb"
+      },
+      {
+        "@id": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/main/docs/semantic/notebooks/inspect_results.py"
+      },
+      {
+        "@id": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/main/docs/semantic/notebooks/inspect_results.py#L113-L144"
+      },
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/data/python-inspection-manifest.json"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Read saved results and missing values"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Executable inspection"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasInput": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook/walkthrough"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasOutput": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#artifact/recorded-metrics"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#precedes": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-4"
+      }
+    ]
+  },
+  {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-4",
+    "@type": [
+      "https://schema.org/SoftwareSourceCode",
+      "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#AtlasEntity"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "Recompute tolerance checks from recorded rounded values against the committed reference; missing values remain skipped."
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/main/docs/semantic/notebooks/inspect_results.ipynb"
+      },
+      {
+        "@id": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/main/docs/semantic/notebooks/inspect_results.py"
+      },
+      {
+        "@id": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/main/docs/semantic/notebooks/inspect_results.py#L161-L193"
+      },
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/data/python-inspection-manifest.json"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Check reference regression"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Executable inspection"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasInput": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#artifact/baseline"
+      },
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#artifact/recorded-metrics"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasOutput": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#artifact/inspection-regression"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#precedes": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-5"
+      }
+    ]
+  },
+  {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-5",
+    "@type": [
+      "https://schema.org/SoftwareSourceCode",
+      "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#AtlasEntity"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "Plot recorded scalar outcomes and redisplay the six original figures with their source hashes; no numeric trajectories are reconstructed."
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/main/docs/semantic/notebooks/inspect_results.ipynb"
+      },
+      {
+        "@id": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/main/docs/semantic/notebooks/inspect_results.py"
+      },
+      {
+        "@id": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/main/docs/semantic/notebooks/inspect_results.py#L207-L239"
+      },
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/data/python-inspection-manifest.json"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Compare recorded outcomes and figures"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Executable inspection"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasInput": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#artifact/recorded-metrics"
+      },
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#artifact/simulation-images"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasOutput": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#artifact/inspection-comparison"
+      }
+    ]
+  },
+  {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook/inspection",
+    "@type": [
+      "https://schema.org/DigitalDocument",
+      "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#AtlasEntity"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "A five-cell Python inspection of pinned, committed parameters, saved rounded metrics, baseline checks and original figures. Its saved outputs contain newly computed comparisons of recorded data. No simulation, original walkthrough execution or upload is performed."
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/main/docs/semantic/notebooks/inspect_results.ipynb"
+      },
+      {
+        "@id": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/main/docs/semantic/notebooks/inspect_results.py"
+      },
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/data/python-inspection-manifest.json"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Inspect saved Hele-Shaw results"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Saved inspection"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasPart": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-1"
+      },
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-2"
+      },
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-3"
+      },
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-4"
+      },
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-5"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#path": [
+      {
+        "@value": "docs/semantic/notebooks/inspect_results.ipynb"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#sha256": [
+      {
+        "@value": "b241521ff20c32129840be94a0e4abbe88b381fca63b65f222445f6e12e31c15"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#sourceArtifact": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook/walkthrough"
+      }
+    ]
+  },
+  {
     "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook/walkthrough",
     "@type": [
       "https://schema.org/DigitalDocument",
@@ -10444,6 +10860,43 @@
     ]
   },
   {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/0dd3792dd0b483c0fc15",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#artifact/inspection-comparison"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasOutput"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-5"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "compares recorded outcomes"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Source"
+      }
+    ]
+  },
+  {
     "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/0df23d0af917cda44695",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
@@ -11138,6 +11591,117 @@
     ]
   },
   {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/196e0b6c87214d3a9cfe",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#artifact/recorded-metrics"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasInput"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-5"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "plots recorded scalar values"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Source"
+      }
+    ]
+  },
+  {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/19828b92d21e7c70df2e",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#artifact/inspection-regression"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasOutput"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-4"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "recomputes checks"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Source"
+      }
+    ]
+  },
+  {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/1a8e5cf6257386d5973f",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-3"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#precedes"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-2"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "then"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Source"
+      }
+    ]
+  },
+  {
     "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/1abd3faa99a252d13b1d",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
@@ -11496,6 +12060,43 @@
     ]
   },
   {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/2509d91c1a308362f44a",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-4"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#precedes"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-3"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "then"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Source"
+      }
+    ]
+  },
+  {
     "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/25272ab197ba6bb1a90c",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
@@ -11529,6 +12130,43 @@
     "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
       {
         "@value": "Saved evidence"
+      }
+    ]
+  },
+  {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/2555ebd4c300645e18ba",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-2"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasPart"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook/inspection"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "contains executable section"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Source"
       }
     ]
   },
@@ -11660,6 +12298,43 @@
     "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#sourceDiagramId": [
       {
         "@value": "eiFgZNk86BmHCPwQhzBy-75"
+      }
+    ]
+  },
+  {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/2615a95c9ee4f251bd64",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#configuration/2"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasInput"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-2"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "reads refined-mesh parameters"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Source"
       }
     ]
   },
@@ -12044,6 +12719,43 @@
     ]
   },
   {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/2f92d4494b18e8c3c12c",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#artifact/recorded-metrics"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasOutput"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-3"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "extracts recorded table"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Source"
+      }
+    ]
+  },
+  {
     "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/2fdd5b27d40b2193725b",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
@@ -12208,6 +12920,43 @@
     "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
       {
         "@value": "Repository mapping"
+      }
+    ]
+  },
+  {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/346f9c22d268df601279",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-2"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#precedes"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-1"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "then"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Source"
       }
     ]
   },
@@ -12538,6 +13287,43 @@
     ]
   },
   {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/3c874102fee3082a48e1",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#artifact/simulation-images"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasInput"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-5"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "redisplays original figures"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Source"
+      }
+    ]
+  },
+  {
     "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/3cb897b87895829d496c",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
@@ -12696,6 +13482,43 @@
     ]
   },
   {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/3deb78654803d20f4e10",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#repository"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasInput"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-1"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "verifies pinned inputs"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Source"
+      }
+    ]
+  },
+  {
     "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/3e13dda9b5cdb617d743",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
@@ -12840,6 +13663,43 @@
     "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
       {
         "@value": "Repository mapping"
+      }
+    ]
+  },
+  {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/403faad81c4c0a5d11eb",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-5"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#precedes"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-4"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "then"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Source"
       }
     ]
   },
@@ -13622,6 +14482,43 @@
     ]
   },
   {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/536b78899aa86b3c9f8a",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-1"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasPart"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook/inspection"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "contains executable section"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Source"
+      }
+    ]
+  },
+  {
     "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/54a1d794f058a0b2277a",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
@@ -14064,6 +14961,43 @@
     ]
   },
   {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/5d1ba7f015186506305a",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook/walkthrough"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasInput"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-3"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "reads recorded output"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Source"
+      }
+    ]
+  },
+  {
     "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/5d2fe20827aa30762fbb",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
@@ -14417,6 +15351,80 @@
     ]
   },
   {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/655bc06ccc34c53b96c5",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#artifact/baseline"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasInput"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-4"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "reads reference and tolerances"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Source"
+      }
+    ]
+  },
+  {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/65bfeea5026901b5e8d0",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook/walkthrough"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#sourceArtifact"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook/inspection"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "inspects recorded notebook outputs"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Source"
+      }
+    ]
+  },
+  {
     "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/66a6088eb214c1a6fa7b",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
@@ -14645,6 +15653,43 @@
     "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
       {
         "@value": "Repository mapping"
+      }
+    ]
+  },
+  {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/6b077d1c151d1d4de40b",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#artifact/recorded-metrics"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasInput"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-4"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "compares recorded values"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Source"
       }
     ]
   },
@@ -15824,6 +16869,43 @@
     ]
   },
   {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/84f9c3810c86336fa0f1",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#configuration/3"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasInput"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-2"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "reads doubled-flow parameters"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Source"
+      }
+    ]
+  },
+  {
     "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/865dcda858baaf264854",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
@@ -15883,6 +16965,43 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@value": "in file"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Source"
+      }
+    ]
+  },
+  {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/883aedf86fadeea5a5e8",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#configuration/1"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasInput"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-2"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "reads reference parameters"
       }
     ],
     "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted": [
@@ -16399,6 +17518,43 @@
     ]
   },
   {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/90fbb1d9f92c3eadb7ee",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-3"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasPart"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook/inspection"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "contains executable section"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Source"
+      }
+    ]
+  },
+  {
     "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/914fca6c6232be3030e8",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
@@ -16421,6 +17577,43 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@value": "in file"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Source"
+      }
+    ]
+  },
+  {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/9152b89659bf90d29ea3",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-5"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasPart"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook/inspection"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "contains executable section"
       }
     ],
     "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted": [
@@ -20741,6 +21934,43 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@value": "in file"
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": true
+      }
+    ],
+    "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#evidenceStatus": [
+      {
+        "@value": "Source"
+      }
+    ]
+  },
+  {
+    "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relation/e0c3118b8e76857475d5",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-4"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#hasPart"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+      {
+        "@id": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook/inspection"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "contains executable section"
       }
     ],
     "https://simulation-benchmarks.github.io/hele-shaw-cells-example/vocabulary.ttl#asserted": [

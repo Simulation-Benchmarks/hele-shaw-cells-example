@@ -90,7 +90,8 @@ arrows open bookmarkable relationship details. Original and linked `.drawio`
 downloads are available. Search reaches every semantic entity.
 
 Workflows is a naturally scrolling document with contents and four sections:
-prepare/simulate, inspect results, check reproducibility, package/share. Each
+prepare/simulate, inspect saved results in NFDI4Ing Jupyter, check reproducibility,
+package/share. Each
 has an action-sentence title, evidence note, artifact links and five numbered
 stages. Stage numbers encode reading order; arrows retain relationship direction.
 Inline diagrams scroll horizontally at narrow widths. Explore diagram opens
@@ -98,9 +99,16 @@ the shared canvas; Back to workflows restores the originating section.
 
 NFDI4Ing Use Cases uses the reference two-column service/workflow pairs with
 pale-blue service columns, stacking on phones. Service status appears before
-workflow links. Jupyter has no configured project launch; ROHub upload remains
-optional and unverified. The saved notebook is a continuous document with
-heading links, exact saved outputs and collapsible long logs.
+workflow links. Use-case sentences follow FAIR4SD: “Use the [service] to [user
+action].” Jupyter has a verified, same-tab launch into a dedicated notebook
+workspace, a first-use setup guide and an account-free saved reading view. Each
+of its five numbered diagram stages opens the matching notebook heading.
+Launches are gated by the tested notebook hash and recorded Hub verification.
+ROHub upload remains optional and unverified. The original saved notebook remains a continuous document with
+heading links, exact saved outputs and collapsible long logs. A separate five-cell
+inspection notebook computes tables and plots from committed saved evidence; it
+does not execute OpenFOAM. Nine missing values and the original pass/fail/skip
+outcomes remain explicit.
 
 ## Elevation & Depth
 
@@ -128,7 +136,8 @@ Detailed mapping status is available on focus and in relationship pages.
 | Graph generation | tools/build_graphs.py | Deterministic entity IDs, RDF-backed arrows, visible evidence status |
 | Workflow catalog | app.js + model.workflows | Contents, section anchors, five stages, contextual return links |
 | Service catalog | app.js + nfdi4ing-services.json | Service status, existing workflow references, responsive pairs |
-| Notebook | tools/notebook_view.py | Saved content only; section anchors, source links, output fidelity |
+| Original notebook | tools/notebook_view.py | Saved content only; section anchors, source links, output fidelity |
+| Jupyter inspection | tools/build_inspection.py + tools/jupyter_service.py | Five tested cells; explicit execution only; verified same-tab notebook/heading destinations; preserved missing data |
 | Scrollbars | style.css | Global thumb/track/hover/active and forced-colors behavior |
 
 Native anchors navigate; native buttons zoom or clear search. File/software

@@ -1,0 +1,53 @@
+{
+  "verifiedOn": "2026-10-25",
+  "notebookPath": "work/hele-shaw-cells-example/docs/semantic/notebooks/inspect_results.ipynb",
+  "sourceNotebookSha256": "b241521ff20c32129840be94a0e4abbe88b381fca63b65f222445f6e12e31c15",
+  "sourceRevision": "dd64acecb9d3fb8a4b05ce2e40587f208598072c",
+  "sourceHashCheck": "sha256sum of the Hub copy matched the repository source before execution; execution may update local outputs and metadata.",
+  "runtime": {
+    "python": "3.13.11",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "matplotlib": "3.10.8"
+  },
+  "execution": {
+    "codeCellCounts": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "errorOutputs": 0,
+    "simulationExecuted": false,
+    "originalNotebookExecuted": false,
+    "uploadExecuted": false,
+    "missingMetricEntries": 9,
+    "matchingComparisonDecisions": 21,
+    "savedFiguresRedisplayed": 6,
+    "newScalarPlots": 1,
+    "method": "JupyterLab Run All Cells in the authenticated NFDI4Ing Python 3 kernel; observed prompts 1–5, zero error outputs, Idle kernel and successful completion messages; saved notebook afterward."
+  },
+  "navigation": {
+    "workspace": "hele-shaw-inspection",
+    "target": "_self",
+    "method": "Opened the public user-redirect notebook URL and all five heading links in the same browser tab. Verified each requested heading after JupyterLab finished rendering. Expanded the notebook by collapsing its file-browser sidebar for the long regression section.",
+    "sectionsVerified": [
+      "1.-Locate-and-verify-sources",
+      "2.-Inspect-the-parameter-sweep",
+      "3.-Read-saved-results-and-missing-values",
+      "4.-Check-reference-regression",
+      "5.-Compare-recorded-outcomes-and-figures"
+    ],
+    "headingTopPixels": [
+      105.73,
+      105.33,
+      105.56,
+      105.45,
+      180.66
+    ],
+    "viewportHeight": 894,
+    "note": "In a narrow Jupyter panel with the file browser open, the long regression section can land below its heading. Collapse the file browser or use the notebook contents links to navigate within the section.",
+    "returnNavigation": "The Hub adds an intermediate redirect to browser history; two Back actions returned to the originating use-case page in the verified session."
+  }
+}

@@ -14,12 +14,14 @@
   },
   {
     "id": "jupyter",
+    "launchUrl": "https://jupyter-nfdi.tik.uni-stuttgart.de/hub/user-redirect/lab/workspaces/hele-shaw-inspection/tree/work/hele-shaw-cells-example/docs/semantic/notebooks/inspect_results.ipynb",
     "logos": [],
-    "name": "NFDI4Ing Jupyter Hub",
-    "previewUrl": "notebooks/Simulation_Walkthrough.html",
-    "serviceName": "NFDI4Ing Jupyter Hub",
-    "status": "Project launch not configured",
-    "summary": "Use the saved notebook view now, or follow the installation guide for a local environment. No project-specific hosted launch URL is configured.",
+    "name": "NFDI4Ing Jupyter Service",
+    "previewUrl": "notebooks/inspect_results.html",
+    "serviceName": "NFDI4Ing Jupyter Service",
+    "setupUrl": "https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/main/docs/semantic/JUPYTER.md",
+    "status": "Authenticated notebook launch verified",
+    "summary": "Sign in to NFDI4Ing JupyterLab, clone the example once using the setup guide, then run five Python cells to inspect committed parameters, recorded metrics, baseline comparisons and saved figures.",
     "url": "https://jupyter.nfdi4ing.de/",
     "workflowSlugs": [
       "inspect-results"
@@ -29,7 +31,7 @@
     "id": "rohub",
     "logos": [],
     "name": "ROHub",
-    "serviceName": "ROHub",
+    "serviceName": "ROHub service",
     "status": "Optional; upload unverified",
     "summary": "Upload and query scripts are supplied. No successful upload identifier is recorded in the inspected sources.",
     "url": "https://www.rohub.org/",

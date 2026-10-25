@@ -41,7 +41,8 @@ Vocabulary normalization is not a claim of scientific certification.
 Four workflows have five illustrated stages each:
 
 1. Prepare and simulate the reference, mesh-refinement and doubled-flow cases.
-2. Extract and inspect fields, metrics, figures and saved notebook evidence.
+2. Inspect committed configurations, saved metrics, missing values, regression
+   outcomes and figures in NFDI4Ing JupyterLab.
 3. Check reproducibility against the configuration-1 baseline and tolerances.
 4. Package results as a research object and explore optional ROHub sharing.
 
@@ -51,8 +52,10 @@ a kernel. It is a saved run, not a new clean execution: missing metrics remain
 missing, and comparisons of configurations 2/3 with the configuration-1 baseline
 retain their reported failures. The reference image is a simulation image, not an
 experimental photograph. The ROHub notebook is not presented as an executed or
-verified upload; the site links to repository guidance instead. A project-specific
-NFDI4Ing Jupyter Hub launch has not been configured.
+verified upload; the site links to repository guidance instead. The separate inspection notebook has a verified NFDI4Ing JupyterLab launch.
+It computes comparisons from committed saved data without Docker or OpenFOAM.
+See [first-time Jupyter setup](JUPYTER.md); each visitor needs their own repository
+copy. The public link contains no account identifier.
 
 ## Navigation
 
@@ -79,7 +82,7 @@ python -m unittest discover -s docs/semantic/tests -p 'test_*.py'
 python -m http.server 8765 --bind 127.0.0.1 --directory _site
 ```
 
-The builder renders the saved notebook, builds RDF/browser data, generates CSS
+The builder renders both saved notebooks, builds RDF/browser data, generates CSS
 tokens and SVG diagrams, validates the results and copies the publishable files
 into `_site`. It never runs simulations or uploads. To update the inspected source
 revision, change the explicit revision in both model and notebook builders and
@@ -102,3 +105,21 @@ The independent `.github/workflows/pages.yml` builds preview artifacts for pull
 requests and publishes to GitHub Pages from `main`. Pages uses GitHub Actions as
 its publishing source. Site publication leaves the manual benchmark workflow
 unchanged. No credentials or upload functions are included in the published UI.
+
+## Executable Jupyter inspection
+
+The inspection workflow has five numbered notebook sections. Its primary action
+and each diagram node open the verified section in NFDI4Ing JupyterLab, in the
+same tab. The use-case view states the service, user action and intended result.
+A saved reading view and first-time setup remain available.
+
+`jupyter.json` holds the public destination and tested source notebook checksum;
+`jupyter-validation.json` records authenticated execution and heading checks.
+The public route redirects to each visitor’s own server. The new inspection
+notebook preserves nine missing measurements, reproduces all 21 recorded
+comparison decisions, redisplays six original figures, and makes one new plot
+from the recorded scalar values. It does not run simulations or uploads.
+
+Normal builds validate and render saved outputs. Maintainers can explicitly
+regenerate the lightweight inspection with `tools/build_inspection.py --execute`,
+then repeat Hub verification before enabling links for the new notebook hash.

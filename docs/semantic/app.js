@@ -209,7 +209,7 @@ function buildCatalog() {
 function buildUseCases() {
   $('use-cases-page').innerHTML = `<div class="workflow-intro"><p class="eyebrow">Services in practice</p>
     <h1 id="use-cases-title" tabindex="-1">NFDI4Ing Use Cases</h1>
-    <p>Follow the benchmark through platform, notebook and research-object services. Each entry states the available evidence.</p></div>
+    <p>Use NFDI4Ing services to prepare a benchmark, inspect its results and share its provenance.</p></div>
     <div class="service-list">${(m.services || []).map(service => `
       <section class="service-entry" aria-labelledby="service-${esc(service.id)}">
         <div class="service-heading"><p class="eyebrow">Service</p>
@@ -221,8 +221,8 @@ function buildUseCases() {
         <div class="service-use-cases">${service.workflowSlugs.map(slug => {
           const workflow = workflows.get(slug);
           return `<article class="service-use-case"><p class="eyebrow">Use case</p>
-            <p class="use-case-statement"><a href="#workflow-${esc(slug)}">${esc(workflow.title)}</a></p>
-            <div class="workflow-actions"><a class="diagram-link" href="#workflow-${esc(slug)}">View workflow →</a></div>
+            <p class="use-case-statement">Use the ${esc(service.serviceName || service.name)} to <a href="#workflow-${esc(slug)}">${esc(workflow.useCaseAction || workflow.title.charAt(0).toLowerCase() + workflow.title.slice(1))}</a>.</p>
+            <div class="workflow-actions">${service.launchUrl ? `<a class="diagram-link" href="${esc(service.launchUrl)}">Open notebook in NFDI4Ing JupyterLab →</a>` : ''}<a ${service.launchUrl ? '' : 'class="diagram-link"'} href="#workflow-${esc(slug)}">View workflow →</a>${service.setupUrl ? `<a href="${esc(service.setupUrl)}" target="_blank" rel="noopener noreferrer">First-time setup ↗</a>` : ''}</div>
           </article>`;
         }).join('')}</div>
       </section>`).join('') || '<p>No service use cases are listed yet.</p>'}</div>`;

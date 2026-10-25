@@ -19,6 +19,7 @@ from rdflib import Graph, Literal, Namespace, RDF, URIRef
 from rdflib.compare import isomorphic
 
 from graph_layout import gap_label
+from jupyter_service import notebook_url, setup_url
 
 HERE = Path(__file__).resolve().parents[1]
 ROOT = HERE.parents[1]
@@ -194,6 +195,9 @@ def main():
     check('All service use cases point to existing workflow sections',
           all(service.get('workflowSlugs') and set(service['workflowSlugs']) <= set(workflow_slugs)
               for service in model['services']))
+    check('Each workflow has an explicit action for its service use case',
+          all(workflow.get('useCaseAction') and workflow['useCaseAction'][0].islower()
+              for workflow in model['workflows']))
     check('Experimental and validation evidence gaps remain explicit',
           all(gap_label(entities[identifier]) for identifier in
               ['step/experiment', 'artifact/experimental-images', 'step/experimental-postprocessing',
@@ -232,10 +236,30 @@ def main():
     # source revision; its historic source identity must remain unchanged.
     verified_paths = set()
     source_records = {record['path']: record for record in manifest['files']}
+    inspection_records = {record['path']: record
+                          for record in model['meta']['inspectionEvidence']['files']}
+    check('The new inspection documents are distinguished from pinned scientific evidence',
+          model['meta']['inspectionEvidence']['scientificSourceRevision'] == manifest['revision']
+          and set(inspection_records) == {
+              'docs/semantic/notebooks/inspect_results.ipynb',
+              'docs/semantic/notebooks/inspect_results.py',
+              'docs/semantic/notebooks/inspect_results.html',
+              'docs/semantic/data/python-inspection-manifest.json'})
+    for path, record in inspection_records.items():
+        data = (ROOT / path).read_bytes()
+        assert record['sha256'] == hashlib.sha256(data).hexdigest(), path
+        assert record['bytes'] == len(data) and record['ref'] == 'main', path
+        assert record['url'] == f'{manifest["repository"]}/blob/main/{path}', path
+    checks.append('Current inspection documents have checksums and current-branch links')
     for entity in entities.values():
         path = entity.get('repositoryPath') or entity.get('path')
         digest = entity.get('sha256')
         if path and digest:
+            if entity.get('evidenceScope') == 'current-inspection':
+                assert path in inspection_records, path
+                assert inspection_records[path]['sha256'] == digest, path
+                assert 'revision' not in entity, path
+                continue
             assert path in source_records, path
             assert source_records[path]['sha256'] == digest, path
             assert entity.get('revision') == source_records[path]['revision'], path
@@ -251,10 +275,68 @@ def main():
     subprocess.check_output([sys.executable, str(HERE / 'tools/notebook_view.py'), '--check'])
     checks.append('Saved notebook HTML preserves all code, execution counts, tables, figures and section anchors')
 
+    inspection = json.loads((HERE / 'data/python-inspection-manifest.json').read_text())
+    check('Inspection executes only five cells over saved data, with no simulation or upload',
+          inspection['revision'] == manifest['revision'] and inspection['codeCellsExecuted'] == 5
+          and all(inspection[flag] is False for flag in
+                  ('simulationExecuted', 'originalNotebookExecuted', 'uploadExecuted')))
+    for path, expected in inspection['sources'].items():
+        assert path in source_records and source_records[path]['sha256'] == expected, path
+    for path, expected in inspection['outputs'].items():
+        assert hashlib.sha256((HERE / path).read_bytes()).hexdigest() == expected, path
+    checks.append('Inspection inputs match the pinned source manifest and every output checksum matches')
+    check('The inspection preserves missing data and distinguishes original figures from the new plot',
+          inspection['missingMetricEntries'] == 9 and inspection['savedImages'] == 6
+          and inspection['newPlots'] == 1)
+    inspection_notebook = json.loads((HERE / 'notebooks/inspect_results.ipynb').read_text())
+    inspection_cells = [cell for cell in inspection_notebook['cells'] if cell['cell_type'] == 'code']
+    check('All five saved inspection cells have execution counts and no error outputs',
+          len(inspection_cells) == 5
+          and all(type(cell.get('execution_count')) is int and cell['execution_count'] > 0
+                  and not any(output.get('output_type') == 'error' for output in cell.get('outputs', []))
+                  for cell in inspection_cells))
+    preview_html = (HERE / 'notebooks/inspect_results.html').read_text()
+    inspection_workflow = next(workflow for workflow in model['workflows'] if workflow['slug'] == 'inspect-results')
+    check('The Jupyter workflow has one executable notebook section in each numbered stage',
+          len(inspection['sections']) == 5
+          and [section['number'] for section in inspection['sections']] == [1, 2, 3, 4, 5]
+          and len(inspection_workflow['entities']) == 5)
+    verified_launch = notebook_url()
+    for section, stage in zip(inspection['sections'], inspection_workflow['stages']):
+        number = section['number']
+        identifier = f'notebook-section/inspection/stage-{number}'
+        entity = entities[identifier]
+        assert stage['entities'] == [identifier] and f"{number}. {stage['title']}" == section['heading'], number
+        assert entity['kind'] == 'Notebook' and entity.get('navigation') != 'explore', identifier
+        assert entity['sectionNumber'] == number and entity['notebookSection'] == section['anchor'], identifier
+        assert entity['previewUrl'] == 'notebooks/inspect_results.html#' + section['previewAnchor'], identifier
+        assert re.search(r'\bid=["\']' + re.escape(section['previewAnchor']) + r'["\']', preview_html), identifier
+        assert entity.get('launchUrl') == notebook_url(section['anchor']), identifier
+        assert any(source['url'].startswith(manifest['repository'] + '/blob/main/docs/semantic/notebooks/inspect_results.py#L')
+                   for source in entity['sources']), identifier
+        assert entities[identifier]['uri'] and 'prov:Activity' not in entity['types'], identifier
+    checks.append('Each numbered inspection node opens its corresponding saved section or verified Hub heading')
+    jupyter = next(service for service in model['services'] if service['id'] == 'jupyter')
+    expected_status = ('Authenticated notebook launch verified' if verified_launch
+                       else 'Authenticated notebook launch not yet verified')
+    check('NFDI4Ing Jupyter use-case availability is gated by verified notebook evidence',
+          jupyter['serviceName'] == 'NFDI4Ing Jupyter Service'
+          and jupyter['workflowSlugs'] == ['inspect-results']
+          and jupyter['status'] == expected_status
+          and jupyter.get('launchUrl') == verified_launch
+          and jupyter['setupUrl'] == setup_url()
+          and entities['notebook/inspection'].get('launchUrl') == verified_launch
+          and inspection_workflow.get('launchUrl') == verified_launch)
+    launch_actions = [action for action in inspection_workflow['actions']
+                      if action['label'] == 'Open notebook in NFDI4Ing JupyterLab']
+    check('A direct notebook action is published only after verified authenticated launch',
+          (len(launch_actions) == 1 and launch_actions[0]['url'] == verified_launch
+           and launch_actions[0].get('sameTab') is True) if verified_launch else not launch_actions)
+
     result = {'conforms': True, 'checks': checks, 'triples': len(rdf),
               'entities': len(entities), 'edges': len(edges), 'graphs': len(graphs),
               'diagramVertices': len(vertices), 'diagramEdges': len(relations),
-              'scope': 'Structural consistency and source evidence only. No experiments, simulations, notebook cells, service launches or scientific validation executed.',
+              'scope': 'Structural consistency and source evidence only. This validator executes no experiments, simulations, notebook cells, service launches or scientific validation. The separate inspection notebook records computations over saved data.',
               'shaclReport': report}
     (HERE / 'validation.json').write_text(json.dumps(result, indent=2, ensure_ascii=False) + '\n')
     print(f'Passed {len(checks)} semantic checks; {len(rdf)} triples, {len(graphs)} SVG views')
