@@ -9907,7 +9907,7 @@
     ],
     "http://purl.org/dc/terms/description": [
       {
-        "@value": "Recompute tolerance checks from recorded rounded values against the committed reference; missing values remain skipped."
+        "@value": "Check rounded saved values against baseline tolerances; skip missing values."
       }
     ],
     "http://purl.org/dc/terms/source": [
@@ -9961,7 +9961,7 @@
     ],
     "http://purl.org/dc/terms/description": [
       {
-        "@value": "Plot recorded scalar outcomes and redisplay the six original figures with their source hashes; no numeric trajectories are reconstructed."
+        "@value": "Plot saved scalar values and show six original figures; retain their source hashes."
       }
     ],
     "http://purl.org/dc/terms/source": [

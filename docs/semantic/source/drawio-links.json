@@ -4548,7 +4548,7 @@
     "linkedSha256": "d224b1a9c86797e60a9fd8610ede86549601577e80baab3283b1146cf3e938e1",
     "linksSha256": "8a0aeaad912dfdb010749db000f36d8a0bc2ad89b05beb20f8dc8a80198efad1",
     "modelPath": "data/model.json",
-    "modelSha256": "8844831252c7a66d83ea8854fb0519629082d5b95a9aaa093f017013aba21042",
+    "modelSha256": "8dfee412273aaabf42a5aff37df07dec4b45ee227676a5896ca9f27a239540ae",
     "publishedBaseUrl": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/",
     "repositoryRevision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
     "sourceBytes": 67645,

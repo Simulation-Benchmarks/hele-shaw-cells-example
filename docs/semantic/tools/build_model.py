@@ -499,8 +499,8 @@ inspection_summaries = [
     'Locate the checkout and verify the hashes of the committed scientific inputs.',
     'Read the reference, refined-mesh and doubled-flow configurations into a comparison table.',
     'Read the three recorded metric rows; preserve all nine missing metric entries.',
-    'Recompute tolerance checks from recorded rounded values against the committed reference; missing values remain skipped.',
-    'Plot recorded scalar outcomes and redisplay the six original figures with their source hashes; no numeric trajectories are reconstructed.',
+    'Check rounded saved values against baseline tolerances; skip missing values.',
+    'Plot saved scalar values and show six original figures; retain their source hashes.',
 ]
 for section, summary in zip(inspection_sections, inspection_summaries):
     number = section['number']

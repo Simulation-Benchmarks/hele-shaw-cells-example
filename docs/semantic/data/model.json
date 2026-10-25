@@ -8773,7 +8773,7 @@
       "uri": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-3"
     },
     {
-      "definition": "Recompute tolerance checks from recorded rounded values against the committed reference; missing values remain skipped.",
+      "definition": "Check rounded saved values against baseline tolerances; skip missing values.",
       "displayLabel": "Check regression",
       "displayType": "Jupyter notebook · cell 4",
       "id": "notebook-section/inspection/stage-4",
@@ -8809,7 +8809,7 @@
       "uri": "https://simulation-benchmarks.github.io/hele-shaw-cells-example/#notebook-section/inspection/stage-4"
     },
     {
-      "definition": "Plot recorded scalar outcomes and redisplay the six original figures with their source hashes; no numeric trajectories are reconstructed.",
+      "definition": "Plot saved scalar values and show six original figures; retain their source hashes.",
       "displayLabel": "Compare outcomes",
       "displayType": "Jupyter notebook · cell 5",
       "id": "notebook-section/inspection/stage-5",
@@ -9984,7 +9984,7 @@
             "notebook-section/inspection/stage-4"
           ],
           "id": "inspection-4",
-          "summary": "Recompute tolerance checks from recorded rounded values against the committed reference; missing values remain skipped.",
+          "summary": "Check rounded saved values against baseline tolerances; skip missing values.",
           "title": "Check reference regression"
         },
         {
@@ -9992,7 +9992,7 @@
             "notebook-section/inspection/stage-5"
           ],
           "id": "inspection-5",
-          "summary": "Plot recorded scalar outcomes and redisplay the six original figures with their source hashes; no numeric trajectories are reconstructed.",
+          "summary": "Plot saved scalar values and show six original figures; retain their source hashes.",
           "title": "Compare recorded outcomes and figures"
         }
       ],
