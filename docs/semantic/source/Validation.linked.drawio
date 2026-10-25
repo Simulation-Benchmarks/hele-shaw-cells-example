@@ -1,0 +1,718 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Seite-1" id="Gk5CF1DBptiz0fOdKMcJ">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject id="ZY6PJmolS8cB0s2s886y-27" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/ZY6PJmolS8cB0s2s886y-27" linkTarget="_self" label="has output"><mxCell edge="1" parent="1" source="ZY6PJmolS8cB0s2s886y-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="ZY6PJmolS8cB0s2s886y-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-18" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-18" linkTarget="_self"><mxCell edge="1" parent="1" source="ZY6PJmolS8cB0s2s886y-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="gINPJ2q_6kqyxV_ifaUd-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-17" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-17" linkTarget="_self" label="realizes method"><mxCell edge="1" parent="1" source="ZY6PJmolS8cB0s2s886y-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="gINPJ2q_6kqyxV_ifaUd-5">
+          <mxGeometry relative="1" x="-0.5" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-37" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/TBgv5Hgd8a8wxE1-uLRW-37" linkTarget="_self" label="investigates"><mxCell edge="1" parent="1" source="ZY6PJmolS8cB0s2s886y-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="TBgv5Hgd8a8wxE1-uLRW-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="ZY6PJmolS8cB0s2s886y-1" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/step%2Fexperiment" linkTarget="_self" label="Experiment"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+          <mxGeometry height="40" width="80" x="87" y="180" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="ZY6PJmolS8cB0s2s886y-22" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/ZY6PJmolS8cB0s2s886y-22" linkTarget="_self"><mxCell edge="1" parent="1" source="ZY6PJmolS8cB0s2s886y-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="ZY6PJmolS8cB0s2s886y-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="ZY6PJmolS8cB0s2s886y-23" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/ZY6PJmolS8cB0s2s886y-23" linkTarget="_self"><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="ZY6PJmolS8cB0s2s886y-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="ZY6PJmolS8cB0s2s886y-3" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/step%2Fexperimental-postprocessing" linkTarget="_self" label="Post-Processing"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+          <mxGeometry height="40" width="80" x="440" y="245" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-50" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-50" linkTarget="_self" label="realizes method"><mxCell edge="1" parent="1" source="ZY6PJmolS8cB0s2s886y-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ZY6PJmolS8cB0s2s886y-37">
+          <mxGeometry relative="1" x="0.0435" y="-40" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-15" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/TBgv5Hgd8a8wxE1-uLRW-15" linkTarget="_self"><mxCell edge="1" parent="1" source="ZY6PJmolS8cB0s2s886y-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="TBgv5Hgd8a8wxE1-uLRW-16">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-10" y="530" />
+              <mxPoint x="85" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-36" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/TBgv5Hgd8a8wxE1-uLRW-36" linkTarget="_self" label="investigates"><mxCell edge="1" parent="1" source="ZY6PJmolS8cB0s2s886y-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="TBgv5Hgd8a8wxE1-uLRW-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="JDZ3WXQOoo0OTXsIz6hO-7" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/JDZ3WXQOoo0OTXsIz6hO-7" linkTarget="_self" label="uses"><mxCell edge="1" parent="1" source="ZY6PJmolS8cB0s2s886y-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="JDZ3WXQOoo0OTXsIz6hO-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="ZY6PJmolS8cB0s2s886y-5" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/step%2Fsimulation" linkTarget="_self" label="Simulation"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+          <mxGeometry height="40" width="80" x="-70" y="438" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="ZY6PJmolS8cB0s2s886y-20" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/ZY6PJmolS8cB0s2s886y-20" linkTarget="_self"><mxCell edge="1" parent="1" source="ZY6PJmolS8cB0s2s886y-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="ZY6PJmolS8cB0s2s886y-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="ZY6PJmolS8cB0s2s886y-13" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/artifact%2Fexperimental-metrics" linkTarget="_self" label="exp. metrics"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+          <mxGeometry height="30" width="70" x="560" y="220" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="ZY6PJmolS8cB0s2s886y-19" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/ZY6PJmolS8cB0s2s886y-19" linkTarget="_self" label="is input of"><mxCell edge="1" parent="1" source="ZY6PJmolS8cB0s2s886y-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="ZY6PJmolS8cB0s2s886y-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="ZY6PJmolS8cB0s2s886y-14" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/notebooks/Simulation_Walkthrough.html#inspect-results" linkTarget="_blank" label="sim. metrics"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+          <mxGeometry height="30" width="70" x="560" y="363" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-3" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-3" linkTarget="_self" label="has output"><mxCell edge="1" parent="1" source="ZY6PJmolS8cB0s2s886y-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="ZY6PJmolS8cB0s2s886y-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-63" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-63" linkTarget="_self" label="realizes method"><mxCell edge="1" parent="1" source="ZY6PJmolS8cB0s2s886y-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="gINPJ2q_6kqyxV_ifaUd-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="ZY6PJmolS8cB0s2s886y-18" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/step%2Fvalidation" linkTarget="_self" label="Validation"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+          <mxGeometry height="40" width="100" x="670" y="280" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="ZY6PJmolS8cB0s2s886y-28" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/ZY6PJmolS8cB0s2s886y-28" linkTarget="_self"><mxCell edge="1" parent="1" source="ZY6PJmolS8cB0s2s886y-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="ZY6PJmolS8cB0s2s886y-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="ZY6PJmolS8cB0s2s886y-24" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/artifact%2Fexperimental-images" linkTarget="_self" label="exp. images"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+          <mxGeometry height="30" width="70" x="304" y="230" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="ZY6PJmolS8cB0s2s886y-26" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/ZY6PJmolS8cB0s2s886y-26" linkTarget="_self" label="has output"><mxCell edge="1" parent="1" source="ZY6PJmolS8cB0s2s886y-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="TBgv5Hgd8a8wxE1-uLRW-22">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="20" y="483" as="sourcePoint" />
+            <mxPoint x="104" y="333" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-2" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-2" linkTarget="_self"><mxCell edge="1" parent="1" source="ZY6PJmolS8cB0s2s886y-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="gINPJ2q_6kqyxV_ifaUd-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="ZY6PJmolS8cB0s2s886y-25" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/notebooks/Simulation_Walkthrough.html#cartesian-figures" linkTarget="_blank" label="sim. images"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+          <mxGeometry height="30" width="70" x="304" y="355" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="ZY6PJmolS8cB0s2s886y-32" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/artifact%2Fvalidation-metrics" linkTarget="_self" label="validation metrics"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+          <mxGeometry height="30" width="70" x="850" y="285" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="ZY6PJmolS8cB0s2s886y-35" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FZY6PJmolS8cB0s2s886y-35" linkTarget="_self" label="Camera"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+          <mxGeometry height="40" width="60" x="207" y="10" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="ZY6PJmolS8cB0s2s886y-36" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FZY6PJmolS8cB0s2s886y-36" linkTarget="_self" label="Motor"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+          <mxGeometry height="40" width="60" x="57" y="-47.5" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-51" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-51" linkTarget="_self" label="implemented by"><mxCell edge="1" parent="1" source="ZY6PJmolS8cB0s2s886y-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="ZY6PJmolS8cB0s2s886y-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="ZY6PJmolS8cB0s2s886y-37" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/method%2Fcfd" linkTarget="_self" label="CFD"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1">
+          <mxGeometry height="40" width="80" x="-70" y="618" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="ZY6PJmolS8cB0s2s886y-55" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/ZY6PJmolS8cB0s2s886y-55" linkTarget="_self" label="softwareRequirements"><mxCell edge="1" parent="1" source="ZY6PJmolS8cB0s2s886y-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="ZY6PJmolS8cB0s2s886y-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="ZY6PJmolS8cB0s2s886y-38" link="https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/Dockerfile" linkTarget="_blank" label="OpenFoam"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1">
+          <mxGeometry height="40" width="80" x="135" y="618" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="ZY6PJmolS8cB0s2s886y-40" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/ZY6PJmolS8cB0s2s886y-40" linkTarget="_self" label="input of"><mxCell edge="1" parent="1" source="ZY6PJmolS8cB0s2s886y-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="ZY6PJmolS8cB0s2s886y-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="ZY6PJmolS8cB0s2s886y-39" link="https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/case_template/constant/transportProperties.template" linkTarget="_blank" label="transportProperties"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+          <mxGeometry height="40" width="130" x="-250" y="413" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="ZY6PJmolS8cB0s2s886y-47" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FZY6PJmolS8cB0s2s886y-47" linkTarget="_self" label="density"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="25" width="70" x="-285" y="157.5" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="ZY6PJmolS8cB0s2s886y-54" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FZY6PJmolS8cB0s2s886y-54" linkTarget="_self" label="Compiler"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+          <mxGeometry height="30" width="80" x="290" y="688" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="ZY6PJmolS8cB0s2s886y-57" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FZY6PJmolS8cB0s2s886y-57" linkTarget="_self" label="HPC system"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+          <mxGeometry height="40" width="80" x="135" y="510" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-1" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/step%2Fsimulation-postprocessing" linkTarget="_self" label="Post-Processing"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+          <mxGeometry height="40" width="80" x="430" y="320" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-19" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-19" linkTarget="_self"><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="gINPJ2q_6kqyxV_ifaUd-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-20" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-20" linkTarget="_self" label="has parameter"><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="gINPJ2q_6kqyxV_ifaUd-9">
+          <mxGeometry relative="1" x="-0.2258" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-44" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-44" linkTarget="_self" label="implemented by"><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="gINPJ2q_6kqyxV_ifaUd-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-5" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FgINPJ2q_6kqyxV_ifaUd-5" linkTarget="_self" label="injection"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1">
+          <mxGeometry height="40" width="80" x="47" y="100" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-39" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-39" linkTarget="_self" label="implemented by"><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="ZY6PJmolS8cB0s2s886y-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-40" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-40" linkTarget="_self"><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="gINPJ2q_6kqyxV_ifaUd-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-41" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-41" linkTarget="_self"><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="gINPJ2q_6kqyxV_ifaUd-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-42" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-42" linkTarget="_self"><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="gINPJ2q_6kqyxV_ifaUd-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-6" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FgINPJ2q_6kqyxV_ifaUd-6" linkTarget="_self" label="recording"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1">
+          <mxGeometry height="40" width="80" x="187" y="100" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-8" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FgINPJ2q_6kqyxV_ifaUd-8" linkTarget="_self" label="flow rate"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="25" width="70" x="-83" y="55" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-9" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FgINPJ2q_6kqyxV_ifaUd-9" linkTarget="_self" label="deg_per_ml"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=0;" vertex="1">
+          <mxGeometry height="25" width="70" x="-83" y="125" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-13" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-13" linkTarget="_self" label="has parameter"><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="gINPJ2q_6kqyxV_ifaUd-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-14" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-14" linkTarget="_self"><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="ZY6PJmolS8cB0s2s886y-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-16" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-16" linkTarget="_self"><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="gINPJ2q_6kqyxV_ifaUd-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-45" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-45" linkTarget="_self"><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="ZY6PJmolS8cB0s2s886y-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-10" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FgINPJ2q_6kqyxV_ifaUd-10" linkTarget="_self" label="dish-soap probe"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1">
+          <mxGeometry height="40" width="100" x="-70" y="172.5" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-46" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-46" linkTarget="_self" label="is input of"><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="ZY6PJmolS8cB0s2s886y-1">
+          <mxGeometry relative="1" x="0.5876" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-11" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FgINPJ2q_6kqyxV_ifaUd-11" linkTarget="_self" label="air"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1">
+          <mxGeometry height="40" width="100" x="-70" y="232.5" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-12" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FgINPJ2q_6kqyxV_ifaUd-12" linkTarget="_self" label="kinematic viscosity"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="25" width="70" x="-285" y="117.5" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="UfCLmVYC0dYswPqqOV6M-1" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/UfCLmVYC0dYswPqqOV6M-1" linkTarget="_self" label=""><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="TBgv5Hgd8a8wxE1-uLRW-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-140" y="192.5" />
+              <mxPoint x="-140" y="80" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-15" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FgINPJ2q_6kqyxV_ifaUd-15" linkTarget="_self" label="surface tension"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="30" width="70" x="-285" y="192.5" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-23" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FgINPJ2q_6kqyxV_ifaUd-23" linkTarget="_self" label="Syringe"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+          <mxGeometry height="40" width="60" x="137" y="-47.5" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-25" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FgINPJ2q_6kqyxV_ifaUd-25" linkTarget="_self" label="scale"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="25" width="70" x="367" y="10" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-26" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FgINPJ2q_6kqyxV_ifaUd-26" linkTarget="_self" label="nozzle radius"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="25" width="90" x="-243" y="-23.5" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-27" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FgINPJ2q_6kqyxV_ifaUd-27" linkTarget="_self" label="resolution"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="25" width="70" x="367" y="44" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-28" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FgINPJ2q_6kqyxV_ifaUd-28" linkTarget="_self" label="frame rate"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="25" width="70" x="367" y="79" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-30" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FgINPJ2q_6kqyxV_ifaUd-30" linkTarget="_self" label="gap height"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="25" width="90" x="-243" y="-58.5" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-31" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FgINPJ2q_6kqyxV_ifaUd-31" linkTarget="_self" label="injected air"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="25" width="70" x="-83" y="90" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="JDZ3WXQOoo0OTXsIz6hO-1" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/JDZ3WXQOoo0OTXsIz6hO-1" linkTarget="_self" label=""><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="gINPJ2q_6kqyxV_ifaUd-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-33" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FgINPJ2q_6kqyxV_ifaUd-33" linkTarget="_self" label="density"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="25" width="70" x="-285" y="296" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-34" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FgINPJ2q_6kqyxV_ifaUd-34" linkTarget="_self" label="kinematic viscosity"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="25" width="70" x="-285" y="240" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-35" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-35" linkTarget="_self" label=""><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="gINPJ2q_6kqyxV_ifaUd-34">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-30" y="234.5" as="sourcePoint" />
+            <mxPoint x="-80" y="187.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-36" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-36" linkTarget="_self" label="has parameter"><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="gINPJ2q_6kqyxV_ifaUd-33">
+          <mxGeometry relative="1" x="-0.3035" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="-40" y="287.5" as="sourcePoint" />
+            <mxPoint x="-90" y="302.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-48" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-48" linkTarget="_self"><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="gINPJ2q_6kqyxV_ifaUd-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-49" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-49" linkTarget="_self"><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="gINPJ2q_6kqyxV_ifaUd-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-47" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FgINPJ2q_6kqyxV_ifaUd-47" linkTarget="_self" label="Hele Shaw Cell"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+          <mxGeometry height="40" width="80" x="-53" y="-47.5" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-52" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/method%2Fcomparison" linkTarget="_self" label="comparison"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1">
+          <mxGeometry height="40" width="80" x="680" y="353" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-57" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-57" linkTarget="_self" label="source"><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ZY6PJmolS8cB0s2s886y-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-54" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FgINPJ2q_6kqyxV_ifaUd-54" linkTarget="_self" label="number of fingers"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="40" width="70" x="650" y="150" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-56" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-56" linkTarget="_self" label="source"><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="ZY6PJmolS8cB0s2s886y-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-55" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/metric%2Ffingers" linkTarget="_self" label="number of fingers"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="40" width="70" x="640" y="420" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-62" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-62" linkTarget="_self" label="source"><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="ZY6PJmolS8cB0s2s886y-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-58" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/metric%2Frelative-error" linkTarget="_self" label="relative error"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="30" width="80" x="845" y="230" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-65" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-65" linkTarget="_self" label="implemented by"><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="gINPJ2q_6kqyxV_ifaUd-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-64" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FgINPJ2q_6kqyxV_ifaUd-64" linkTarget="_self" label="Validation code"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1">
+          <mxGeometry height="40" width="80" x="850" y="353" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-70" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-70" linkTarget="_self"><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="ZY6PJmolS8cB0s2s886y-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-71" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-71" linkTarget="_self"><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="gINPJ2q_6kqyxV_ifaUd-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-73" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-73" linkTarget="_self" label="has part"><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="gINPJ2q_6kqyxV_ifaUd-23">
+          <mxGeometry relative="1" x="-0.6332" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-67" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FgINPJ2q_6kqyxV_ifaUd-67" linkTarget="_self" label="Experimental Setup"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+          <mxGeometry height="40" width="60" x="55" y="35" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-77" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-77" linkTarget="_self" label="has kind of quantity"><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="gINPJ2q_6kqyxV_ifaUd-75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-78" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-78" linkTarget="_self" label="has measurement unit"><mxCell edge="1" parent="1" source="gINPJ2q_6kqyxV_ifaUd-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="gINPJ2q_6kqyxV_ifaUd-76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-74" link="https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/#NumericalVariable" linkTarget="_blank" label="m4i:Numerical Variable"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="30" width="90" x="1530" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-75" link="https://qudt.org/schema/qudt/QuantityKind" linkTarget="_blank" label="qudt:Quantity Kind"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1">
+          <mxGeometry height="30" width="90" x="1320" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-76" link="https://qudt.org/schema/qudt/Unit" linkTarget="_blank" label="qudt:Unit"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1">
+          <mxGeometry height="30" width="90" x="1320" y="44" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-79" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FgINPJ2q_6kqyxV_ifaUd-79" linkTarget="_self" label="schema:FileObject"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+          <mxGeometry height="30" width="140" x="1320" y="105" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-80" link="https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/#ProcessingStep" linkTarget="_blank" label="m4i:ProcessingStep"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+          <mxGeometry height="30" width="140" x="1320" y="152.5" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-81" link="https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/#Method" linkTarget="_blank" label="m4i:Method"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1">
+          <mxGeometry height="40" width="80" x="1320" y="205" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-82" link="https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/#Tool" linkTarget="_blank" label="m4i:Tool"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+          <mxGeometry height="40" width="60" x="1320" y="268" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-84" link="https://schema.org/SoftwareApplication" linkTarget="_blank" label="schema:SoftwareApplication"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1">
+          <mxGeometry height="40" width="180" x="1410" y="268" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-3" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/TBgv5Hgd8a8wxE1-uLRW-3" linkTarget="_self" label="represents"><mxCell edge="1" parent="1" source="TBgv5Hgd8a8wxE1-uLRW-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="gINPJ2q_6kqyxV_ifaUd-33">
+          <mxGeometry relative="1" x="0.4267" y="-1" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="-310" y="308.57" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-11" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/TBgv5Hgd8a8wxE1-uLRW-11" linkTarget="_self" label="source"><mxCell edge="1" parent="1" source="TBgv5Hgd8a8wxE1-uLRW-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ZY6PJmolS8cB0s2s886y-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-1" link="https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/case_template/constant/transportProperties.template" linkTarget="_blank" label="air-rho"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1">
+          <mxGeometry height="25" width="70" x="-350" y="393" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-6" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/TBgv5Hgd8a8wxE1-uLRW-6" linkTarget="_self"><mxCell edge="1" parent="1" source="TBgv5Hgd8a8wxE1-uLRW-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="ZY6PJmolS8cB0s2s886y-47">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-360" y="465.57" />
+              <mxPoint x="-360" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-12" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/TBgv5Hgd8a8wxE1-uLRW-12" linkTarget="_self" label="source"><mxCell edge="1" parent="1" source="TBgv5Hgd8a8wxE1-uLRW-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="ZY6PJmolS8cB0s2s886y-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-5" link="https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/case_template/constant/transportProperties.template" linkTarget="_blank" label="soap-rho"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1">
+          <mxGeometry height="25" width="70" x="-350" y="453" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-7" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FTBgv5Hgd8a8wxE1-uLRW-7" linkTarget="_self" label="capillary coefficient"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="25" width="70" x="-285" y="65" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-9" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/TBgv5Hgd8a8wxE1-uLRW-9" linkTarget="_self"><mxCell edge="1" parent="1" source="TBgv5Hgd8a8wxE1-uLRW-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="TBgv5Hgd8a8wxE1-uLRW-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-380" y="505.57" />
+              <mxPoint x="-380" y="77.43" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-13" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/TBgv5Hgd8a8wxE1-uLRW-13" linkTarget="_self"><mxCell edge="1" parent="1" source="TBgv5Hgd8a8wxE1-uLRW-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="ZY6PJmolS8cB0s2s886y-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-8" link="https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/case_template/constant/transportProperties.template" linkTarget="_blank" label="sigma"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1">
+          <mxGeometry height="25" width="70" x="-350" y="493" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-14" link="https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/#http://mlcommons.org/croissant/Field" linkTarget="_blank" label="cr:Field"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1">
+          <mxGeometry height="25" width="70" x="1320" y="338" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-20" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/TBgv5Hgd8a8wxE1-uLRW-20" linkTarget="_self" label="softwareRequirements"><mxCell edge="1" parent="1" source="TBgv5Hgd8a8wxE1-uLRW-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="ZY6PJmolS8cB0s2s886y-38">
+          <mxGeometry relative="1" x="0.2593" y="65" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-16" link="https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/solver/heleShawFoam.C" linkTarget="_blank" label="heleShawFoam"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1">
+          <mxGeometry height="40" width="115" x="27.5" y="563" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="JDZ3WXQOoo0OTXsIz6hO-4" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/JDZ3WXQOoo0OTXsIz6hO-4" linkTarget="_self" label="described by"><mxCell edge="1" parent="1" source="TBgv5Hgd8a8wxE1-uLRW-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="JDZ3WXQOoo0OTXsIz6hO-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-17" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FTBgv5Hgd8a8wxE1-uLRW-17" linkTarget="_self" label="Model"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" vertex="1">
+          <mxGeometry height="40" width="90" x="-620" y="544" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-18" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/task%2Fvalidation" linkTarget="_self" label="Task"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" vertex="1">
+          <mxGeometry height="40" width="90" x="45" y="330.5" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="gINPJ2q_6kqyxV_ifaUd-61" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/gINPJ2q_6kqyxV_ifaUd-61" linkTarget="_self" label="has employed tool"><mxCell edge="1" parent="1" source="ZY6PJmolS8cB0s2s886y-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="ZY6PJmolS8cB0s2s886y-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-30" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/TBgv5Hgd8a8wxE1-uLRW-30" linkTarget="_self" label="has output"><mxCell edge="1" parent="1" source="TBgv5Hgd8a8wxE1-uLRW-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="ZY6PJmolS8cB0s2s886y-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-31" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/TBgv5Hgd8a8wxE1-uLRW-31" linkTarget="_self" label="has employed tool"><mxCell edge="1" parent="1" source="TBgv5Hgd8a8wxE1-uLRW-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="TBgv5Hgd8a8wxE1-uLRW-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-21" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/step%2Fvisualisation" linkTarget="_self" label="Visualisation"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+          <mxGeometry height="40" width="80" x="213" y="438" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-23" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/TBgv5Hgd8a8wxE1-uLRW-23" linkTarget="_self"><mxCell edge="1" parent="1" source="TBgv5Hgd8a8wxE1-uLRW-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="TBgv5Hgd8a8wxE1-uLRW-21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="170" y="493" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-22" link="https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/case_template/case2D.foam" linkTarget="_blank" label="testcase.foam"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+          <mxGeometry height="30" width="90" x="72" y="438" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-26" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/TBgv5Hgd8a8wxE1-uLRW-26" linkTarget="_self"><mxCell edge="1" parent="1" source="TBgv5Hgd8a8wxE1-uLRW-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="TBgv5Hgd8a8wxE1-uLRW-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-24" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/notebooks/Simulation_Walkthrough.html#alpha-field-inspection" linkTarget="_blank" label="time series data"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+          <mxGeometry height="30" width="90" x="72" y="478" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-25" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/TBgv5Hgd8a8wxE1-uLRW-25" linkTarget="_self" label="has output"><mxCell edge="1" parent="1" source="ZY6PJmolS8cB0s2s886y-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="TBgv5Hgd8a8wxE1-uLRW-24">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="493" as="sourcePoint" />
+            <mxPoint x="132" y="463" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-27" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/software%2Fparaview" linkTarget="_self" label="ParaView"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1">
+          <mxGeometry height="40" width="80" x="240" y="513" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-90" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-90" linkTarget="_self"><mxCell edge="1" parent="1" source="TBgv5Hgd8a8wxE1-uLRW-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="ZY6PJmolS8cB0s2s886y-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-32" link="https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/case_template/constant/turbulenceProperties.template" linkTarget="_blank" label="turbulanceProperties"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+          <mxGeometry height="40" width="130" x="-250" y="544" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-34" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/TBgv5Hgd8a8wxE1-uLRW-34" linkTarget="_self"><mxCell edge="1" parent="1" source="TBgv5Hgd8a8wxE1-uLRW-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="TBgv5Hgd8a8wxE1-uLRW-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-35" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/TBgv5Hgd8a8wxE1-uLRW-35" linkTarget="_self" label="represents?"><mxCell edge="1" parent="1" source="TBgv5Hgd8a8wxE1-uLRW-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="TBgv5Hgd8a8wxE1-uLRW-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-33" link="https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/case_template/constant/turbulenceProperties.template" linkTarget="_blank" label="simulationType"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1">
+          <mxGeometry height="25" width="100" x="-420" y="551.5" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-40" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FTBgv5Hgd8a8wxE1-uLRW-40" linkTarget="_self" label="ontoMS:Model"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" vertex="1">
+          <mxGeometry height="40" width="90" x="1315" y="398" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-43" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/TBgv5Hgd8a8wxE1-uLRW-43" linkTarget="_self" label="has output"><mxCell edge="1" parent="1" source="TBgv5Hgd8a8wxE1-uLRW-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="TBgv5Hgd8a8wxE1-uLRW-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-41" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/step%2Fpreparation" linkTarget="_self" label="Preparation"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+          <mxGeometry height="40" width="80" x="-820" y="530" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="TBgv5Hgd8a8wxE1-uLRW-44" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FTBgv5Hgd8a8wxE1-uLRW-44" linkTarget="_self" label="Preparation"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+          <mxGeometry height="40" width="80" x="-740" y="172.5" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-7" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-7" linkTarget="_self" label="m4i:onfiguration"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;" vertex="1">
+          <mxGeometry height="40" width="100" x="1315" y="473" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-8" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-8" linkTarget="_self" label="ontoMS:Task"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" vertex="1">
+          <mxGeometry height="40" width="90" x="1450" y="398" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-9" link="https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/#VariableSet" linkTarget="_blank" label="m4i:VariableSet"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9f7ed;strokeColor=#36393d;" vertex="1">
+          <mxGeometry height="30" width="90" x="1670" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-23" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-23" linkTarget="_self"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-25" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-25" linkTarget="_self" label="configures"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-12" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-12" linkTarget="_self" label="geometry configuration"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;" vertex="1">
+          <mxGeometry height="40" width="80" x="-630" y="1100" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-35" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-35" linkTarget="_self"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="eiFgZNk86BmHCPwQhzBy-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-37" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-37" linkTarget="_self"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-14" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-14" linkTarget="_self" label="experimental configuration"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;" vertex="1">
+          <mxGeometry height="40" width="80" x="-630" y="1242" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-18" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-18" linkTarget="_self" label="nozzle radius"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="25" width="90" x="-340" y="1125" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-19" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-19" linkTarget="_self" label="gap height"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="25" width="90" x="-340" y="1090" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-21" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-21" linkTarget="_self"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-20" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-20" linkTarget="_self" label="geometry set"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9f7ed;strokeColor=#36393d;" vertex="1">
+          <mxGeometry height="40" width="80" x="-500" y="1100" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-22" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-22" linkTarget="_self" label="has part"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="eiFgZNk86BmHCPwQhzBy-18">
+          <mxGeometry relative="1" x="-0.1795" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="-410" y="1147" as="sourcePoint" />
+            <mxPoint x="-330" y="1130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-24" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-24" linkTarget="_self" label="Experimental Setup"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+          <mxGeometry height="60" width="80" x="-630" y="1000" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-28" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-28" linkTarget="_self" label="flow rate"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="25" width="70" x="-330" y="1215" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-29" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-29" linkTarget="_self" label="deg_per_ml"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=0;" vertex="1">
+          <mxGeometry height="25" width="70" x="-330" y="1285" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-30" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-30" linkTarget="_self" label="injected air"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="25" width="70" x="-330" y="1250" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-32" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-32" linkTarget="_self"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-31" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-31" linkTarget="_self" label="injection set"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9f7ed;strokeColor=#36393d;" vertex="1">
+          <mxGeometry height="40" width="80" x="-490" y="1242" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-33" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-33" linkTarget="_self"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="eiFgZNk86BmHCPwQhzBy-30">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-380" y="1342" as="sourcePoint" />
+            <mxPoint x="-300" y="1300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-34" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-34" linkTarget="_self" label="has part"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="eiFgZNk86BmHCPwQhzBy-29">
+          <mxGeometry relative="1" x="-0.2558" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="-350" y="1337" as="sourcePoint" />
+            <mxPoint x="-270" y="1330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-36" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-36" linkTarget="_self" label="injection"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1">
+          <mxGeometry height="40" width="80" x="-630" y="1320" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-46" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-46" linkTarget="_self"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-38" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-38" linkTarget="_self" label="exp. metrics"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+          <mxGeometry height="30" width="70" x="720" y="1140" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-48" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-48" linkTarget="_self"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-39" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-39" linkTarget="_self" label="sim. metrics"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+          <mxGeometry height="30" width="70" x="720" y="1225" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-45" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-45" linkTarget="_self"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-40" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-40" linkTarget="_self" label="exp. images"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+          <mxGeometry height="30" width="70" x="720" y="1100" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-47" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-47" linkTarget="_self"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-41" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-41" linkTarget="_self" label="sim. images"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+          <mxGeometry height="30" width="70" x="720" y="1180" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-49" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-49" linkTarget="_self" label="part of"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-44">
+          <mxGeometry relative="1" x="0.5593" y="-15" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-43" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-43" linkTarget="_self" label="validation metrics"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+          <mxGeometry height="30" width="70" x="720" y="1270" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-57" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-57" linkTarget="_self"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-58" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-58" linkTarget="_self" label="includes observed property"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-50">
+          <mxGeometry relative="1" x="0.2727" y="50" as="geometry">
+            <mxPoint x="-40" y="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-59" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-59" linkTarget="_self"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-60" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-60" linkTarget="_self"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-61" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-61" linkTarget="_self"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-62" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-62" linkTarget="_self"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-63" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-63" linkTarget="_self" label="includes configured property"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-68" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-68" linkTarget="_self"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-69" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-69" linkTarget="_self"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-64">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-70" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-70" linkTarget="_self"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-65">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-71" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-71" linkTarget="_self" label="was generated by method"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-66">
+          <mxGeometry relative="1" x="-0.3514" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-75" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-75" linkTarget="_self"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-72">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-76" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-76" linkTarget="_self"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-77" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-77" linkTarget="_self" label="was generated by software"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-74">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-83" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-83" linkTarget="_self"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-81">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-84" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-84" linkTarget="_self"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-78">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-85" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-85" linkTarget="_self"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-79">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-86" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/eiFgZNk86BmHCPwQhzBy-86" linkTarget="_self" label="was generated by tool"><mxCell edge="1" parent="1" source="eiFgZNk86BmHCPwQhzBy-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eiFgZNk86BmHCPwQhzBy-82">
+          <mxGeometry relative="1" x="-0.2788" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-44" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-44" linkTarget="_self" label="dataset"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1">
+          <mxGeometry height="60" width="120" x="880" y="1050" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-50" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-50" linkTarget="_self" label="number of fingers"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="40" width="70" x="1099" y="1030" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-51" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-51" linkTarget="_self" label="relative error"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="30" width="80" x="1099" y="990" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-52" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-52" linkTarget="_self" label="nozzle radius"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="25" width="90" x="1100" y="1145" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-53" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-53" linkTarget="_self" label="gap height"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="25" width="90" x="1100" y="1110" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-54" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-54" linkTarget="_self" label="flow rate"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="25" width="70" x="1100" y="1180" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-55" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-55" linkTarget="_self" label="deg_per_ml"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=0;" vertex="1">
+          <mxGeometry height="25" width="70" x="1100" y="1250" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-56" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-56" linkTarget="_self" label="injected air"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+          <mxGeometry height="25" width="70" x="1100" y="1215" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-64" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-64" linkTarget="_self" label="CFD"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1">
+          <mxGeometry height="40" width="80" x="660" y="930" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-65" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-65" linkTarget="_self" label="injection"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1">
+          <mxGeometry height="40" width="80" x="660" y="880" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-66" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-66" linkTarget="_self" label="recording"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1">
+          <mxGeometry height="40" width="80" x="660" y="830" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-67" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-67" linkTarget="_self" label="comparison"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1">
+          <mxGeometry height="40" width="80" x="660" y="980" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-72" link="https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/Dockerfile" linkTarget="_blank" label="OpenFoam"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1">
+          <mxGeometry height="40" width="80" x="988" y="872" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-73" link="https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/solver/heleShawFoam.C" linkTarget="_blank" label="heleShawFoam"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1">
+          <mxGeometry height="40" width="115" x="988" y="817" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-74" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-74" linkTarget="_self" label="ParaView"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1">
+          <mxGeometry height="40" width="80" x="988" y="762" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-78" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-78" linkTarget="_self" label="Camera"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+          <mxGeometry height="40" width="60" x="988" y="1353" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-79" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-79" linkTarget="_self" label="Motor"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+          <mxGeometry height="40" width="60" x="988" y="1403" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-80" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-80" linkTarget="_self" label="HPC system"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+          <mxGeometry height="40" width="80" x="628" y="1060.5" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-81" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-81" linkTarget="_self" label="Syringe"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+          <mxGeometry height="40" width="60" x="988" y="1300" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-82" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-82" linkTarget="_self" label="Hele Shaw Cell"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1">
+          <mxGeometry height="40" width="80" x="988" y="1458" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-87" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-87" linkTarget="_self" label="Dataset oriented view"><mxCell parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1;fontSize=18;" vertex="1">
+          <mxGeometry height="30" width="230" x="650" y="762" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="eiFgZNk86BmHCPwQhzBy-88" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FeiFgZNk86BmHCPwQhzBy-88" linkTarget="_self" label="With configurations"><mxCell parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1;fontSize=18;" vertex="1">
+          <mxGeometry height="30" width="230" x="-440" y="1000" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="JDZ3WXQOoo0OTXsIz6hO-2" link="https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/docs/hele-shaw-cells.md" linkTarget="_blank" label="hele-shaw.md"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+          <mxGeometry height="40" width="130" x="-650" y="428" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="JDZ3WXQOoo0OTXsIz6hO-9" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/JDZ3WXQOoo0OTXsIz6hO-9" linkTarget="_self" label="contains"><mxCell edge="1" parent="1" source="JDZ3WXQOoo0OTXsIz6hO-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="JDZ3WXQOoo0OTXsIz6hO-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="JDZ3WXQOoo0OTXsIz6hO-6" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/model" linkTarget="_self" label="Model"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1">
+          <mxGeometry height="40" width="90" x="-93" y="350" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="JDZ3WXQOoo0OTXsIz6hO-10" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/JDZ3WXQOoo0OTXsIz6hO-10" linkTarget="_self" label="contains"><mxCell edge="1" parent="1" source="JDZ3WXQOoo0OTXsIz6hO-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="gINPJ2q_6kqyxV_ifaUd-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="JDZ3WXQOoo0OTXsIz6hO-8" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#overview/diagram-cell%2FJDZ3WXQOoo0OTXsIz6hO-8" linkTarget="_self" label="Formula"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1">
+          <mxGeometry height="40" width="90" x="-231" y="330.5" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="JDZ3WXQOoo0OTXsIz6hO-14" link="https://simulation-benchmarks.github.io/hele-shaw-cells-example/#relationship/JDZ3WXQOoo0OTXsIz6hO-14" linkTarget="_self" label="represents"><mxCell edge="1" parent="1" source="JDZ3WXQOoo0OTXsIz6hO-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="gINPJ2q_6kqyxV_ifaUd-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        </UserObject><UserObject id="JDZ3WXQOoo0OTXsIz6hO-13" link="https://github.com/Simulation-Benchmarks/hele-shaw-cells-example/blob/8ec1b34f0a8fdbc103f35f88cba20e12b465800b/openfoam/case_template/0/U.template" linkTarget="_blank" label="flow-rate"><mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1">
+          <mxGeometry height="25" width="70" x="-520" y="272.5" as="geometry" />
+        </mxCell>
+      </UserObject></root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

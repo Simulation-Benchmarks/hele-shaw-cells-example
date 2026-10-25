@@ -158,3 +158,25 @@ button:disabled,input:disabled{cursor:not-allowed;opacity:.65}
 #drawing.load-error{inset:40px 24px auto;max-width:680px;line-height:1.6}
 .load-error h1{font-size:24px;margin:0 0 12px}.load-error a{color:var(--color-primary)}
 header nav a[aria-disabled="true"]{cursor:not-allowed;opacity:.65}
+
+/* The original draw.io canvas owns every scientific shape, label and colour.
+   Only its surrounding navigation and focus affordance use atlas styling. */
+#drawio-actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:8px;font-size:11px;pointer-events:auto}
+#drawio-actions a,#back-to-model{color:var(--color-primary);text-underline-offset:3px}
+#back-to-model{display:block;width:max-content;margin-bottom:8px;font-size:12px;pointer-events:auto}
+#drawio-actions[hidden],#back-to-model[hidden],#relationship-page[hidden]{display:none}
+.original-drawio a{cursor:pointer}
+.original-drawio a:focus-visible{outline:none}
+.original-drawio a:focus-visible :is(path,rect,ellipse){stroke:var(--color-primary);stroke-width:2;vector-effect:non-scaling-stroke}
+body[data-view="relationship"]{height:auto;overflow:visible}
+body[data-view="relationship"] header{position:sticky;top:0}
+body[data-view="relationship"] footer{position:static;margin-top:24px}
+#relationship-page{max-width:1000px;margin:0 auto;padding:38px 36px 60px;line-height:1.65}
+#relationship-page>.back-contents{display:inline-block;margin-bottom:24px}
+#relationship-page a{color:var(--color-primary);text-underline-offset:3px}
+#relationship-page dl{margin:28px 0;overflow-wrap:anywhere}
+#relationship-page dt{font-size:12px;color:var(--color-muted);margin-top:18px}
+#relationship-page dd{margin:4px 0 0}
+.relationship-status{font-size:13px;font-weight:600;color:var(--color-warning);margin-top:26px}
+.relationship-note{border-left:3px solid var(--color-border);padding-left:16px;color:var(--color-muted)}
+@media(max-width:600px){#relationship-page{padding:26px 16px 40px}#relationship-page h1{font-size:25px}footer #evidence-note{font-size:10px}}

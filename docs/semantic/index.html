@@ -1,16 +1,17 @@
 <!doctype html>
 <!-- SPDX-FileCopyrightText: 2026 Vasiliy Seibert; SPDX-License-Identifier: MIT -->
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hele-Shaw semantic atlas</title><meta name="description" content="Explore the Hele-Shaw semantic model, reproducible simulation workflows and NFDI4Ing use cases, aligned with Validation.drawio."><link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="style.css"><script defer src="data/model.js"></script><script defer src="data/graphs.js"></script><script defer src="app.js"></script></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hele-Shaw semantic atlas</title><meta name="description" content="Explore the Hele-Shaw semantic model, reproducible simulation workflows and NFDI4Ing use cases, aligned with Validation.drawio."><link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="style.css"><script defer src="data/model.js"></script><script defer src="data/graphs.js"></script><script defer src="data/drawio.js"></script><script defer src="vendor/drawio/29.6.6/offline-config.js"></script><script defer src="vendor/drawio/29.6.6/viewer-static.min.js"></script><script defer src="drawio-viewer.js"></script><script defer src="app.js"></script></head>
 <body>
 <a class="skip-link" href="#drawing">Skip to semantic diagram</a>
 <header><a class="brand" href="#overview">Simulation-Benchmarks/<wbr>hele-shaw-cells-example</a><nav aria-label="Main navigation"><a href="#overview">Semantic Model</a><a href="#workflows">Workflows</a><a href="#nfdi4ing">NFDI4Ing Use Cases</a></nav><div class="search"><input id="search" type="search" aria-label="Find an entity" placeholder="Find a variable, file, concept…" aria-controls="results" aria-expanded="false" autocomplete="off"><button id="clear-search" hidden onclick="window.mapAction('clear')" aria-label="Clear search">×</button><div id="results" hidden></div></div><a class="repository-link" href="model.ttl" target="_blank" rel="noopener noreferrer">RDF source ↗</a></header>
 <main id="canvas" aria-label="Interactive semantic diagram"><div id="drawing" tabindex="-1" class="semantic-graph"></div></main>
 <main id="workflow-page" hidden aria-labelledby="workflows-title"></main>
 <main id="use-cases-page" hidden aria-labelledby="use-cases-title"></main>
+<main id="relationship-page" hidden aria-labelledby="relationship-title"></main>
 <div id="tip" role="tooltip" hidden></div>
-<div class="map-caption"><a id="back-to-workflows" href="#workflows" hidden>← Back to workflows</a><strong id="map-title">Semantic Model</strong><span id="map-count"></span><p id="map-description" hidden></p></div>
+<div class="map-caption"><a id="back-to-workflows" href="#workflows" hidden>← Back to workflows</a><a id="back-to-model" href="#overview" hidden>← Original semantic model</a><strong id="map-title">Semantic Model</strong><span id="map-count"></span><p id="map-description" hidden></p><div id="drawio-actions" hidden><a href="source/Validation.drawio" download>Original .drawio ↓</a><a href="source/Validation.linked.drawio" download>With source links ↓</a></div></div>
 <div class="legend" aria-label="Entity colours"></div>
 <div class="zoom" aria-label="Diagram zoom"><button onclick="window.mapAction('out')" aria-label="Zoom out">−</button><button id="fit" onclick="window.mapAction('fit')" aria-label="Fit diagram">Fit</button><button onclick="window.mapAction('in')" aria-label="Zoom in">+</button></div>
-<footer><span>Drag / arrow keys to pan · scroll to zoom · hover for details · ↗ opens source</span><span>m4i + PROV · conceptual gaps labeled</span></footer>
+<footer><span>Drag / arrow keys to pan · scroll to zoom · hover for details</span><span id="evidence-note">Experimental acquisition and comparison are conceptual · hover for status</span></footer>
 <div id="status" role="status" class="sr-only"></div><noscript>This diagram needs JavaScript. <a href="model.ttl">View the semantic model in the repository</a>.</noscript>
 </body></html>

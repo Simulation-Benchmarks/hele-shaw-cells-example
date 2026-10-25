@@ -10,9 +10,18 @@ repository's `DESIGN.md`.
 
 The complete supplied `Validation.drawio` is retained unchanged. Its 112 vertices
 and 100 arrows have a machine-readable crosswalk, including original labels,
-identifiers and uncertain relationships. The overview is curated for readability;
-entity search and neighborhood views expose the detailed model. Dashed arrows
-identify proposed interpretations, not established assertions.
+identifiers and uncertain relationships. The Semantic Model tab renders this
+original XML with the official offline draw.io renderer, preserving every label,
+position, style, waypoint and arrow direction. Links are attached by original
+cell ID. Concrete sources open directly; conceptual nodes open related entities;
+arrows open their original endpoints and mapping notes. The diagram includes its
+original legend. Normalized interpretations remain in RDF and related-entity
+views, where dashed arrows identify proposals.
+
+The original `.drawio` download remains byte-identical. The separate
+`source/Validation.linked.drawio` download adds native draw.io hyperlinks using
+lossless UserObject wrappers; only link metadata is added. Its geometry and
+scientific content are checked against the original on every build.
 
 The experimental branch and experiment-versus-simulation validation remain
 conceptual. The repository implements simulation preparation, OpenFOAM execution,
@@ -47,7 +56,8 @@ NFDI4Ing Jupyter Hub launch has not been configured.
 
 ## Navigation
 
-Hover or keyboard-focus nodes for definitions and evidence status. Scientific
+Hover or keyboard-focus nodes and arrows for evidence status. Select an arrow
+for its original label, endpoints and any proposed semantic interpretation. Scientific
 concepts open related entities; concrete artifacts and software open source
 evidence. Search opens an entity's neighborhood. A neighborhood shows up to 28
 neighbors and reports omitted connections; RDF retains the full model.
@@ -79,7 +89,11 @@ Generated artifacts are committed for direct offline use. `model.ttl` and
 `model.jsonld` are equivalent graphs; `vocabulary.ttl` defines the local extension;
 `shapes.ttl` is the application validation profile. `data/model.json` and its JS
 counterpart supply entities, edges, overview, workflows and services.
-`data/graphs.js` supplies precomputed SVGs. Validation checks representation and
+`data/graphs.js` supplies precomputed workflow and neighborhood SVGs.
+`data/drawio.js` supplies the exact original XML and cell links for the main view;
+`drawio-viewer.js` uses the locally vendored official renderer. No remote renderer,
+fonts, images or API are needed for this drawing. Renderer provenance and license
+are retained in `vendor/drawio/`. Validation checks representation and
 evidence integrity, not the scientific validity of the simulation.
 
 ## Publication

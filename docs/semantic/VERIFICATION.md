@@ -27,3 +27,38 @@
 These checks validate the atlas representation and saved evidence. They do not
 certify the scientific model or establish experimental validation, a new solver
 run, a working project-specific Jupyter launch, or a successful ROHub upload.
+
+
+## Exact original drawing follow-up — 2026-10-25
+
+The main Semantic Model canvas now uses the official, unmodified draw.io 29.6.6
+static renderer on the byte-identical original XML. All 112 vertices and 100
+relationships render, including the configuration and dataset views and original
+legend. Every original cell has a source, concept or relationship link.
+
+The native SVG visual structure is compared before and after hyperlink injection
+at runtime; browser inspection reported `visualUnchanged: true`, 212 rendered
+cells and 212 linked cells (visual signature `fnv1a32:642050a5`). The original
+SHA-256 remains `182b574888e044685ed66d6505eed993ff3187d04fa58af9ade6e0c98b93f1ab`.
+The linked `.drawio` derivative normalizes losslessly to the original tree,
+including labels, styles, geometry, nested waypoints, ordering and endpoints.
+
+The build checks 30 semantic invariants plus the exact-drawing validator. All 22
+unit tests pass, including 15 original-drawing and offline-renderer checks.
+The official bundle hash/size and required local script order are checked. The
+unused default remote MathJax startup is disabled; the source has `math="0"`.
+Browser DOM inspection after a fresh reload found no remote rendering assets.
+
+Browser verification covered desktop (1280×800) and mobile (390×844), complete
+cell coverage, visual comparison before/after links, native label clicks and
+keyboard Enter, uncertain relationship notes, the preserved original vs.
+normalized `part of` direction, search and return to the original drawing,
+zoom/Fit, Back/refresh, and all three tabs. No page horizontal overflow was found.
+Workflow, service and saved-notebook content are unchanged. The original diagram
+retains its exact labels; conceptual status is disclosed by the canvas note,
+focus/hover descriptions and linked relationship details.
+
+The strict UI audit reports no findings for the edited interface sources.
+Generated data and unchanged third-party code are excluded from that UI scan.
+Whitespace checks pass for authored changes; two upstream whitespace-only lines
+in the official viewer are retained to preserve its verified byte-for-byte hash.

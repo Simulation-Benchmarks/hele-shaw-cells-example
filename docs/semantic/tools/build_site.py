@@ -26,13 +26,13 @@ def main() -> None:
     marker = output / ".hele-shaw-site-build"
     if output.exists() and any(output.iterdir()) and not marker.exists():
         parser.error("Refusing to replace a nonempty directory without the site build marker.")
-    for name in ("notebook_view.py", "build_model.py", "build_tokens.py", "build_graphs.py", "validate_model.py"):
+    for name in ("notebook_view.py", "build_model.py", "build_tokens.py", "build_graphs.py", "build_drawio.py", "validate_model.py", "validate_drawio.py"):
         subprocess.run([sys.executable, str(SITE / "tools" / name)], cwd=REPO, check=True)
     if output.exists():
         shutil.rmtree(output)
     output.mkdir(parents=True)
     marker.touch()
-    files = ("index.html", "app.js", "tokens.css", "style.css", "model.ttl", "model.jsonld",
+    files = ("index.html", "app.js", "drawio-viewer.js", "tokens.css", "style.css", "model.ttl", "model.jsonld",
              "vocabulary.ttl", "shapes.ttl", "validation.json", "nfdi4ing-services.json",
              "ATTRIBUTION.md", ".nojekyll")
     for name in files:
@@ -40,7 +40,7 @@ def main() -> None:
         if not source.is_file():
             raise FileNotFoundError(source)
         shutil.copy2(source, output / name)
-    for name in ("data", "assets", "notebooks", "source"):
+    for name in ("data", "assets", "notebooks", "source", "vendor"):
         source = SITE / name
         if source.is_dir():
             shutil.copytree(source, output / name)

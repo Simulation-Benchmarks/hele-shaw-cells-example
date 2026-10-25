@@ -19,12 +19,13 @@ if (!m || !graphs) {
   return;
 }
 const entities = new Map(m.entities.map(e => [e.id, e]));
+const original = window.HELE_SHAW_DRAWIO;
 const workflows = new Map(m.workflows.map(workflow => [workflow.slug, workflow]));
 const siteTitle = m.meta.repository.replace('https://github.com/', '');
 const names = {overview: 'Semantic Model', ...Object.fromEntries(m.workflows.map(w => [w.graphKey, w.title]))};
 const canvas = $('canvas'), drawing = $('drawing'), tip = $('tip');
 let key = 'overview', section = 'overview', context = '', documentView = false;
-let scale = 1, x = 0, y = 0, w = 100, h = 100, drag = null, tipTimer;
+let scale = 1, x = 0, y = 0, w = 100, h = 100, drag = null, tipTimer, originalSvg;
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const sourceFor = e => e.navigation === 'explore' ? null : (e.launchUrl || e.previewUrl) ? {url: e.launchUrl || e.previewUrl, target: e.launchUrl ? '_self' : '_blank'} : e.sources?.[0];
 const entityLink = (id, owner = context) => '#' + (section === 'workflows' ? 'workflows' : 'overview') + '/' + encodeURIComponent(id)
@@ -44,14 +45,14 @@ function fit() {
   if (documentView) return;
   const top = Math.max(65, document.querySelector('.map-caption').getBoundingClientRect().bottom - canvas.getBoundingClientRect().top + 20);
   const available = Math.max(80, canvas.clientHeight - top - 85);
-  scale = Math.max(.08, Math.min((canvas.clientWidth - 70) / w, available / h, 1.4));
+  scale = Math.max(.015, Math.min((canvas.clientWidth - 40) / w, available / h, 1.4));
   x = (canvas.clientWidth - w * scale) / 2;
   y = top + (available - h * scale) / 2;
   transform();
 }
 function zoom(f, cx = canvas.clientWidth / 2, cy = canvas.clientHeight / 2) {
   if (documentView) return;
-  const next = Math.max(.06, Math.min(4, scale * f));
+  const next = Math.max(.015, Math.min(4, scale * f));
   x = cx - (cx - x) * next / scale; y = cy - (cy - y) * next / scale;
   scale = next; transform(); hide();
 }
@@ -74,10 +75,77 @@ function show(e, node, event) {
     ${e.bindings?.length ? `<p><code>${esc(e.bindings[0].selector)}</code></p>` : ''}
     <div class="hint">Click to ${esc(hint)}${source ? (source.target === '_self' ? ' →' : ' ↗') : ''}</div>`;
   tip.hidden = false;
-  const r = node.getBoundingClientRect(), tx = event?.clientX ?? r.right, ty = event?.clientY ?? r.top;
+  const focusTarget = node.querySelector('foreignObject > div > div > div') || node;
+  const r = focusTarget.getBoundingClientRect(), tx = event?.clientX ?? r.right, ty = event?.clientY ?? r.top;
   tip.style.left = Math.max(12, Math.min(innerWidth - tip.offsetWidth - 12, tx + 16)) + 'px';
   tip.style.top = Math.max(12, Math.min(innerHeight - tip.offsetHeight - 12, ty + 16)) + 'px';
   node.parentElement.setAttribute('aria-describedby', 'tip');
+}
+
+function showOriginal(link, node, event) {
+  const entity = entities.get(link.entityId);
+  const status = link.status || entity?.status || 'Original diagram';
+  clearTimeout(tipTimer);
+  tip.innerHTML = `<strong>${esc(link.label || link.originalLabel || 'Unlabelled relationship')}</strong>
+    <small>${esc(status)}</small><p>${esc(link.reviewNote || entity?.definition || 'Original relationship from Validation.drawio. Open its mapping details for evidence and interpretation.')}</p>
+    <div class="hint">${link.type === 'edge' ? 'Open relationship details →' : link.url.startsWith('#') ? 'Explore connections →' : 'Open linked source ↗'}</div>`;
+  tip.hidden = false;
+  const focusTarget = node.querySelector('foreignObject > div > div > div') || node;
+  const r = focusTarget.getBoundingClientRect(), tx = event?.clientX ?? r.right, ty = event?.clientY ?? r.top;
+  tip.style.left = Math.max(12, Math.min(innerWidth - tip.offsetWidth - 12, tx + 16)) + 'px';
+  tip.style.top = Math.max(12, Math.min(innerHeight - tip.offsetHeight - 12, ty + 16)) + 'px';
+  node.setAttribute('aria-describedby', 'tip');
+}
+
+function bindOriginal() {
+  if (!original || !window.HeleShawDrawio) throw new Error('The original drawing renderer could not load.');
+  if (!originalSvg) originalSvg = window.HeleShawDrawio.render(original).svg;
+  drawing.replaceChildren(originalSvg.cloneNode(true));
+  const svg = drawing.querySelector('svg');
+  svg.setAttribute('role', 'group');
+  svg.setAttribute('aria-label', 'Original Validation.drawio: 112 entities and 100 relationships');
+  svg.querySelectorAll('a').forEach(anchor => {
+    const cell = anchor.closest('[data-drawio-id]') || anchor.querySelector('[data-drawio-id]');
+    const id = anchor.getAttribute('data-drawio-id') || cell?.getAttribute('data-drawio-id');
+    const link = original.links[id];
+    if (!link) return;
+    anchor.setAttribute('tabindex', '0');
+    anchor.addEventListener('mouseenter', ev => showOriginal(link, anchor, ev));
+    anchor.addEventListener('mouseleave', () => { tipTimer = setTimeout(hide, 180); });
+    anchor.addEventListener('focus', () => showOriginal(link, anchor));
+    anchor.addEventListener('blur', hide);
+  });
+  return svg;
+}
+
+function renderRelationship(id) {
+  const link = original?.links[id], page = $('relationship-page');
+  if (!link || link.type !== 'edge') {
+    page.innerHTML = '<h1 id="relationship-title" tabindex="-1">Relationship unavailable</h1><p>This diagram identifier was not found.</p><a href="#overview">Return to the original drawing →</a>';
+    return;
+  }
+  const endpoint = diagramId => {
+    const item = original.links[diagramId];
+    return item ? `<a href="#overview/${encodeURIComponent(item.entityId)}">${esc(item.label || 'Unlabelled entity')}</a>` : esc(diagramId);
+  };
+  const mappedEndpoint = entityId => `<a href="#overview/${encodeURIComponent(entityId)}">${esc(entities.get(entityId)?.label || entityId)}</a>`;
+  const predicateUrl = link.predicate.startsWith(m.meta.namespace + 'vocabulary.ttl#')
+    ? 'vocabulary.ttl#' + link.predicate.split('#').pop() : link.predicate;
+  page.innerHTML = `<a class="back-contents" href="#overview">← Original semantic model</a>
+    <div class="workflow-intro"><p class="eyebrow">Original relationship</p><h1 id="relationship-title" tabindex="-1">${esc(link.originalLabel || link.label || 'Unlabelled arrow')}</h1>
+    <p>${endpoint(link.sourceDiagramId)} → ${endpoint(link.targetDiagramId)}</p></div>
+    <p class="relationship-status">${esc(link.status)}${link.asserted === false ? ' · interpretation requires review' : ''}</p>
+    <p>The arrow above follows the source drawing exactly. Its mapping into the semantic dataset is recorded below.</p>
+    ${link.reviewNote ? `<p class="relationship-note">${esc(link.reviewNote)}</p>` : ''}
+    ${link.directionNormalized ? '<p class="relationship-note">The semantic dataset normalizes this relationship’s direction. The drawing keeps the original direction.</p>' : ''}
+    <dl><dt>Original label</dt><dd>${esc(link.originalLabel || '(no label in the drawing)')}</dd>
+    <dt>Mapped direction${link.asserted === false ? ' (proposed)' : ''}</dt><dd>${mappedEndpoint(link.mappedSource)} → ${mappedEndpoint(link.mappedTarget)}</dd>
+    <dt>Mapped predicate</dt><dd><a href="${esc(predicateUrl)}" target="_blank" rel="noopener noreferrer">${esc(link.predicate)}</a></dd>
+    <dt>Diagram identifier</dt><dd><code>${esc(id)}</code></dd></dl>
+    <div class="workflow-actions"><a href="source/Validation.drawio" download>Download original drawing ↓</a><a href="source/diagram-crosswalk.json" target="_blank" rel="noopener noreferrer">Read mapping record ↗</a></div>`;
+  document.title = (link.originalLabel || 'Unlabelled relationship') + ' — ' + siteTitle;
+  window.scrollTo(0, 0); $('relationship-title').focus({preventScroll:true});
+  $('status').textContent = 'Showing original relationship and mapping status';
 }
 
 // Shared by the full canvas and inline diagrams. Graph markup is generated
@@ -165,8 +233,9 @@ function render() {
   let route; try { route = decodeURIComponent(rawPath); } catch { route = 'overview'; }
   const anchor = route.startsWith('workflow-') ? route.slice('workflow-'.length) : '';
   const useCasesView = route === 'nfdi4ing';
+  const relationshipView = route.startsWith('relationship/');
   const workflowView = route === 'workflows' || workflows.has(anchor);
-  documentView = useCasesView || workflowView;
+  documentView = useCasesView || workflowView || relationshipView;
   section = useCasesView ? 'nfdi4ing' : workflowView || route.startsWith('workflows/') ? 'workflows' : 'overview';
   context = workflows.has(anchor) ? anchor : new URLSearchParams(query).get('from') || '';
   if (!workflows.has(context)) context = '';
@@ -175,17 +244,19 @@ function render() {
   const workflow = m.workflows.find(w => w.graphKey === key);
   if (workflow) context = workflow.slug;
   document.documentElement.classList.toggle('document-view', documentView);
-  document.body.dataset.view = documentView ? section : 'diagram';
+  document.body.dataset.view = relationshipView ? 'relationship' : documentView ? section : 'diagram';
   $('workflow-page').hidden = !workflowView;
   $('use-cases-page').hidden = !useCasesView; canvas.hidden = documentView;
+  $('relationship-page').hidden = !relationshipView;
   document.querySelectorAll('.map-caption,.legend,.zoom').forEach(el => el.hidden = documentView);
   document.querySelectorAll('header nav a').forEach(a => {
     if (a.hash === '#' + section) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
   });
   $('results').hidden = true; $('search').setAttribute('aria-expanded', 'false'); hide();
   const skip = document.querySelector('.skip-link');
-  skip.href = useCasesView ? '#use-cases-title' : workflowView ? (anchor ? '#heading-' + anchor : '#workflows-title') : '#drawing';
+  skip.href = relationshipView ? '#relationship-title' : useCasesView ? '#use-cases-title' : workflowView ? (anchor ? '#heading-' + anchor : '#workflows-title') : '#drawing';
   skip.textContent = documentView ? 'Skip to page content' : 'Skip to semantic diagram';
+  if (relationshipView) { renderRelationship(route.slice('relationship/'.length)); return; }
   if (useCasesView) {
     document.title = 'NFDI4Ing Use Cases — ' + siteTitle;
     window.scrollTo(0, 0); $('use-cases-title').focus({preventScroll: true});
@@ -202,18 +273,31 @@ function render() {
   }
   window.scrollTo(0, 0);
   const graph = graphs[key], title = names[key] || entities.get(key)?.label || 'Semantic map';
-  const svg = bindGraph(drawing, graph, title, context);
+  drawing.classList.toggle('semantic-graph', key !== 'overview');
+  drawing.classList.toggle('original-drawio', key === 'overview');
+  drawing.classList.remove('load-error');
+  let svg;
+  try { svg = key === 'overview' ? bindOriginal() : bindGraph(drawing, graph, title, context); }
+  catch (error) {
+    drawing.style.transform = ''; drawing.classList.add('load-error');
+    drawing.innerHTML = '<h1>The original drawing could not load</h1><p>Reload to try again, or download the original file.</p><a href="source/Validation.drawio" download>Download Validation.drawio ↓</a>';
+    document.querySelectorAll('.map-caption,.legend,.zoom').forEach(el => el.hidden = true);
+    $('status').textContent = error.message; return;
+  }
   w = svg.viewBox.baseVal.width; h = svg.viewBox.baseVal.height;
   svg.setAttribute('width', w); svg.setAttribute('height', h);
   document.querySelector('.legend').innerHTML = legendMarkup(graph);
+  document.querySelector('.legend').hidden = key === 'overview';
   $('map-title').textContent = title;
-  $('map-count').textContent = `${graph.count} entities` + (graph.total > graph.count ? ` · ${graph.total - graph.count} more connections in RDF` : '');
-  const description = workflow?.summary || (key === 'overview' ? m.overview.summary : entities.get(key)?.definition) || '';
+  $('map-count').textContent = key === 'overview' ? '112 entities · 100 relationships · original layout' : `${graph.count} entities` + (graph.total > graph.count ? ` · ${graph.total - graph.count} more connections in RDF` : '');
+  const description = workflow?.summary || (key === 'overview' ? 'Validation.drawio, unchanged. Select an entity for its source or an arrow for mapping details.' : entities.get(key)?.definition) || '';
   $('map-description').hidden = !description; $('map-description').textContent = description;
   $('back-to-workflows').hidden = section !== 'workflows';
   $('back-to-workflows').href = context ? '#workflow-' + context : '#workflows';
+  $('back-to-model').hidden = section !== 'overview' || key === 'overview';
+  $('drawio-actions').hidden = key !== 'overview';
   document.title = title + ' — ' + siteTitle; fit();
-  $('status').textContent = `Showing ${title}, ${graph.count} entities`;
+  $('status').textContent = key === 'overview' ? 'Showing original Validation.drawio, all 112 entities and 100 relationships' : `Showing ${title}, ${graph.count} entities`;
   if (graph.total > graph.count) $('status').textContent += `; ${graph.total - graph.count} connections omitted from this view, retained in RDF.`;
 }
 

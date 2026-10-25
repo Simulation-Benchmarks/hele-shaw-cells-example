@@ -58,9 +58,10 @@ White canvas, dark readable labels, pastel category fills, thin borders.
 Category colors retain FAIR4SD's semantic roles: blue model, white numerical
 variables, pale blue files/datasets, green processing steps, orange methods,
 yellow tools/configurations, and purple fields/bindings. `tools/build_graphs.py`
-owns the graph palette and generates each graph's matching legend. Status is
-written in node labels and descriptions, not communicated through color alone.
-Conceptual steps and proposed relationships are explicitly qualified.
+owns the graph palette and generates each graph's matching legend. Workflow and neighborhood status is written in labels and descriptions. The
+original drawing keeps its exact labels and colors; the canvas caption and
+hover/focus details disclose conceptual status, and arrow links disclose proposed
+interpretations without changing the source drawing.
 
 The token path is this frontmatter → `tools/build_tokens.py` → `tokens.css` →
 `style.css`. Do not hand-edit generated tokens or introduce another theme.
@@ -79,11 +80,14 @@ Semantic Model (`#overview`), Workflows (`#workflows`) and NFDI4Ing Use Cases
 (`#nfdi4ing`). The header wraps at the reference breakpoints; `--header-height`
 controls canvas offsets and document anchor clearance.
 
-Semantic Model is a full-window pan/zoom canvas with a small caption, floating
-legend and zoom controls, and no permanent inspector. A curated overview shows
-the experimental and simulation branches converging on validation. Model,
-configuration and dataset details open related-entity views. Search reaches
-every entity, including the complete supplied diagram's detail views.
+Semantic Model is a full-window pan/zoom canvas with a small caption and zoom
+controls. It renders the original `Validation.drawio` with the official, locally
+bundled draw.io renderer: all 112 vertices and 100 arrows, exact labels, positions,
+styles, waypoints and directions, including the original legend. No scientific
+content is re-laid out or normalized in this view. Links are added by original
+cell ID. Source links open evidence; conceptual nodes open related entities;
+arrows open bookmarkable relationship details. Original and linked `.drawio`
+downloads are available. Search reaches every semantic entity.
 
 Workflows is a naturally scrolling document with contents and four sections:
 prepare/simulate, inspect results, check reproducibility, package/share. Each
@@ -107,8 +111,10 @@ descriptions use a restrained shadow. No decorative gradients or animation.
 
 Pastel rounded rectangular nodes, labeled directional arrows and small rounded
 native controls. Methods, tools, processing steps and artifacts remain distinct.
-Graph layouts are generated from the semantic dataset; neighborhood routing uses
-Graphviz. Conceptual status must stay legible without hovering.
+The original drawing owns its geometry and styling. Workflow and neighborhood
+layouts are generated from the semantic dataset; neighborhoods use Graphviz.
+The original canvas visibly notes conceptual experimental acquisition/comparison.
+Detailed mapping status is available on focus and in relationship pages.
 
 ## Components
 
@@ -117,6 +123,8 @@ Graphviz. Conceptual status must stay legible without hovering.
 | Navigation | index.html + app.js | Three hash routes, contextual entity routes, Back/refresh, descriptive titles |
 | Search | app.js | Local search, clear button, keyboard traversal, Escape, no-results feedback |
 | Canvas and inline diagrams | app.js bindGraph | Shared node behavior, unique SVG IDs, pan/zoom/fit, keyboard panning |
+| Original drawing | tools/build_drawio.py + drawio-viewer.js | Byte-identical source, complete native rendering, links by cell ID, no visual mutation |
+| Relationship details | app.js | Original endpoints and labels, mapping status, review notes, Back/refresh |
 | Graph generation | tools/build_graphs.py | Deterministic entity IDs, RDF-backed arrows, visible evidence status |
 | Workflow catalog | app.js + model.workflows | Contents, section anchors, five stages, contextual return links |
 | Service catalog | app.js + nfdi4ing-services.json | Service status, existing workflow references, responsive pairs |
