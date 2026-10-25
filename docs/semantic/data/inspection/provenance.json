@@ -1,0 +1,70 @@
+{
+  "revision": "8ec1b34f0a8fdbc103f35f88cba20e12b465800b",
+  "sources": {
+    "parameters_1.json": "f782185f028fdf7a71d609f8e545dae566d41a326eef8a63b4fc4a657d454c79",
+    "parameters_2.json": "e3a3931663876bc3344cb8665509cafca6266c045f4391dcf44472ccbbb71692",
+    "parameters_3.json": "a6dafc64cfd6f36e65dcf8571bbf91c17164cc8b423a048abb7414a0072f0549",
+    "tests/baseline/metrics_baseline.json": "b0193c2d400248d24169b470174abaffcd80e7b9d7e979e3fde1639d5dc5780d",
+    "tests/baseline/metrics_tolerances.json": "a9692fb18ae24801af40d902dc793639e440b30b979d1287bb9dc64638c49f4e",
+    "tests/compare.py": "99c16f64e0e1192e67993282b910f6caf1020e185b39e0e865585fcb2de2852b",
+    "notebooks/Simulation_Walkthrough.ipynb": "453b3a86d7cf7fb128437617936cfb6e55301a792b57691d9cfd7e03fbc0ba16"
+  },
+  "simulationExecuted": false,
+  "originalNotebookExecuted": false,
+  "uploadExecuted": false,
+  "numericTrajectoriesAvailable": false,
+  "metricPrecision": "Exactly the saved HTML table; radius rounded to 6 decimals",
+  "missingMetricEntries": 9,
+  "statusDecisionsMatchSavedTranscript": true,
+  "newPlot": "recorded-outcomes.png",
+  "savedImages": [
+    {
+      "configuration": "1",
+      "kind": "finger-count-curve",
+      "sourceCellIndex": 30,
+      "sourceOutputIndex": 1,
+      "file": "saved-config-1-finger-count-curve.png",
+      "sha256": "0dc3b5e566826e87651aaa545e334abeb29c59323796491ad774f355e424abaa"
+    },
+    {
+      "configuration": "1",
+      "kind": "final-mask",
+      "sourceCellIndex": 30,
+      "sourceOutputIndex": 2,
+      "file": "saved-config-1-final-mask.png",
+      "sha256": "ddb90cda3799c9e31e99a8487a9228607ead023a92d0303e8104391093cb01b3"
+    },
+    {
+      "configuration": "2",
+      "kind": "finger-count-curve",
+      "sourceCellIndex": 30,
+      "sourceOutputIndex": 4,
+      "file": "saved-config-2-finger-count-curve.png",
+      "sha256": "8555ac4b935e08812e1b81a2cd281b84edb412a92faf740c04324e72884b20f6"
+    },
+    {
+      "configuration": "2",
+      "kind": "final-mask",
+      "sourceCellIndex": 30,
+      "sourceOutputIndex": 5,
+      "file": "saved-config-2-final-mask.png",
+      "sha256": "bd9c8ea9ff6686cfdf36b80829f75801ad9fb2f5ff9919b48cf0fedca5b756cf"
+    },
+    {
+      "configuration": "3",
+      "kind": "finger-count-curve",
+      "sourceCellIndex": 30,
+      "sourceOutputIndex": 7,
+      "file": "saved-config-3-finger-count-curve.png",
+      "sha256": "a0a3cf11f17308bff19e0bb315d38a17a34d0796511ba67c5d6d3b5a90737010"
+    },
+    {
+      "configuration": "3",
+      "kind": "final-mask",
+      "sourceCellIndex": 30,
+      "sourceOutputIndex": 8,
+      "file": "saved-config-3-final-mask.png",
+      "sha256": "7c54b66175e09eb44d177434697d5976ae7d5254d62b7029d7e5ca513b07a15e"
+    }
+  ]
+}

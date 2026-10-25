@@ -1,0 +1,4 @@
+configuration,NPA,NPZ,NPB,flow_m3_s,outer_radius_m,gap_m,end_time_s,write_interval_s
+1,60,60,1,4e-07,0.095,0.001,15.0,0.05
+2,80,80,1,4e-07,0.095,0.001,15.0,0.05
+3,60,60,1,8e-07,0.095,0.001,15.0,0.05

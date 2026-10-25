@@ -1,0 +1,4 @@
+configuration,phase1_volume_fraction,cumulative_continuity_error,interface_length_proxy,wall_time_seconds,time_step_count,final_number_of_fingers,critical_radius_m
+1,,,2141.0,,300.0,15.0,0.015833
+2,,,3821.0,,300.0,28.0,0.011875
+3,,,2599.0,,300.0,16.0,0.015833

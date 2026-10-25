@@ -1,0 +1,33 @@
+
+=== Smoke test: configuration 1 ===
+compare.py: phase1_volume_fraction: SKIP (missing value)
+compare.py: cumulative_continuity_error: SKIP (missing value)
+compare.py: interface_length_proxy: PASS  baseline=2141.0  fresh=2141.0  |delta| = 0  (tol 50.0)
+compare.py: wall_time_seconds: SKIP (missing value)
+compare.py: time_step_count: PASS  baseline=300  fresh=300  baseline=300  fresh=300
+compare.py: final_number_of_fingers: PASS  baseline=15  fresh=15  |delta| = 0  (tol 5.0)
+compare.py: critical_radius_m: PASS  baseline=0.01583333333333333  fresh=0.0158  |delta| = 3.333e-05  (tol 0.005)
+compare.py: metrics mode  4 pass, 0 fail
+compare.py: PASS (all metrics within tolerance)
+
+=== Smoke test: configuration 2 ===
+compare.py: phase1_volume_fraction: SKIP (missing value)
+compare.py: cumulative_continuity_error: SKIP (missing value)
+compare.py: interface_length_proxy: FAIL  baseline=3821.0  fresh=2141.0  |delta| = 1680  (tol 50.0)
+compare.py: wall_time_seconds: SKIP (missing value)
+compare.py: time_step_count: PASS  baseline=300  fresh=300  baseline=300  fresh=300
+compare.py: final_number_of_fingers: FAIL  baseline=28  fresh=15  |delta| = 13  (tol 5.0)
+compare.py: critical_radius_m: PASS  baseline=0.011875  fresh=0.0158  |delta| = 0.003925  (tol 0.005)
+compare.py: metrics mode  2 pass, 2 fail
+compare.py: FAIL  (interface_length_proxy, final_number_of_fingers out of tolerance)
+
+=== Smoke test: configuration 3 ===
+compare.py: phase1_volume_fraction: SKIP (missing value)
+compare.py: cumulative_continuity_error: SKIP (missing value)
+compare.py: interface_length_proxy: FAIL  baseline=2599.0  fresh=2141.0  |delta| = 458  (tol 50.0)
+compare.py: wall_time_seconds: SKIP (missing value)
+compare.py: time_step_count: PASS  baseline=300  fresh=300  baseline=300  fresh=300
+compare.py: final_number_of_fingers: PASS  baseline=16  fresh=15  |delta| = 1  (tol 5.0)
+compare.py: critical_radius_m: PASS  baseline=0.01583333333333333  fresh=0.0158  |delta| = 3.333e-05  (tol 0.005)
+compare.py: metrics mode  3 pass, 1 fail
+compare.py: FAIL  (interface_length_proxy out of tolerance)
